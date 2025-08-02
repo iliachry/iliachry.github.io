@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ''
+title: 'Blog | Ilias Chrysovergis'
 ---
 
 # Blog & Insights
@@ -23,9 +23,6 @@ I'm currently preparing a series of articles that dive deep into the topics I'm 
 **"Greece's Metaverse Journey: Why We Started Metatopia"**  
 *The challenges and opportunities of building metaverse solutions in Greece*
 
-**"From Research to Reality: Bridging Academic VR and Commercial Applications"**
-*How to translate cutting-edge research into products people actually use*
-
 **"The Future of VR Training: Beyond Gaming Into Professional Development"**
 *Why VR training is revolutionizing everything from medicine to military applications*
 
@@ -37,7 +34,7 @@ I'm currently preparing a series of articles that dive deep into the topics I'm 
 ## 🎯 What You'll Find Here
 
 ### **Technical Deep Dives**
-Detailed explorations of VR development challenges, solutions, and best practices drawn from real projects and research.
+Detailed explorations of XR development challenges, solutions, and best practices drawn from real projects and research.
 
 ### **Industry Insights**  
 Analysis of metaverse trends, emerging technologies, and the evolving landscape of immersive experiences.
@@ -56,9 +53,9 @@ Thoughts on how technology should enhance rather than replace human connection a
 ## 🌟 Featured Themes
 
 ### **Human-Centered Technology**
-Exploring how VR, AR, and emerging technologies can solve real human problems rather than just creating impressive demos.
+Exploring how XR and emerging technologies can solve real human problems rather than just creating impressive demos.
 
-### **The Science Behind VR**
+### **The Science Behind XR**
 Breaking down the technical, psychological, and physiological aspects that make virtual reality truly immersive.
 
 ### **Metaverse Realism**
@@ -92,11 +89,11 @@ I believe the best insights come from discussion and debate. Each article will e
 
 I'm always looking for topics that would be valuable to the VR development, research, and entrepreneurship communities. Some areas I'm considering:
 
-- **Technical Tutorials**: Step-by-step guides for VR development challenges
-- **Case Studies**: Detailed analyses of successful (and failed) VR projects
-- **Research Reviews**: Accessible explanations of cutting-edge VR/AR research
-- **Industry Predictions**: Where I think VR, AR, and metaverse technologies are heading
-- **Career Advice**: For those looking to enter VR development or tech entrepreneurship
+- **Technical Tutorials**: Step-by-step guides for XR development challenges
+- **Case Studies**: Detailed analyses of successful (and failed) XR projects
+- **Research Reviews**: Accessible explanations of cutting-edge XR research
+- **Industry Predictions**: Where I think XR and metaverse technologies are heading
+- **Career Advice**: For those looking to enter XR development or tech entrepreneurship
 
 **Have a specific question or topic request?** [Send me your suggestions](/contact)
 
@@ -106,7 +103,7 @@ I'm always looking for topics that would be valuable to the VR development, rese
 
 *Once articles are published, they'll be organized by:*
 
-- **VR Development** 
+- **XR Development** 
 - **Research & Academia**
 - **Entrepreneurship** 
 - **Technology Trends**

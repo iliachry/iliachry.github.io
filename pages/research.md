@@ -1,19 +1,19 @@
 ---
 layout: default
-title: ''
+title: 'Research | Ilias Chrysovergis'
 ---
 
 # Research & Publications
 
-*Bridging the gap between theoretical innovation and practical application in VR, wireless communications, and human-computer interaction.*
+*Bridging the gap between theoretical innovation and practical application in XR, wireless communications, signal processing, artificial intelligence, and human-computer interaction.*
 
 ---
 
 ## 🎓 Current Research
 
-### **PhD Candidate - VR/AR Technologies**
-**Institution**: [University Name]  
-**Focus**: Advancing the theoretical and practical foundations of extended reality technologies
+### **PhD Candidate - A Metaverse Architecture for Wireless Communications Systems**
+**Institution**: University of Thessaly  
+**Focus**: Advancing the theoretical and practical foundations of metaverse technologies for wireless systems 
 
 **Research Areas**:
 - Geometric Algebra applications in VR systems
@@ -25,26 +25,21 @@ title: ''
 
 ## 📚 Publications
 
-### **VR and Computer Vision**
+### **Virtual Reality**
 
 **"Assessing unconstrained surgical cuttings in VR using CNNs"**
-*Conference/Journal*
+*Workshop*
 - Developed machine learning approaches for evaluating surgical procedures in virtual reality
-- Combined computer vision with VR training to provide automated feedback
-- Implications for medical education and skill assessment
 
 **"Recording and replaying psychomotor user actions in VR"**  
-*Conference/Journal*
+*Workshop*
 - Novel approach to capturing and reproducing complex user interactions in virtual environments
-- Applications in training, research, and accessibility
-- Technical contribution to VR interaction paradigms
 
-### **Wireless Communications & Machine Learning**
+### **Wireless Communications & Signal Processing**
 
 **"Random Rotation-based Low-Complexity Schemes for Intelligent Reflecting Surfaces"**
 *IEEE Transactions on Wireless Communications*
 - Co-authored research on optimizing wireless communication systems
-- Machine learning applications in communication networks
 - Collaboration with University of Cyprus research team
 
 ### **Healthcare Technology**

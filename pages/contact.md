@@ -1,18 +1,18 @@
 ---
 layout: default
-title: ''
+title: 'Contact | Ilias Chrysovergis'
 ---
 
 # Let's Connect
 
-*Whether you're interested in VR collaboration, metaverse solutions, research partnerships, or just want to discuss the future of technology over excellent Greek coffee – I'd love to hear from you.*
+*Whether you're interested in VR collaboration, metaverse solutions, research partnerships, or just want to discuss the future of technology – I'd love to hear from you.*
 
 ---
 
 ## 📧 Direct Contact
 
 ### **Email**
-**iliachry@gmail.com**  
+**iliachry@iliachry.com**  
 *Best for: Project inquiries, collaboration proposals, research discussions*
 
 ### **Phone**
@@ -24,7 +24,7 @@ title: ''
 ## 🌐 Professional Networks
 
 ### **LinkedIn**
-**[linkedin.com/in/ilias-chrysovergis-99872690](https://linkedin.com/in/ilias-chrysovergis-99872690)**  
+**[linkedin.com/in/ilias-chrysovergis](https://linkedin.com/in/ilias-chrysovergis)**  
 *Connect for: Professional networking, career discussions, industry insights*
 
 ### **Twitter/X**
@@ -40,7 +40,7 @@ title: ''
 ## 🏢 Business Inquiries
 
 ### **Metatopia - Metaverse Studio**
-For metaverse solutions, digital twin development, VR training platforms, and immersive experience projects.
+For metaverse solutions, digital twin development, XR training platforms, and immersive experience projects.
 
 **Services Include:**
 - Digital Twin development and implementation
@@ -144,7 +144,7 @@ For urgent matters, please:
 
 I believe the most interesting challenges are the ones everyone says are impossible. Whether you're looking to:
 
-- **Build** the next generation of VR applications
+- **Build** the next generation of XR applications
 - **Research** emerging technologies with real-world impact  
 - **Create** immersive experiences that change how people learn and work
 - **Develop** digital twin solutions for complex systems
@@ -156,7 +156,7 @@ I believe the most interesting challenges are the ones everyone says are impossi
 
 ## ☕ Fun Fact
 
-If you're ever in Thessaloniki, I'm always up for discussing technology over excellent Greek coffee. Some of my best ideas have come from casual conversations over καφές!
+If you're ever in Thessaloniki, I'm always up for discussing technology. Some of my best ideas have come from casual conversations over Freddo Espresso!
 
 **Ready to turn impossible into inevitable?** Drop me a line!
 

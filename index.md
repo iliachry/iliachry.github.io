@@ -1,11 +1,7 @@
 ---
 layout: default
-title: ''
+title: 'Ilias Chrysovergis | XR Developer & Researcher'
 ---
-
-<div style="font-style: italic; color: gray; margin-bottom: 2em;">
-  ~~Yes, this is just my digital twin. The real me is probably debugging something.~~
-</div>
 
 # Hey there! I'm Ilias Chrysovergis 👋
 
@@ -19,7 +15,7 @@ Welcome to my corner of the internet, where virtual worlds meet real-world impac
 
 I'm a **Co-Founder & CEO/CTO of Metatopia**, Greece's first Metaverse Studio, where we're building the future one virtual pixel at a time. When I'm not busy convincing people that VR isn't just fancy gaming, I'm a **Lead XR Software Engineer at CERTH** and a **PhD candidate** who's still trying to explain my research to my parents.
 
-My journey started at **Aristotle University of Thessaloniki** (Electrical & Computer Engineering), took a detour through **Imperial College London** (MSc in Communications & Signal Processing), and somehow landed me in the wonderful world of making impossible things possible through technology.
+My journey started at **Aristotle University of Thessaloniki** (MEng Electrical & Computer Engineering), took a detour through **Imperial College London** (MSc in Communications & Signal Processing), and somehow landed me in the wonderful world of making impossible things possible through technology.
 
 **Fun fact**: I once built a VR training app during my military service that impressed generals. Turns out, virtual reality and actual reality have more in common than you'd think! 🎖️
 
@@ -60,7 +56,7 @@ PhD candidate working on VR/AR technologies, published researcher in computer vi
 
 ## Let's Connect!
 
-Interested in collaborating on the next big thing in VR? Want to discuss the finer points of wireless communications? Or maybe you just want to ask how I convinced judges that a VR anti-bullying app was worth $50,000?
+Interested in collaborating on the next big thing in VR? Want to discuss the finer points of wireless communications? Or maybe you just want to ask how team AMANDA convinced judges that a VR anti-bullying app was worth $50,000 in 2016?
 
 **Reach out**: 
 - 🐦 [@iliachry](https://twitter.com/iliachry) – Where I share profound thoughts and terrible jokes
@@ -72,7 +68,7 @@ Interested in collaborating on the next big thing in VR? Want to discuss the fin
 
 *"I solve problems you didn't know you had in ways you don't understand, using technology that shouldn't exist yet."* 
 
-**P.S.**: If you made it this far, you deserve a virtual cookie 🍪 (Patent pending)
+**P.S.**: If you made it this far, you've officially spent more time reading this page than I spent building the whole website (which is saying something) 🐛
 
 ---
 
