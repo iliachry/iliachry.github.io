@@ -3,19 +3,11 @@ layout: default
 title: ''
 ---
 
-<nav style="margin-bottom:2em; font-size:1.1em;">
-  <a href="/" style="margin-right:20px;">About</a>
-  <a href="/project" style="margin-right:20px;">Projects</a>
-  <a href="/research" style="margin-right:20px;">Research</a>
-  <a href="/blog" style="margin-right:20px;">Blog</a>
-  <a href="/contact">Contact</a>
-</nav>
-
 # About Me
 
 ## The Journey So Far
 
-I'm **Ilias Chrysovergis**, a technology entrepreneur and researcher who believes the most interesting problems are the ones everyone says are impossible to solve. My journey has taken me from winning international competitions to building Greece's first Metaverse Studio, all while pursuing cutting-edge research in VR and wireless communications.
+I'm **Ilias Chrysovergis**, a technology entrepreneur and researcher who believes the most interesting problems are the ones everyone says are impossible to solve. My path has been anything but conventional - from convincing military generals about VR's potential to building empathy-measuring applications that win global competitions.
 
 ## Education & Background
 
@@ -24,25 +16,18 @@ I'm **Ilias Chrysovergis**, a technology entrepreneur and researcher who believe
 - **Electrical & Computer Engineering** (Honors) - Aristotle University of Thessaloniki (AUTH)
 - **Currently: PhD Candidate** - Advancing VR/AR technologies
 
-### 🏆 Recognition & Awards
-- **Microsoft Imagine Cup World Champion 2016** - 1st Place, World Citizenship Category ($50,000)
+### 🏆 Key Achievements
 - **Multiple Excellence Awards** from AUTH Rector (2016, 2017, 2018)
-- **U.S. Patent** for innovative VR anti-bullying application
-- **Military Innovation Recognition** for VR training systems
+- **U.S. Patent** for innovative VR technology
+- **Military Innovation Recognition** for breakthrough VR training systems
 
-## Professional Experience
+## The Story Behind the Tech
 
-### **Co-Founder & CEO/CTO - Metatopia** (2023 - Present)
-Building Greece's first Metaverse Studio, creating digital twins, VR training platforms, and immersive experiences for industry 4.0, education, and entertainment.
+### **Early Inspiration**
+My fascination with virtual reality started during university when I realized that the most powerful tool for building empathy isn't a speech or a book - it's literally putting someone in another person's shoes. This insight would later drive some of my most impactful work.
 
-### **Lead XR Software Engineer - CERTH** (Present)
-Leading extended reality development projects at the Centre for Research and Technology Hellas, focusing on cutting-edge VR/AR applications.
-
-### **Research Associate - Urban Water Management** (Present)
-Developing Digital Twin solutions for urban water systems, combining my expertise in software engineering with environmental sustainability.
-
-### **Military Service Innovation** (Completed)
-Developed VR training applications that earned recognition from high-ranking military officials, proving that virtual reality has real-world military applications.
+### **Military Innovation** 
+During my military service, I developed VR training applications that impressed high-ranking officials. Turns out, virtual reality and actual reality have more in common than you'd think! This experience taught me that the best technology solutions come from understanding real-world problems first.
 
 ## What Drives Me
 

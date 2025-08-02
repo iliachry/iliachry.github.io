@@ -33,7 +33,7 @@ title: ''
 ### **Metatopia - Greece's First Metaverse Studio**
 **Co-Founder & CEO/CTO | 2023 - Present**
 
-Building the infrastructure for Greece's digital future through comprehensive metaverse solutions.
+Building the infrastructure for Greece's digital future through comprehensive metaverse solutions across Thessaloniki and Nicosia.
 
 **What We're Building**:
 - **Digital Twins** that mirror and predict real-world systems

@@ -28,20 +28,13 @@ My journey started at **Aristotle University of Thessaloniki** (Electrical & Com
 ## What I've Been Up To
 
 ### 🏆 Microsoft Imagine Cup World Champion (2016)
-Led **Team AMANDA** to victory in the World Citizenship Category, winning $50,000 for creating a VR application that tackles school bullying. The app measures empathy levels and helps build understanding through immersive experiences. We even got a **U.S. Patent** for it – apparently, changing the world comes with paperwork!
+Led **Team AMANDA** to global victory with a VR application that tackles school bullying through empathy-building experiences. Winner of $50,000 and a U.S. Patent.
 
-### 🚀 Building the Metaverse (For Real This Time)
-**Metatopia** isn't just another metaverse company throwing around buzzwords. We're creating:
-- **Digital Twins** that make reality jealous
-- **VR Training Platforms** for education and industry
-- **Immersive Experiences** for museums and entertainment
-- **Simulation Tools** that predict the future (results may vary)
+### 🚀 Current Focus: Building the Metaverse
+Co-founder of **Metatopia**, Greece's first Metaverse Studio, where we create digital twins, VR training platforms, and immersive experiences that bridge virtual and real worlds.
 
-### 🔬 Research That Actually Matters
-I publish papers that more than 12 people read (including my mom). Recent work includes:
-- **VR and Computer Vision**: Teaching machines to understand surgical procedures in virtual reality
-- **Wireless Communications**: Making signals smarter with machine learning
-- **COVID-19 Research**: Building smartphone games that boost immune systems (because why not?)
+### 🔬 Research & Innovation
+PhD candidate working on VR/AR technologies, published researcher in computer vision and wireless communications, with a focus on making technology more human-centered.
 
 ---
 
@@ -57,15 +50,11 @@ I publish papers that more than 12 people read (including my mom). Recent work i
 
 ---
 
-## Current Adventures
+## What's Next
 
-🔬 **PhD Candidate**: Currently working on research that will either revolutionize VR or provide excellent material for future therapy sessions
+🚀 **Expanding Metatopia** across Greece and Cyprus while advancing cutting-edge VR research
 
-🏢 **Metatopia**: Expanding our metaverse empire across Thessaloniki and Nicosia (world domination comes next)
-
-📡 **CERTH**: Leading XR development and pretending I understand all the research papers I cite
-
-🌊 **Urban Water Management**: Building Digital Twins for water systems (because even water needs a virtual version)
+🎯 **Always looking for** collaborations that push the boundaries of what's possible with immersive technology
 
 ---
 
@@ -87,4 +76,4 @@ Interested in collaborating on the next big thing in VR? Want to discuss the fin
 
 ---
 
-> Built with ❤️ and excessive amounts of Coke Zero
+> Built with ❤️ and excessive amounts of Coke Zero 
