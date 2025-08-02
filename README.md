@@ -2,15 +2,18 @@
 
 > Ideas rendering in real time (some bugs and lag may apply).
 
-My personal website built with Jekyll and the Hacker theme, featuring a custom theme switcher for dark/light modes.
+My personal website built with Jekyll and the Hacker theme, featuring a custom theme switcher for dark/light modes, comprehensive project portfolio, research publications, and professional information.
 
 ## 🌟 Features
 
 - **Dark/Light Theme Toggle**: Switch between classic hacker dark mode and clean light mode
+- **Comprehensive Portfolio**: Projects, publications, research, and professional information
+- **Consistent Green Branding**: Unified color scheme across both themes
 - **Responsive Design**: Works on desktop and mobile devices
 - **Jekyll Static Site**: Fast loading and SEO-friendly
 - **Custom Styling**: Modified hacker theme with personal touches
 - **GitHub Pages Ready**: Automatically deploys via GitHub Pages
+- **Professional Signature**: Consistent footer with personality across all pages
 
 ## 🎨 Theme Modes
 
@@ -21,7 +24,7 @@ My personal website built with Jekyll and the Hacker theme, featuring a custom t
 
 ### ☀️ Light Mode
 - Clean white background
-- Modern blue links and styling
+- Consistent green links and styling
 - Professional appearance
 
 ## 🚀 Getting Started
@@ -61,15 +64,16 @@ My personal website built with Jekyll and the Hacker theme, featuring a custom t
 ├── _includes/            # Reusable components
 ├── assets/
 │   └── css/
-│       ├── style.scss    # Main styles with theme switching
-│       └── custom.scss   # Additional custom styles
-├── about.md              # About page
-├── blog.md               # Blog page
-├── contact.md            # Contact page
-├── index.md              # Homepage
-├── project.md            # Projects page
-├── research.md           # Research page
-└── README.md             # This file
+│       └── style.scss    # Main styles with theme switching
+├── pages/               # Site content pages
+│   ├── about.md         # About page
+│   ├── blog.md          # Blog page
+│   ├── contact.md       # Contact page
+│   ├── project.md       # Projects page
+│   ├── publications.md  # Publications page
+│   └── research.md      # Research page
+├── index.md             # Homepage
+└── README.md            # This file
 ```
 
 ## 🛠️ Customization
@@ -111,7 +115,7 @@ The theme switcher is implemented using:
 ## 📝 Adding Content
 
 ### New Pages
-1. Create a new `.md` file in the root directory
+1. Create a new `.md` file in the `pages/` directory
 2. Add front matter:
    ```yaml
    ---
@@ -120,6 +124,7 @@ The theme switcher is implemented using:
    ---
    ```
 3. Write your content in Markdown
+4. Add the page to navigation in `_layouts/default.html` if needed
 
 ### Blog Posts
 Add new posts in the `_posts/` directory (create if it doesn't exist) with the naming convention:
@@ -140,4 +145,5 @@ Feel free to fork this repository and customize it for your own use!
 
 ---
 
-Built with ❤️ using Jekyll and the Hacker theme. 
+Built with ❤️ and excessive amounts of Coke Zero  
+Powered by Jekyll theme hacker • Deployed on GitHub Pages 
