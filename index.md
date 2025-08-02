@@ -63,11 +63,11 @@ PhD candidate working on metaverse technologies for wireless systems, published 
 Interested in collaborating on the next big thing in XR? Want to discuss the finer points of wireless communications? Or maybe you just want to ask how team AMANDA convinced judges that a VR/AR anti-bullying app was worth $50,000 in 2016?
 
 **Reach out**: 
-- 🐦 [X](https://x.com/iliachry) – Where I share profound thoughts and terrible jokes
-- 💼 [LinkedIn](https://linkedin.com/in/ilias-chrysovergis) – My professional alter ego
-- 🛠️ [GitHub](https://github.com/iliachry) – Where my code lives (and occasionally works)
-- 📘 [Facebook](https://facebook.com/elias.chrissovergis) – The classics never go out of style
-- 📸 [Instagram](https://instagram.com/ilias_xr) – Behind-the-scenes of reality bending
+- 🐦 [X](https://x.com/iliachry){:target="_blank"} – Where I share profound thoughts and terrible jokes
+- 💼 [LinkedIn](https://linkedin.com/in/ilias-chrysovergis){:target="_blank"} – My professional alter ego
+- 🛠️ [GitHub](https://github.com/iliachry){:target="_blank"} – Where my code lives (and occasionally works)
+- 📘 [Facebook](https://facebook.com/elias.chrissovergis){:target="_blank"} – The classics never go out of style
+- 📸 [Instagram](https://instagram.com/ilias_xr){:target="_blank"} – Behind-the-scenes of reality bending
 - 📧 [Email me](mailto:iliachry@iliachry.com) – The old-fashioned way
 
 ---

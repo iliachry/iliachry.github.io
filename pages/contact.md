@@ -24,15 +24,15 @@ title: 'Contact | Ilias Chrysovergis'
 ## 🌐 Professional Networks
 
 ### **LinkedIn**
-**[linkedin.com/in/ilias-chrysovergis](https://linkedin.com/in/ilias-chrysovergis)**  
+**[linkedin.com/in/ilias-chrysovergis](https://linkedin.com/in/ilias-chrysovergis){:target="_blank"}**  
 *Connect for: Professional networking, career discussions, industry insights*
 
 ### **Twitter/X**
-**[@iliachry](https://twitter.com/iliachry)**  
+**[@iliachry](https://twitter.com/iliachry){:target="_blank"}**  
 *Follow for: Technology insights, research updates, industry thoughts, and the occasional terrible joke*
 
 ### **GitHub**
-**[github.com/iliachry](https://github.com/iliachry)**  
+**[github.com/iliachry](https://github.com/iliachry){:target="_blank"}**  
 *Explore: Open source projects, research code, development contributions*
 
 ---

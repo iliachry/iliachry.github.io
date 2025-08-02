@@ -101,12 +101,12 @@ Created smartphone-based biofeedback games designed to boost immune system respo
 ### **Keras Official Documentation - PPO CartPole**
 **Featured Implementation | Code Reviewed by François Chollet**
 
-Authored the [official Keras example for Proximal Policy Optimization](https://keras.io/examples/rl/ppo_cartpole/) - a comprehensive deep reinforcement learning tutorial that teaches PPO implementation for the CartPole environment.
+Authored the [official Keras example for Proximal Policy Optimization](https://keras.io/examples/rl/ppo_cartpole/){:target="_blank"} - a comprehensive deep reinforcement learning tutorial that teaches PPO implementation for the CartPole environment.
 
 **Multi-Platform Recognition**: 
 - **Code reviewed and approved** by François Chollet (creator of Keras)
 - **Featured prominently** in official Keras documentation
-- **Published as official model** on [Hugging Face](https://huggingface.co/keras-io/ppo-cartpole)
+- **Published as official model** on [Hugging Face](https://huggingface.co/keras-io/ppo-cartpole){:target="_blank"}
 - **Widely used** by the global ML community for learning RL concepts
 
 **Technical Contribution**: Complete implementation of PPO algorithm with detailed explanations, making advanced reinforcement learning accessible to developers worldwide across multiple platforms.

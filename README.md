@@ -135,8 +135,8 @@ Feel free to fork this repository and customize it for your own use!
 
 ## 📧 Contact
 
-- **Website**: [iliachry.github.io](https://iliachry.github.io)
-- **GitHub**: [@iliachry](https://github.com/iliachry)
+- **Website**: [iliachry.github.io](https://iliachry.github.io){:target="_blank"}
+- **GitHub**: [@iliachry](https://github.com/iliachry){:target="_blank"}
 
 ---
 
