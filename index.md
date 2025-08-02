@@ -1,8 +1,15 @@
+---
+layout: default
+title: Home
+---
+
 # Hey there! I'm Ilias Chrysovergis 👋
 
-### VR Developer | Researcher | Entrepreneur | Professional Reality Bender
+### XR Developer | Researcher | Entrepreneur | Professional Reality Bender
 
 Welcome to my corner of the internet, where virtual worlds meet real-world impact (and occasionally, where my code actually compiles on the first try).
+
+[About](/about) | [Projects](/projects) | [Research](/research) | [Blog](/blog) | [Contact](/contact)
 
 ---
 
@@ -78,4 +85,4 @@ Interested in collaborating on the next big thing in VR? Want to discuss the fin
 
 ---
 
-> Built with ❤️ and excessive amounts of caffeine | Powered by Jekyll & GitHub Pages
+> Built with ❤️ and excessive amounts of Coke Zero
