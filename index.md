@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: ''
 ---
 
 # Hey there! I'm Ilias Chrysovergis 👋
