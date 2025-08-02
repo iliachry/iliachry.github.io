@@ -3,14 +3,6 @@ layout: default
 title: ''
 ---
 
-<nav style="margin-bottom:2em; font-size:1.1em;">
-  <a href="/" style="margin-right:20px;">About</a>
-  <a href="/project" style="margin-right:20px;">Projects</a>
-  <a href="/research" style="margin-right:20px;">Research</a>
-  <a href="/blog" style="margin-right:20px;">Blog</a>
-  <a href="/contact">Contact</a>
-</nav>
-
 # Let's Connect
 
 *Whether you're interested in VR collaboration, metaverse solutions, research partnerships, or just want to discuss the future of technology over excellent Greek coffee – I'd love to hear from you.*

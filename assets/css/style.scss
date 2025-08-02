@@ -180,3 +180,48 @@ body[data-theme="light"] header {
   background-color: #ffffff !important;
   border-bottom: 1px dashed #238636 !important;
 }
+
+// Navigation styling
+.main-nav {
+  margin: 20px 0 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 15px !important;
+  justify-content: flex-start !important;
+}
+
+.nav-link {
+  display: inline-block !important;
+  padding: 8px 16px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid #00ff00 !important;
+  border-radius: 20px !important;
+  color: #00ff00 !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.nav-link:hover {
+  background: #00ff00 !important;
+  color: #000000 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3) !important;
+}
+
+// Light theme navigation
+html[data-theme="light"] .nav-link,
+body[data-theme="light"] .nav-link {
+  background: rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid #238636 !important;
+  color: #238636 !important;
+}
+
+html[data-theme="light"] .nav-link:hover,
+body[data-theme="light"] .nav-link:hover {
+  background: #238636 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3) !important;
+}
