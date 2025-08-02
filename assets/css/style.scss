@@ -128,18 +128,18 @@ body[data-theme="light"] .container {
 // Light theme button overrides
 html[data-theme="light"] .btn,
 body[data-theme="light"] .btn {
-  background: #0969da !important;
-  border: 1px solid #0969da !important;
+  background: #238636 !important;
+  border: 1px solid #238636 !important;
   color: #ffffff !important;
 }
 
 html[data-theme="light"] .btn:hover,
 body[data-theme="light"] .btn:hover {
-  background: #0860ca !important;
-  border-color: #0860ca !important;
+  background: #1a6b2b !important;
+  border-color: #1a6b2b !important;
   color: #ffffff !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 4px 8px rgba(9, 105, 218, 0.3) !important;
+  box-shadow: 0 4px 8px rgba(35, 134, 54, 0.3) !important;
 }
 
 html[data-theme="light"] .btn-github,
