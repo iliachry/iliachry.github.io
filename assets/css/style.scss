@@ -9,6 +9,15 @@ body {
   color: #eaeaea !important;
 }
 
+// Default link colors for dark theme
+a {
+  color: #00ff00 !important;
+}
+
+a:hover {
+  color: #66ff66 !important;
+}
+
 // Theme switcher styles
 .theme-switcher {
   position: fixed !important;
@@ -47,12 +56,12 @@ body[data-theme="light"] header {
 
 html[data-theme="light"] a,
 body[data-theme="light"] a {
-  color: #2563eb !important;
+  color: #238636 !important;
 }
 
 html[data-theme="light"] a:hover,
 body[data-theme="light"] a:hover {
-  color: #1d4ed8 !important;
+  color: #1a6b2b !important;
 }
 
 html[data-theme="light"] .theme-switcher,

@@ -3,7 +3,7 @@ layout: default
 title: 'Research | Ilias Chrysovergis'
 ---
 
-# Research & Publications
+# Research
 
 *Bridging the gap between theoretical innovation and practical application in XR, wireless communications, signal processing, artificial intelligence, and human-computer interaction.*
 
@@ -18,44 +18,6 @@ title: 'Research | Ilias Chrysovergis'
 **Research Areas**:
 - Geometric Algebra applications in VR systems
 - Human-computer interaction in immersive environments  
-- Real-time rendering optimization for mobile VR
-- Haptic feedback integration in virtual environments
-
----
-
-## 📚 Publications
-
-### **Virtual Reality**
-
-**"Assessing unconstrained surgical cuttings in VR using CNNs"**
-*Workshop*
-- Developed machine learning approaches for evaluating surgical procedures in virtual reality
-
-**"Recording and replaying psychomotor user actions in VR"**  
-*Workshop*
-- Novel approach to capturing and reproducing complex user interactions in virtual environments
-
-### **Wireless Communications & Signal Processing**
-
-**"Random Rotation-based Low-Complexity Schemes for Intelligent Reflecting Surfaces"**
-*IEEE Transactions on Wireless Communications*
-- Co-authored research on optimizing wireless communication systems
-- Collaboration with University of Cyprus research team
-
-### **Healthcare Technology**
-
-**"Smartphone-based Biofeedback Games for Shielding of Immune System against COVID-19"**
-*Conference/Journal*
-- Innovative application of gamification to health outcomes
-- Mobile technology for immune system support during pandemic
-- Intersection of technology and public health
-
-### **Medical VR Training**
-
-**"MAGES 4.0 Platform Contributions"**
-- Research contributions to advanced medical VR training platforms
-- Integration of haptic feedback and realistic simulations
-- Collaboration with medical professionals and institutions
 
 ---
 
@@ -117,12 +79,25 @@ My research approach combines rigorous academic investigation with practical app
 
 ---
 
-## 📊 Research Metrics
+## 📊 Research Impact
 
-### **Publications**: Multiple peer-reviewed papers in top-tier venues
-### **Citations**: Growing impact in VR, wireless communications, and digital twin research  
-### **Collaborations**: International partnerships across Europe and beyond
-### **Patents**: U.S. Patent for VR anti-bullying application (Microsoft Imagine Cup project)
+### **Current Focus Areas**
+- **Extended Reality (XR)** development and optimization
+- **Digital Twin Technology** for real-world applications
+- **Machine Learning** integration in immersive systems
+- **Wireless Communications** and signal processing research
+
+### **Research Recognition**
+- **PhD candidate** at University of Thessaly
+- **Lead XR Software Engineer** at CERTH
+- **International collaborations** across Europe
+- **IEEE publications** and conference presentations
+
+### **Ongoing Projects**
+- **Metaverse architecture** for wireless communications
+- **Medical VR training** platform development
+- **Digital twin systems** for urban water management
+- **Geometric algebra** applications in VR
 
 ---
 
@@ -133,7 +108,6 @@ My research approach combines rigorous academic investigation with practical app
 - Virtual reality applications in education and training
 - Machine learning optimization for wireless systems  
 - Digital twin development methodologies
-- Human factors in immersive technology design
 
 ---
 
