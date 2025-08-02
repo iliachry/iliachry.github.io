@@ -46,6 +46,25 @@ This belief drives everything I do - from the XR applications I develop to the r
 - 🌊 I'm building digital twins for water systems because even H2O deserves a virtual counterpart
 - 🏛️ Based in Peraia, Thessaloniki – Where I debug code with a view of the Thermaikos Gulf (because even virtual reality needs a real reality backup)
 
+## 🏆 Awards & Recognition
+
+| Achievement | Location & Year |
+|-------------|----------------|
+| **Poster Presentation at SIGGRAPH International Conference** | Vancouver, 2022 |
+| **[Keras.io](https://keras.io/examples/rl/ppo_cartpole/){:target="_blank"} Reinforcement Learning Implementation Publication** | Worldwide, 2021 |
+| **1st Place in Cyprus Science Communication Competition** | Cyprus, 2019 |
+| **Marie Skłodowska-Curie Fellowship** | Europe, 2019 |
+| **Commendation from Chief of General Staff of the Army** | Greece, 2019 |
+| **U.S. Patent Holder** | USA, 2018 |
+| **3rd Place in University of Hong Kong Global Competition** | Hong Kong, 2017 |
+| **[AMANDA Project](https://github.com/iliachry/AMANDA){:target="_blank"} Presentation at Microsoft Ignite Conference** | Atlanta, 2016 |
+| **1st Place in Microsoft Imagine Cup World Championship** | Seattle, 2016 |
+| **Excellence Award from Aristotle University of Thessaloniki Rector** | Greece, 2016/2017/2018 |
+| **Finalist in Greek National Business Competition** | Greece, 2016 |
+| **Finalist in BEST European EBEC Competition** | Portugal, 2015 |
+
+---
+
 ## Looking Forward
 
 Currently expanding Metatopia across Greece and Cyprus while advancing my PhD research. Always interested in collaborating on projects that push the boundaries of what's possible with XR and emerging technologies.
