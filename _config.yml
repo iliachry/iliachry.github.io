@@ -4,7 +4,7 @@ plugins:
   - jekyll-sitemap
 
 # Site Settings
-title: "Ilias Chrysovergis | Software Architect, XR Developer, Researcher"
+title: "iliachry"
 description: "Software Architect, XR Developer, and Researcher specializing in Software Engineering, Extended (Virtual, Augmented, and Mixed) Reality, Artificial Intelligence, Machine Learning, and Digital Twins. PhD candidate, Microsoft Imagine Cup Winner, and Co-founder of Greece's first Metaverse Studio."
 url: "https://iliachry.github.io"
 baseurl: ""
