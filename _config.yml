@@ -1,7 +1,64 @@
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
-title: iliachry
-description: Ideas rendering in real time (some bugs and lag may apply).
+# Site Settings
+title: "Ilias Chrysovergis | Software Architect, XR Developer, Researcher"
+description: "Software Architect, XR Developer, and Researcher specializing in Software Engineering, Extended (Virtual, Augmented, and Mixed) Reality, Artificial Intelligence, Machine Learning, and Digital Twins. PhD candidate, Microsoft Imagine Cup Winner, and Co-founder of Greece's first Metaverse Studio."
+url: "https://iliachry.github.io"
+baseurl: ""
 theme: jekyll-theme-hacker
+
+# Author Information
+author:
+  name: "Ilias Chrysovergis"
+  email: "iliachry@iliachry.com"
+  picture: "/assets/images/profile.jpeg"
+
+# SEO Settings
+lang: "en-US"
+timezone: "Europe/Athens"
+
+# Social Media Profiles
+social:
+  name: "Ilias Chrysovergis"
+  links:
+    - "https://x.com/iliachry"
+    - "https://linkedin.com/in/ilias-chrysovergis"
+    - "https://github.com/iliachry"
+    - "https://facebook.com/elias.chrissovergis"
+    - "https://instagram.com/ilias_xr"
+
+# Twitter Cards
+twitter:
+  username: "iliachry"
+  card: "summary_large_image"
+
+# Facebook
+facebook:
+  app_id: ""
+  publisher: ""
+  admins: ""
+
+# LinkedIn
+linkedin:
+  username: "ilias-chrysovergis"
+
+# Site Verification (add your verification codes here)
+google_site_verification: ""
+bing_site_verification: ""
+
+# Analytics (add your tracking IDs)
+google_analytics: ""
+
+# Feed Settings
+feed:
+  excerpt_only: false
+
+# Sitemap Settings
+sitemap:
+  exclude:
+    - "/404.html"
+    - "/Gemfile*"
+    - "/robots.txt"

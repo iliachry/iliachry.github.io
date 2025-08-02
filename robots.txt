@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://iliachry.github.io/sitemap.xml
+
+# Disallow crawling of unnecessary directories
+Disallow: /assets/css/
+Disallow: /_site/
+Disallow: /.git/
+
+# Allow crawling of important pages
+Allow: /pages/
+Allow: /index.html 

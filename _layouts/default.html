@@ -4,10 +4,70 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#1e6091">
+    <meta name="msapplication-TileColor" content="#1e6091">
+    
+    <!-- Preconnect to External Domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://github.com">
+    
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
 
-{% seo %}
+    {% seo %}
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ site.author.name }}",
+      "url": "{{ site.url }}",
+      "email": "{{ site.author.email }}",
+      "jobTitle": "Software Architect & XR Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Metatopia"
+      },
+      "alumniOf": [
+        {
+          "@type": "Organization",
+          "name": "Aristotle University of Thessaloniki"
+        },
+        {
+          "@type": "Organization", 
+          "name": "Imperial College London"
+        }
+      ],
+      "award": [
+        "Microsoft Imagine Cup World Champion 2016",
+        "U.S. Patent Holder",
+        "Marie Skłodowska-Curie Fellowship"
+      ],
+      "knowsAbout": [
+        "Virtual Reality",
+        "Augmented Reality", 
+        "Machine Learning",
+        "Digital Twins",
+        "Wireless Communications",
+        "Signal Processing"
+      ],
+      "sameAs": [
+        "https://x.com/iliachry",
+        "https://linkedin.com/in/ilias-chrysovergis",
+        "https://github.com/iliachry",
+        "https://facebook.com/elias.chrissovergis",
+        "https://instagram.com/ilias_xr"
+      ]
+    }
+    </script>
   </head>
 
   <body>

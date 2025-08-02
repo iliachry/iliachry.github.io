@@ -1,6 +1,8 @@
 ---
 layout: default
 title: 'Publications | Ilias Chrysovergis'
+description: 'Research publications by Ilias Chrysovergis in Extended Reality, Artificial Intelligence, Wireless Communications, and Signal Processing. IEEE papers, ArXiv preprints, and more.'
+keywords: 'Ilias Chrysovergis publications, XR research papers, Machine Learning publications, IEEE papers, ArXiv preprints, Extended Reality research, Signal Processing'
 ---
 
 # Publications & Research Contributions

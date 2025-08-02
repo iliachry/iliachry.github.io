@@ -1,6 +1,8 @@
 ---
 layout: default
 title: 'About | Ilias Chrysovergis'
+description: 'Learn about Ilias Chrysovergis - Software Architect, XR Developer, Researcher, and Co-founder of Metatopia. Microsoft Imagine Cup Winner with expertise in XR, AI, and Digital Twins.'
+keywords: 'Ilias Chrysovergis about, XR developer biography, Extended Reality researcher, Microsoft Imagine Cup winner, Metatopia co-founder, PhD candidate'
 ---
 
 # About Me
