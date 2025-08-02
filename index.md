@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 'Ilias Chrysovergis | Software Architect, XR Developer, Researcher'
+title: 'iliachry'
 description: 'Software Architect & XR Developer specializing in Extended Reality, AI, and Digital Twins. Microsoft Imagine Cup Winner, PhD candidate, and Co-founder of Metatopia.'
 keywords: 'Ilias Chrysovergis, XR Developer, Virtual Reality, Augmented Reality, Machine Learning, Digital Twins, Microsoft Imagine Cup, Metatopia, PhD researcher'
 image: '/assets/images/social-share.jpg'
