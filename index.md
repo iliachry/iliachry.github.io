@@ -3,13 +3,23 @@ layout: default
 title: ''
 ---
 
+<nav style="margin-bottom:2em; font-size:1.1em;">
+  <a href="/" style="margin-right:20px;">About</a>
+  <a href="/project" style="margin-right:20px;">Projects</a>
+  <a href="/research" style="margin-right:20px;">Research</a>
+  <a href="/blog" style="margin-right:20px;">Blog</a>
+  <a href="/contact">Contact</a>
+</nav>
+
+<div style="font-style: italic; color: gray; margin-bottom: 2em;">
+  ~~Yes, this is just my digital twin. The real me is probably debugging something.~~
+</div>
+
 # Hey there! I'm Ilias Chrysovergis 👋
 
 ### XR Developer | Researcher | Entrepreneur | Professional Reality Bender
 
 Welcome to my corner of the internet, where virtual worlds meet real-world impact (and occasionally, where my code actually compiles on the first try).
-
-[About](/about) | [Projects](/projects) | [Research](/research) | [Blog](/blog) | [Contact](/contact)
 
 ---
 

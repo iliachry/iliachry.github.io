@@ -1,1 +1,7 @@
-theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+title: iliachry
+description: My personal tech dimension
+theme: jekyll-theme-hacker

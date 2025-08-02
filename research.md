@@ -1,9 +1,15 @@
 ---
 layout: default
-title: Research
+title: ''
 ---
 
-[Home](/) | [About](/about) | [Projects](/projects) | [Blog](/blog) | [Contact](/contact)
+<nav style="margin-bottom:2em; font-size:1.1em;">
+  <a href="/" style="margin-right:20px;">About</a>
+  <a href="/project" style="margin-right:20px;">Projects</a>
+  <a href="/research" style="margin-right:20px;">Research</a>
+  <a href="/blog" style="margin-right:20px;">Blog</a>
+  <a href="/contact">Contact</a>
+</nav>
 
 # Research & Publications
 
