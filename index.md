@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 'Ilias Chrysovergis | XR Developer & Researcher'
+title: 'Ilias Chrysovergis | Software Architect/Developer & Researcher'
 ---
 
 # Hey there! I'm Ilias Chrysovergis 👋

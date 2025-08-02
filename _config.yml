@@ -3,5 +3,5 @@ plugins:
   - jekyll-seo-tag
 
 title: iliachry
-description: My personal tech dimension
+description: Ideas rendering in real time (some bugs and lag may apply).
 theme: jekyll-theme-hacker
