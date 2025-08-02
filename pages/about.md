@@ -7,7 +7,7 @@ title: 'About | Ilias Chrysovergis'
 
 ## The Journey So Far
 
-I'm **Ilias Chrysovergis**, a technology entrepreneur, software developer and researcher who believes the most interesting problems are the ones everyone says are impossible to solve. My path has been anything but conventional - from convincing military generals about VR's potential to building empathy-measuring applications that win global competitions.
+I'm **Ilias Chrysovergis**, a software architect/developer, researcher, and technology entrepreneur, who believes the most interesting problems are the ones everyone says are impossible to solve. My path has been anything but conventional - from convincing military generals about VR's potential to building empathy-measuring applications that win global competitions.
 
 ## Education & Background
 
@@ -41,13 +41,13 @@ This belief drives everything I do - from the XR applications I develop to the r
 
 ## Fun Facts
 
-- ☕ I run on Coke Zero, Freddo Espresso and the occasional deadline-induced adrenaline rush
+- ☕ I run on Coke Zero, Freddo Espresso, and the occasional deadline-induced adrenaline rush
 - 🎮 I once convinced military generals that VR training was revolutionary (spoiler: it was)
 - 🌊 I'm building digital twins for water systems because even H2O deserves a virtual counterpart
 - 🏛️ Based in Peraia, Thessaloniki – Where I debug code with a view of the Thermaikos Gulf (because even virtual reality needs a real reality backup)
 
 ## Looking Forward
 
-Currently expanding Metatopia across Greece and Cyprus while advancing my PhD research. Always interested in collaborating on projects that push the boundaries of what's possible with VR, AR, and emerging technologies.
+Currently expanding Metatopia across Greece and Cyprus while advancing my PhD research. Always interested in collaborating on projects that push the boundaries of what's possible with XR and emerging technologies.
 
 **Ready to build the future together?** [Let's connect!](/contact)
