@@ -43,8 +43,6 @@ body[data-theme="light"] {
 html[data-theme="light"] header,
 body[data-theme="light"] header {
   background-color: #ffffff !important;
-  border-bottom: 1px solid #e0e0e0 !important;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
 }
 
 html[data-theme="light"] a,
@@ -83,4 +81,102 @@ html[data-theme="light"] .container,
 body[data-theme="light"] .container {
   background-color: #ffffff !important;
   color: #000000 !important;
+}
+
+// Button styling for both themes
+.btn {
+  transition: all 0.3s ease !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+
+// Dark theme button colors
+.btn {
+  background: #238636 !important;
+  border: 1px solid #2ea043 !important;
+  color: #ffffff !important;
+}
+
+.btn:hover {
+  background: #2ea043 !important;
+  border-color: #46954a !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;
+}
+
+.btn-github {
+  background: #24292e !important;
+  border: 1px solid #444d56 !important;
+}
+
+.btn-github:hover {
+  background: #444d56 !important;
+  border-color: #6a737d !important;
+}
+
+// Light theme button overrides
+html[data-theme="light"] .btn,
+body[data-theme="light"] .btn {
+  background: #0969da !important;
+  border: 1px solid #0969da !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="light"] .btn:hover,
+body[data-theme="light"] .btn:hover {
+  background: #0860ca !important;
+  border-color: #0860ca !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(9, 105, 218, 0.3) !important;
+}
+
+html[data-theme="light"] .btn-github,
+body[data-theme="light"] .btn-github {
+  background: #24292f !important;
+  border: 1px solid #24292f !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="light"] .btn-github:hover,
+body[data-theme="light"] .btn-github:hover {
+  background: #32383f !important;
+  border-color: #32383f !important;
+  color: #ffffff !important;
+}
+
+// Make green elements more visible in light mode
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] .highlight,
+body[data-theme="light"] h1,
+body[data-theme="light"] h2,
+body[data-theme="light"] h3,
+body[data-theme="light"] .highlight {
+  color: #238636 !important;
+}
+
+// Also target any elements with the light green color
+html[data-theme="light"] *[style*="#90a959"],
+html[data-theme="light"] *[style*="#a5c25c"],
+body[data-theme="light"] *[style*="#90a959"],
+body[data-theme="light"] *[style*="#a5c25c"] {
+  color: #238636 !important;
+}
+
+// Use the same green for dashed lines in light mode
+html[data-theme="light"] hr,
+body[data-theme="light"] hr {
+  border: none !important;
+  border-top: 1px dashed #238636 !important;
+  margin: 20px 0 !important;
+}
+
+html[data-theme="light"] header,
+body[data-theme="light"] header {
+  background-color: #ffffff !important;
+  border-bottom: 1px dashed #238636 !important;
 }
