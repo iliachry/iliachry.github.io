@@ -1,3 +1,11 @@
+---
+layout: minimal
+title: "Flamingo Living - Privacy Policy"
+permalink: /pages/flamingo-living-privacy-policy
+sitemap: false
+search: exclude
+---
+
 # Privacy Policy for Flamingo Living Mobile App
 
 **Last Updated: August 7, 2025**
