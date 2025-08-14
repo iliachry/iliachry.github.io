@@ -32,7 +32,7 @@ keywords: 'Ilias Chrysovergis publications, XR research papers, Machine Learning
 
 ### **Wireless Communications & Signal Processing**
 
-**A Digital Twin Based Reconfigurable Intelligent Surface Phase Adaptation Using Spiking Reinforcement Learning Policy Optimization**
+**"A Digital Twin Based Reconfigurable Intelligent Surface Phase Adaptation Using Spiking Reinforcement Learning Policy Optimization"**
 *Optimizing intelligent surfaces in wireless networks using digital twin and spiking reinforcement learning techniques.*
 
 **"Low-complexity random rotation-based schemes for intelligent reflecting surfaces"**
