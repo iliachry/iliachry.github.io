@@ -16,7 +16,7 @@ I turn crazy ideas into working code, and somehow people pay me for it.
 
 ## About Me
 
-I'm a **Co-Founder & CEO/CTO of Metatopia**, Greece's first Metaverse Studio, where we're building the future one voxel at a time. When I'm not busy convincing people that XR isn't just fancy gaming, I'm a **3D Developer at National Technical University of Athens**, a **Lecturer at Mediterranean College - University of Derby** and a **PhD candidate at University of Thessaly** who's still trying to explain my research to my parents.
+I'm a **Co-Founder & CEO/CTO of Metatopia**, Greece's first Metaverse Studio, where we're building the future one voxel at a time. When I'm not busy convincing people that XR isn't just fancy gaming, I'm a **Full-Stack Developer at National Technical University of Athens**, a **Lecturer at Mediterranean College - University of Derby** and a **PhD candidate at University of Thessaly** who's still trying to explain his research to his parents.
 
 My journey started at **Aristotle University of Thessaloniki** (MEng Electrical & Computer Engineering), took a detour through **Imperial College London** (MSc in Communications & Signal Processing), had a brief but educational stint as a PhD candidate at **University of Cyprus** (turns out academic chemistry matters more than actual chemistry), and somehow landed me in the wonderful world of making technology.
 
@@ -33,7 +33,7 @@ Co-founded and led **Team AMANDA** to global victory with a VR/AR application th
 Co-founder of **Metatopia**, Greece's first Metaverse Studio, where we create digital twins, XR training platforms, and immersive experiences that bridge virtual and real worlds.
 
 ### 🔬 Research & Innovation
-PhD candidate working on metaverse technologies for wireless systems, published researcher in virtual reality, artificial intelligence, signal processing, and wireless communications, with a focus on making technology more human-centered.
+PhD candidate working on metaverse technologies for wireless systems, published researcher in extended reality, artificial intelligence, signal processing, and wireless communications, with a focus on making technology more human-centered.
 
 ---
 
@@ -48,6 +48,8 @@ PhD candidate working on metaverse technologies for wireless systems, published 
 **Digital Twins**: Creating digital doppelgangers that are actually useful
 
 **Geometric Algebra**: Yes, this is a real thing, and yes, it's as cool as it sounds
+
+**Topos Theory**: Where mathematics meets the multiverse of logic
 
 **Programming Languages**: Fluent in multiple dialects of computer conversation
 

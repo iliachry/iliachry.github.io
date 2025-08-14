@@ -9,14 +9,14 @@ keywords: 'Ilias Chrysovergis about, XR developer biography, Extended Reality re
 
 ## The Journey So Far
 
-I'm **Ilias Chrysovergis**, a software architect/developer, researcher, and technology entrepreneur, who believes the most interesting problems are the ones everyone says are impossible to solve. My path has been anything but conventional - from convincing military generals about VR's potential to building empathy-measuring applications that win global competitions.
+I'm **Ilias Chrysovergis**, a software architect, XR developer, researcher, and technology entrepreneur, who believes the most interesting problems are the ones everyone says are impossible to solve. My path has been anything but conventional - from convincing military generals about VR's potential to building empathy-measuring applications that win global competitions.
 
 ## Education & Background
 
 ### 🎓 Academic Foundation
 - **MEng Electrical & Computer Engineering** (Honors) - Aristotle University of Thessaloniki (AUTH)
 - **MSc in Communications & Signal Processing** - Imperial College London  
-- **Currently: PhD Candidate** - Advancing XR technologies for wireless communications systems
+- **Currently: PhD Candidate** - University of Thessaly
 
 ### 🏆 Key Achievements
 - **Multiple Excellence Awards** from AUTH Rector (2016, 2017, 2018)
@@ -52,6 +52,10 @@ This belief drives everything I do - from the XR applications I develop to the r
 
 | Achievement | Location & Year |
 |-------------|----------------|
+| **Demo at ICMLCN** | Barcelona, 2025 |
+| **Talk at FOSSCOMM 2024** | Greece, 2024 |
+| **Talk at AI, Cloud & Modern Workplace Conference 2024** | Worldwide, 2024 |
+| **Meta Presence Platform Hackathon Participant** | London, 2023 | 
 | **Poster Presentation at SIGGRAPH International Conference** | Vancouver, 2022 |
 | **[Keras.io](https://keras.io/examples/rl/ppo_cartpole/){:target="_blank"} Reinforcement Learning Implementation Publication** | Worldwide, 2021 |
 | **1st Place in Cyprus Science Communication Competition** | Cyprus, 2019 |
@@ -62,7 +66,7 @@ This belief drives everything I do - from the XR applications I develop to the r
 | **[AMANDA Project](https://github.com/iliachry/AMANDA){:target="_blank"} Presentation at Microsoft Ignite Conference** | Atlanta, 2016 |
 | **1st Place in Microsoft Imagine Cup World Championship** | Seattle, 2016 |
 | **Excellence Award from Aristotle University of Thessaloniki Rector** | Greece, 2016/2017/2018 |
-| **Finalist in Greek National Business Competition** | Greece, 2016 |
+| **Finalist in Greek National Debating Competition** | Greece, 2016 |
 | **Finalist in BEST European EBEC Competition** | Portugal, 2015 |
 
 ---

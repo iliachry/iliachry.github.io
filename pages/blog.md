@@ -5,7 +5,7 @@ title: 'Blog | Ilias Chrysovergis'
 
 # Blog & Insights
 
-*Thoughts on VR development, metaverse trends, research discoveries, and the intersection of technology with human experience.*
+*Thoughts on XR development, metaverse trends, research discoveries, and the intersection of technology with human experience.*
 
 ---
 
@@ -56,7 +56,7 @@ Thoughts on how technology should enhance rather than replace human connection a
 Exploring how XR and emerging technologies can solve real human problems rather than just creating impressive demos.
 
 ### **The Science Behind XR**
-Breaking down the technical, psychological, and physiological aspects that make virtual reality truly immersive.
+Breaking down the technical, psychological, and physiological aspects that make extended reality truly immersive.
 
 ### **Metaverse Realism**
 Cutting through the hype to discuss practical applications, challenges, and the actual timeline for metaverse adoption.
@@ -87,7 +87,7 @@ I believe the best insights come from discussion and debate. Each article will e
 
 ### **What Would You Like to Read About?**
 
-I'm always looking for topics that would be valuable to the VR development, research, and entrepreneurship communities. Some areas I'm considering:
+I'm always looking for topics that would be valuable to the XR development, research, and entrepreneurship communities. Some areas I'm considering:
 
 - **Technical Tutorials**: Step-by-step guides for XR development challenges
 - **Case Studies**: Detailed analyses of successful (and failed) XR projects

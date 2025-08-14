@@ -5,7 +5,7 @@ title: 'Contact | Ilias Chrysovergis'
 
 # Let's Connect
 
-*Whether you're interested in VR collaboration, metaverse solutions, research partnerships, or just want to discuss the future of technology – I'd love to hear from you.*
+*Whether you're interested in XR collaboration, metaverse solutions, software development, research partnerships, or just want to discuss the future of technology – I'd love to hear from you.*
 
 ---
 
@@ -44,7 +44,7 @@ For metaverse solutions, digital twin development, XR training platforms, and im
 
 **Services Include:**
 - Digital Twin development and implementation
-- Custom VR/AR application development  
+- Custom XR application development  
 - Industry 4.0 training and simulation solutions
 - Immersive educational experiences
 - Virtual museum and exhibition creation
@@ -55,7 +55,7 @@ Open to academic partnerships, joint research projects, and industry-academia co
 
 **Areas of Interest:**
 - Extended Reality (VR/AR/MR) applications
-- Machine learning in immersive systems
+- Machine learning in immersive systems, software engineering, and wireless communications
 - Digital twin technology development
 - Wireless communications research
 - Human-computer interaction studies
@@ -65,23 +65,23 @@ Open to academic partnerships, joint research projects, and industry-academia co
 ## 🎯 What I'm Looking For
 
 ### **Collaboration Opportunities**
-- VR/AR development projects with social impact
+- XR development projects with social impact
 - Research partnerships in emerging technologies  
 - Metaverse applications for education and training
 - International expansion opportunities for Metatopia
 - Speaking engagements and conference presentations
 
 ### **Mentorship & Education**
-- Mentoring emerging VR developers
+- Mentoring emerging software developers
 - Guest lectures and university presentations
 - Startup advice for technology entrepreneurs
-- Research guidance for students and early-career researchers
+- Guidance for students and early-career researchers
 
 ### **Industry Partnerships**
 - Companies seeking metaverse strategy guidance
 - Organizations needing digital twin solutions
-- Educational institutions interested in VR training
-- Healthcare providers exploring VR applications
+- Educational institutions interested in XR training
+- Healthcare providers exploring XR applications
 
 ---
 
@@ -144,13 +144,13 @@ For urgent matters, please:
 
 I believe the most interesting challenges are the ones everyone says are impossible. Whether you're looking to:
 
-- **Build** the next generation of XR applications
+- **Build** the next generation of software applications
 - **Research** emerging technologies with real-world impact  
 - **Create** immersive experiences that change how people learn and work
 - **Develop** digital twin solutions for complex systems
 - **Explore** the practical applications of metaverse technologies
 
-**I'd love to hear about your impossible project.**
+**I'd love to hear about your project.**
 
 ---
 

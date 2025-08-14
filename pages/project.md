@@ -5,26 +5,7 @@ title: 'Projects | Ilias Chrysovergis'
 
 # Projects & Innovations
 
-*A collection of ventures, competitions, and collaborations that push the boundaries of virtual reality, research, and real-world impact.*
-
----
-
-## 🏆 Competition Winners
-
-### **AMANDA - VR Anti-Bullying Platform**
-**Microsoft Imagine Cup 2016 - World Champion**
-
-**The Challenge**: School bullying affects millions of students worldwide, but traditional anti-bullying programs often lack emotional impact and fail to build genuine empathy.
-
-**Our Solution**: Team AMANDA created a revolutionary VR application that immerses users in bullying scenarios from multiple perspectives, measuring empathy levels and helping build understanding through powerful virtual experiences.
-
-**Impact**:
-- 🥇 **1st Place** in World Citizenship Category, Seattle
-- 💰 **$50,000 Prize** from Microsoft  
-- 📜 **U.S. Patent** secured for the innovative approach
-- 🌍 **Global Recognition** for addressing social issues through technology
-
-**Technical Innovation**: Combined VR immersion with empathy measurement algorithms, creating a new category of social-impact applications.
+*A collection of ventures, competitions, and collaborations that push the boundaries of extended reality, research, and real-world impact.*
 
 ---
 
@@ -37,14 +18,33 @@ Building the infrastructure for Greece's digital future through comprehensive me
 
 **What We're Building**:
 - **Digital Twins** that mirror and predict real-world systems
-- **VR Training Platforms** for industry 4.0 and professional development  
+- **XR Training Platforms** for industry 4.0 and professional development  
 - **Immersive Educational Experiences** transforming how we learn
 - **Virtual Museums & Exhibitions** preserving culture in digital space
 - **Simulation Tools** for predictive analytics and optimization
 
-**Technical Stack**: Cutting-edge VR/AR development, machine learning integration, cloud computing, and real-time 3D rendering.
+**Technical Stack**: Cutting-edge XR development, machine learning integration, cloud computing, and real-time 3D rendering.
 
 **Locations**: Operating across Thessaloniki, Greece and Nicosia, Cyprus
+
+---
+
+## 🏆 Competition Winners
+
+### **AMANDA - VR/AR Anti-Bullying Platform**
+**Microsoft Imagine Cup 2016 - World Champion**
+
+**The Challenge**: School bullying affects millions of students worldwide, but traditional anti-bullying programs often lack emotional impact and fail to build genuine empathy.
+
+**Our Solution**: Team AMANDA created a revolutionary VR/AR application that immerses users in bullying scenarios from multiple perspectives, measuring empathy levels and helping build understanding through powerful virtual experiences.
+
+**Impact**:
+- 🥇 **1st Place** in World Citizenship Category, Seattle
+- 💰 **$50,000 Prize** from Microsoft  
+- 📜 **U.S. Patent** secured for the innovative approach
+- 🌍 **Global Recognition** for addressing social issues through technology
+
+**Technical Innovation**: Combined VR/AR immersion with empathy measurement algorithms, creating a new category of social-impact applications.
 
 ---
 
@@ -68,7 +68,7 @@ Building the infrastructure for Greece's digital future through comprehensive me
 ### **MAGES 4.0 - Medical VR Training**
 **Research Collaboration**
 
-Contributing to next-generation medical training platforms that use VR and computer vision to teach complex surgical procedures.
+Contributing to next-generation medical training platforms that use VR and AI to teach complex surgical procedures.
 
 **Innovation**: Combines immersive VR environments with AI-powered assessment to provide personalized medical training experiences.
 
@@ -86,10 +86,10 @@ Contributing to next-generation medical training platforms that use VR and compu
 ## 🔬 Research Projects
 
 ### **VR Surgical Training with CNNs**
-Developing computer vision systems that assess surgical procedures performed in virtual reality, providing automated feedback and skill evaluation.
+Developing AI systems that assess surgical procedures performed in virtual reality, providing automated feedback and skill evaluation.
 
 ### **Wireless Communication Optimization**
-Research on "Random Rotation-based Low-Complexity Schemes for Intelligent Reflecting Surfaces" published in IEEE Transactions on Wireless Communications.
+Research on "Random Rotation-based Low-Complexity Schemes for Intelligent Reflecting Surfaces" published in IEEE Annual International Symposium on Personal, Indoor and Mobile Radio Communications.
 
 ### **COVID-19 Biofeedback Games**
 Created smartphone-based biofeedback games designed to boost immune system response during the pandemic.
@@ -112,10 +112,10 @@ Authored the [official Keras example for Proximal Policy Optimization](https://k
 **Technical Contribution**: Complete implementation of PPO algorithm with detailed explanations, making advanced reinforcement learning accessible to developers worldwide across multiple platforms.
 
 ### **GitHub Portfolio**
-Active contributor to open-source projects related to VR development, machine learning, and academic research.
+Active contributor to open-source projects related to XR development, machine learning, and academic research.
 
 **Notable Repositories**:
-- VR development frameworks and tools
+- Unity development frameworks and tools
 - Academic research implementations
 - Educational resources for emerging developers
 
@@ -129,7 +129,7 @@ Active contributor to open-source projects related to VR development, machine le
 Scaling our metaverse solutions across southeastern Europe while maintaining our commitment to meaningful, practical applications.
 
 ### **PhD Research**
-Advancing the theoretical foundations of VR/AR technologies through focused academic research.
+Advancing the theoretical foundations of wireless metaverse technologies through focused academic research.
 
 ### **New Collaborations**
 Always exploring partnerships that combine cutting-edge technology with real-world impact.

@@ -15,6 +15,9 @@ keywords: 'Ilias Chrysovergis publications, XR research papers, Machine Learning
 
 ### **Virtual Reality & Extended Reality**
 
+**"Metaverse Framework for Wireless Systems Management"**
+*Innovative framework integrating metaverse technologies with wireless network infrastructure*
+
 **"Less Is More: Efficient Networked VR Transformation Handling Using Geometric Algebra"**
 *Advanced optimization techniques for virtual reality networking systems*
 
@@ -28,6 +31,9 @@ keywords: 'Ilias Chrysovergis publications, XR research papers, Machine Learning
 *Methodology for capturing and analyzing user interactions in virtual reality systems*
 
 ### **Wireless Communications & Signal Processing**
+
+**A Digital Twin Based Reconfigurable Intelligent Surface Phase Adaptation Using Spiking Reinforcement Learning Policy Optimization**
+*Optimizing intelligent surfaces in wireless networks using digital twin and spiking reinforcement learning techniques.*
 
 **"Low-complexity random rotation-based schemes for intelligent reflecting surfaces"**
 *Wireless communication optimization using innovative signal processing techniques*
@@ -85,8 +91,8 @@ Revolutionary approach to behavioral analysis through immersive virtual reality 
 ## 📊 Publication Impact & Recognition
 
 ### **Academic Contributions**
-- **8+ peer-reviewed research articles** across multiple domains
-- **IEEE Transactions** on Wireless Communications publication
+- **10 research articles** across multiple domains
+- **IEEE and ACM** publications
 - **Medical VR training** advancement through MAGES 4.0 collaboration
 - **COVID-19 response** through innovative mobile health applications
 
@@ -103,8 +109,8 @@ Revolutionary approach to behavioral analysis through immersive virtual reality 
 - **Global developer community** impact through Keras/TensorFlow ecosystem
 
 ### **Research Areas Coverage**
-- **Virtual & Augmented Reality** applications and optimization
-- **Machine Learning & Deep Learning** for immersive systems
+- **Extended Reality** applications and optimization
+- **Machine Learning & Deep Learning** for immersive systems, software engineering, and wireless communications
 - **Wireless Communications** and signal processing
 - **Human-Computer Interaction** in virtual environments
 - **Medical Technology** and VR training systems
@@ -127,7 +133,7 @@ Revolutionary approach to behavioral analysis through immersive virtual reality 
 ## 🤝 Research Collaborations
 
 **Interested in collaboration?** I'm always open to:
-- **Joint research projects** in VR/AR and machine learning
+- **Joint research projects** in XR and AI
 - **Academic partnerships** and cross-institutional research
 - **Industry collaborations** for practical application development
 - **Student mentorship** and research guidance
