@@ -18,6 +18,7 @@ GEM
     ffi (1.17.2-arm-linux-gnu)
     ffi (1.17.2-arm-linux-musl)
     ffi (1.17.2-arm64-darwin)
+    ffi (1.17.2-x64-mingw-ucrt)
     ffi (1.17.2-x86-linux-gnu)
     ffi (1.17.2-x86-linux-musl)
     ffi (1.17.2-x86_64-darwin)
@@ -77,6 +78,10 @@ GEM
       ffi (~> 1.9)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2025.2)
+      tzinfo (>= 1.0.0)
     unicode-display_width (1.8.0)
     webrick (1.9.1)
 
@@ -87,6 +92,7 @@ PLATFORMS
   arm-linux-musl
   arm64-darwin
   ruby
+  x64-mingw-ucrt
   x86-linux-gnu
   x86-linux-musl
   x86_64-darwin
@@ -99,8 +105,11 @@ DEPENDENCIES
   csv
   jekyll (~> 4.0.0)
   jekyll-feed (~> 0.12)
+  jekyll-seo-tag
   jekyll-sitemap
   jekyll-theme-hacker (~> 0.2.0)
+  tzinfo (~> 2.0)
+  tzinfo-data
   webrick
 
 BUNDLED WITH

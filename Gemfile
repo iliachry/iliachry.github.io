@@ -6,9 +6,16 @@ gem "csv"
 gem "base64"
 gem "bigdecimal"
 gem "webrick"
+# Required on Windows for timezone support
+
+gem "tzinfo", "~> 2.0"
+
+gem "tzinfo-data"
 
 # If you have any plugins, put them here!
+
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-sitemap"
+  gem "jekyll-seo-tag"
 end 
