@@ -11,25 +11,18 @@ title: 'Blog | Ilias Chrysovergis'
 
 ## 📝 Latest Articles
 
-### Coming Soon: Fresh Perspectives on Technology
-
-I'm currently preparing a series of articles that dive deep into the topics I'm most passionate about. Here's what you can expect:
-
-### **Planned Topics**
-
-**"Building Empathy Through Virtual Reality: Lessons from Microsoft Imagine Cup"**
-*The story behind AMANDA and how VR can address social issues*
-
-**"Greece's Metaverse Journey: Why We Started Metatopia"**  
-*The challenges and opportunities of building metaverse solutions in Greece*
-
-**"The Future of VR Training: Beyond Gaming Into Professional Development"**
-*Why VR training is revolutionizing everything from medicine to military applications*
-
-**"Digital Twins in Practice: Real-World Applications Beyond the Hype"**
-*Practical insights from building digital twin solutions for urban systems*
+{% for post in site.posts %}
+<div class="post-preview">
+  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  <small>{{ post.date | date: "%-d %B %Y" }}</small>
+  <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 40 }}</p>
+  {% if post.tags %}
+  <small>tags: <em>{{ post.tags | join: "</em> - <em>" }}</em></small>
+  {% endif %}
+</div>
 
 ---
+{% endfor %}
 
 ## 🎯 What You'll Find Here
 
@@ -50,29 +43,7 @@ Thoughts on how technology should enhance rather than replace human connection a
 
 ---
 
-## 🌟 Featured Themes
-
-### **Human-Centered Technology**
-Exploring how XR and emerging technologies can solve real human problems rather than just creating impressive demos.
-
-### **The Science Behind XR**
-Breaking down the technical, psychological, and physiological aspects that make extended reality truly immersive.
-
-### **Metaverse Realism**
-Cutting through the hype to discuss practical applications, challenges, and the actual timeline for metaverse adoption.
-
-### **Research Translation**
-How to take academic research and transform it into products and services that create value in the real world.
-
-### **Global Tech from Greece**
-Perspectives on building international technology companies from Greece and southeastern Europe.
-
----
-
 ## 📬 Stay Updated
-
-### **Subscribe for Updates**
-*Coming Soon: Newsletter signup for latest articles and insights*
 
 ### **Join the Conversation**
 I believe the best insights come from discussion and debate. Each article will encourage:
@@ -101,7 +72,7 @@ I'm always looking for topics that would be valuable to the XR development, rese
 
 ## 🔍 Archive & Categories
 
-*Once articles are published, they'll be organized by:*
+Posts are organized by:
 
 - **XR Development** 
 - **Research & Academia**
@@ -109,21 +80,3 @@ I'm always looking for topics that would be valuable to the XR development, rese
 - **Technology Trends**
 - **Case Studies**
 - **Personal Reflections**
-
----
-
-## ✍️ Writing Philosophy
-
-### **Accessible Expertise**
-Complex topics explained clearly, without sacrificing depth or accuracy.
-
-### **Practical Focus**  
-Every article should provide actionable insights or practical knowledge readers can apply.
-
-### **Honest Perspective**
-Sharing both successes and failures, with lessons learned from each experience.
-
-### **Community Building**
-Writing that encourages discussion, collaboration, and knowledge sharing within the tech community.
-
-**Ready to explore the intersection of technology and human experience?** Check back soon for the first articles, or [contact me](/contact) with your questions and suggestions!
