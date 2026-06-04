@@ -37,7 +37,7 @@ export function BioSection() {
                 My path has taken me through Imperial College London, the National Technical
                 University of Athens, and research labs across Europe, while simultaneously
                 co-founding Metatopia — Greece&apos;s first metaverse studio — and building
-                products across agriculture, creative tech, and decision-support systems.
+                products across XR, creative tech, and decision-support systems.
               </p>
               <p>
                 I&apos;m currently a PhD candidate at the University of Thessaly, investigating

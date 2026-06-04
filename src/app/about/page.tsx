@@ -55,7 +55,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   I co-founded Metatopia — Greece&apos;s first metaverse studio — and
-                  I&apos;m building products across agriculture, creative tech, and
+                  I&apos;m building products across XR, creative tech, and
                   decision-support systems. I&apos;m simultaneously a PhD candidate,
                   a university lecturer, and an engineer who has shipped production
                   code for defense, healthcare, water management, and open-source
@@ -97,6 +97,12 @@ export default function AboutPage() {
                 title: "Full-Stack Developer — NTUA",
                 detail:
                   "Building digital twin systems for urban water infrastructure. Hydroinformatics visualization and flood simulation platforms.",
+              },
+              {
+                period: "2020 – 2022",
+                title: "VR & ML Software Engineer — ORamaVR",
+                detail:
+                  "Developed 3D session recording and ML-based user performance evaluation for the MAGES medical VR training SDK. Research on surgical assessment with CNNs and geometric algebra for networked VR.",
               },
               {
                 period: "2019 – 2022",

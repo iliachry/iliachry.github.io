@@ -27,7 +27,7 @@ export const projects: Project[] = [
     title: "Flood Simulation & Hydroinformatics Visualization",
     domain: "Hydroinformatics · Geospatial · Digital Twins",
     summary:
-      "Building real-time flood simulation and visualization systems that transform complex hydrological data into actionable decision-support tools for urban water management.",
+      "Building real-time flood simulation and visualization systems that transform complex hydrological data into actionable decision-support tools for urban water management, as part of the EU Horizon 2020 IMPETUS project.",
     problem:
       "Urban water systems are complex and opaque. Flood risk assessment requires integrating massive sensor networks, hydrological models, and geospatial data into interfaces that non-specialists can act on — in real time.",
     role: "Full-Stack Developer & Systems Architect at NTUA",
@@ -49,9 +49,9 @@ export const projects: Project[] = [
       "Decision-support system design",
     ],
     outcome:
-      "Developed a comprehensive digital twin platform for urban water infrastructure enabling proactive maintenance and real-time flood risk assessment.",
+      "Developed a Regional Digital Twin for the Attica region, providing a comprehensive platform for urban water infrastructure enabling proactive maintenance and real-time flood risk assessment.",
     impact:
-      "Deployed across urban water networks, enabling municipalities to shift from reactive to predictive infrastructure management.",
+      "Deployed as part of the EU Horizon 2020 IMPETUS project across urban water networks, enabling municipalities to shift from reactive to predictive infrastructure management.",
     links: [
       { label: "UWMH Group (NTUA)", url: "https://uwmh.eu/" },
       { label: "IMPETUS Project", url: "https://impetus-project.eu/" },

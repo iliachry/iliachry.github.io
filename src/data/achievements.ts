@@ -29,7 +29,7 @@ export const achievements: Achievement[] = [
   },
   {
     title: "AI, Cloud & Modern Workplace Conference",
-    detail: "Invited speaker on AI and spatial computing",
+    detail: "Presented on leveraging Azure Digital Twins for the Industrial Metaverse",
     year: "2024",
     location: "International",
     category: "recognition",
@@ -92,7 +92,7 @@ export const achievements: Achievement[] = [
   },
   {
     title: "Microsoft Imagine Cup — World Champion",
-    detail: "1st Place with Team AMANDA — VR/AR anti-bullying platform ($50,000 prize)",
+    detail: "1st Place, World Citizenship category, with Team AMANDA — VR/AR anti-bullying platform ($50,000 prize)",
     year: "2016",
     location: "Seattle",
     category: "award",
