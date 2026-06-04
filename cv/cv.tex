@@ -1,0 +1,282 @@
+% ============================================
+%  CV — Ilias Chrysovergis
+%  Design system: iliachry.gr (amber accent, editorial sans-serif)
+%  Compile with: lualatex cv.tex
+% ============================================
+\documentclass[a4paper,10pt]{article}
+
+% ---------- Fonts ----------
+\usepackage{fontspec}
+\setmainfont{Inter}
+\setsansfont{Inter}
+\setmonofont{Consolas}[Scale=0.85]
+
+% ---------- Packages ----------
+\usepackage[
+  top=1.6cm,
+  bottom=1.6cm,
+  left=1.8cm,
+  right=1.8cm,
+]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{parskip}
+\usepackage{multicol}
+
+% ---------- Colors (match website tokens) ----------
+\definecolor{accent}{HTML}{D4600A}       % --accent
+\definecolor{textprimary}{HTML}{1A1A18}  % --text-primary
+\definecolor{textsecondary}{HTML}{5C5C57}% --text-secondary
+\definecolor{texttertiary}{HTML}{8A8A85} % --text-tertiary
+\definecolor{border}{HTML}{E0E0DB}       % --border-color
+\definecolor{surface}{HTML}{F2F2ED}      % --surface
+
+% ---------- Hyperlinks ----------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  pdfauthor={Ilias Chrysovergis},
+  pdftitle={Ilias Chrysovergis — CV},
+  pdfsubject={Software Architect, Researcher, Founder},
+}
+
+% ---------- Global ----------
+\color{textprimary}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ---------- Section Styling ----------
+% Uppercase label + rule
+% NB: define BORDER alias because \MakeUppercase leaks into the after-rule
+\colorlet{BORDER}{border}
+\titleformat{\section}{%
+  \color{accent}\fontsize{8}{10}\selectfont\bfseries\MakeUppercase%
+}{}{0em}{}[\vspace{2pt}{\color{border}\hrule height 0.4pt}]
+\titlespacing{\section}{0pt}{14pt}{6pt}
+
+% ---------- Custom Commands ----------
+\newcommand{\entry}[4]{%
+  \vspace{5pt}
+  {\fontsize{9}{11}\selectfont\color{texttertiary}#1\hfill#2}\\[1pt]
+  {\fontsize{10.5}{13}\selectfont\bfseries #3}\\[1pt]
+  {\fontsize{9}{12}\selectfont\color{textsecondary}#4}
+  \vspace{2pt}
+}
+
+\newcommand{\entrycompact}[3]{%
+  \vspace{4pt}
+  {\fontsize{9}{11}\selectfont\color{texttertiary}#1}\\[1pt]
+  {\fontsize{10}{12}\selectfont\bfseries #2}\\[1pt]
+  {\fontsize{9}{12}\selectfont\color{textsecondary}#3}
+  \vspace{1pt}
+}
+
+\newcommand{\achievement}[3]{%
+  {\fontsize{9}{11}\selectfont\color{texttertiary}#1}\hspace{8pt}%
+  {\fontsize{9.5}{12}\selectfont #2}\hfill%
+  {\fontsize{8.5}{11}\selectfont\color{texttertiary}#3}\\[3pt]%
+}
+
+\newcommand{\pub}[4]{%
+  \vspace{3pt}
+  {\fontsize{9}{12}\selectfont\color{texttertiary}#1\hspace{6pt}{\color{border}|}\hspace{6pt}{\color{texttertiary}#2}}\\[1pt]
+  {\fontsize{9.5}{12}\selectfont #3}\\[1pt]
+  {\fontsize{8.5}{11}\selectfont\color{textsecondary}\textit{#4}}
+  \vspace{1pt}
+}
+
+% ============================================
+%  DOCUMENT
+% ============================================
+\begin{document}
+
+% ---------- HEADER ----------
+{%
+  \fontsize{28}{32}\selectfont\bfseries Ilias Chrysovergis\par
+}
+\vspace{4pt}
+{\fontsize{11}{14}\selectfont\color{textsecondary}%
+  Software Architect\hspace{4pt}{\color{border}·}\hspace{4pt}%
+  Researcher\hspace{4pt}{\color{border}·}\hspace{4pt}%
+  Founder%
+}
+
+\vspace{10pt}
+
+{\fontsize{9}{13}\selectfont\color{textsecondary}%
+  \faIcon{envelope}\hspace{4pt}\href{mailto:iliachry@iliachry.gr}{iliachry@iliachry.gr}%
+  \hspace{12pt}\faIcon{phone}\hspace{4pt}+30 698 629 30 42%
+  \hspace{12pt}\faIcon{globe}\hspace{4pt}\href{https://iliachry.gr}{iliachry.gr}%
+  \hspace{12pt}\faIcon{github}\hspace{4pt}\href{https://github.com/iliachry}{iliachry}%
+  \hspace{12pt}\faIcon{linkedin}\hspace{4pt}\href{https://linkedin.com/in/ilias-chrysovergis}{ilias-chrysovergis}%
+}
+
+\vspace{4pt}
+
+{\fontsize{9}{13}\selectfont\color{textsecondary}%
+  \faIcon{graduation-cap}\hspace{4pt}\href{https://scholar.google.com/citations?user=x5Zq1-QAAAAJ}{Google Scholar}%
+  \hspace{12pt}\faIcon{researchgate}\hspace{4pt}\href{https://www.researchgate.net/profile/Ilias-Chrysovergis}{ResearchGate}%
+  \hspace{12pt}\faIcon{orcid}\hspace{4pt}\href{https://orcid.org/0000-0002-5434-2175}{ORCID}%
+}
+
+\vspace{6pt}
+{\fontsize{9.5}{13}\selectfont\color{textsecondary}%
+Passionate about science \& technology and their impact on humanity. Creating solutions for real-life problems using cutting-edge tech: artificial intelligence, metaverse, software architecture.%
+}
+
+% ---------- AI & XR EXPERIENCE ----------
+\section{AI \& XR Experience}
+
+\entry{Jun 2025 -- Present}{Contract, Alexandroupoli, Greece}
+{Research Scientist — Democritus University of Thrace}
+{Conducting research on how AI and XR can be leveraged for systems thinking education.}
+
+\entry{Co-Founder/CTO \hfill Sep 2024 -- Sep 2025}{Experimentation, Thessaloniki, Greece}
+{QuimaXR}
+{An XR app offering immersive cinema experiences that deliver novel perspectives and storytelling approaches.}
+
+\entry{Founder/CEO/CTO \hfill Nov 2022 -- Sep 2025}{Thessaloniki, Greece / Nicosia, Cyprus}
+{Metatopia}
+{A metaverse studio building solutions for the 3D internet. Projects: (i) VR simulator for electric circuits, (ii) MR slot machine gaming with Kaizen/Betano, (iii) digital twin for wireless communication systems, (iv) EU open call consortia.}
+
+\entry{Lead ML \& XR Engineer \hfill Apr 2022 -- Oct 2024}{Contract, Thessaloniki, Greece}
+{CERTH/ITI}
+{(i) Led development of ExpertAssist AR "On-the-Job" toolkit for construction. (ii) Worked on OCR for Greek documents. (iii) Wrote deliverables for Greek and EU funded projects. (iv) Technical Lead of VARLAB XR team.}
+
+\entry{Software Engineer (ML \& VR) \hfill Sep 2020 -- Sep 2022}{Contract, Thessaloniki, Greece}
+{ORamaVR}
+{(i) VR surgical simulation development. (ii) Multiplayer functionality. (iii) Cloud data integration. (iv) 3D session recording \& replay SDK. (v) Supervised DL algorithm for surgical assessment. (vi) Co-authored four papers.}
+
+\entry{Machine Learning Engineer \hfill Apr 2020 -- Aug 2020}{Full-Time, Thessaloniki, Greece}
+{AUTH}
+{(i) Deep learning for gyroscope/accelerometer eating behavior detection. (ii) Real-time breathing rate estimation from audio signals.}
+
+\entry{Research Scientist \hfill Sep 2019 -- Mar 2020}{Full-Time, Nicosia, Cyprus}
+{University of Cyprus}
+{Research on fundamental limits of intelligent reflecting surfaces assisted wireless communications, and ML for wireless communications. Marie Skłodowska-Curie Fellow.}
+
+\entry{Software Engineer (VR) \hfill Nov 2018 -- Aug 2019}{Service, Thessaloniki, Greece}
+{Greek Army}
+{Designed and developed the first VR application for military infantry training. Presented to generals, the Chief of the Army, and the Deputy Minister of National Defense. Project received 30k+ EUR funding.}
+
+% ---------- OTHER EXPERIENCE ----------
+\section{Other Experience}
+
+\entry{Co-Founder/CTO \hfill Dec 2024 -- Present}{Experimentation, Thessaloniki, Greece}
+{PestView}
+{A cloud-based pest control management platform for scheduling appointments, monitoring pest activity, and utilizing operational data.}
+
+\entry{Lecturer \hfill Mar 2025 -- Present}{Contract, Thessaloniki, Greece}
+{International Hellenic University}
+{Teaching Augmented \& Virtual Reality at the MSc in Smart Environmental Sustainability.}
+
+\entry{Lead Full-Stack Developer \hfill Nov 2024 -- Present}{Contract, Athens, Greece}
+{NTUA}
+{Building digital twins in the Urban Water Management and Hydroinformatics Unit of the Civil Engineering Department.}
+
+\entry{Lecturer \hfill Oct 2024 -- Sep 2025}{Contract, Athens/Thessaloniki, Greece}
+{Mediterranean College · University of Derby}
+{(i) Taught Game Behavior, Virtual Environment Development, Game Development, and Computer Graphics at the BSc in Computer Games Programming. (ii) Supervised six final year projects.}
+
+% ---------- EDUCATION ----------
+\section{Education}
+
+\entrycompact{University of Cyprus \hfill Sep 2019 -- Sep 2020 {\color{texttertiary}(Paused)}}
+{PhD Electrical \& Computer Engineering}
+{Research on fundamental limits of intelligent reflecting surfaces assisted wireless communications, and machine learning for wireless communications.}
+
+\entrycompact{Imperial College London, EEE Department \hfill Oct 2017 -- Sep 2018}
+{MSc Communications \& Signal Processing \hfill {\normalfont\color{texttertiary}Grade: 71.8\%}}
+{Signal Processing, Machine Intelligence, Computer Vision, Big Data, Pattern Recognition, Distributed Networks, Stochastic Processes.}
+
+\entrycompact{Aristotle University of Thessaloniki (AUTH) \hfill Oct 2012 -- Jul 2017}
+{MEng Electrical \& Computer Engineering \hfill {\normalfont\color{texttertiary}Grade: 9.1/10 (Top 1\%)}}
+{Math, Physics, Electronics, Circuits, Algorithms, Programming, Electromagnetic Fields, Communications, Antennas \& Propagation, ML, Software Engineering, Signal Processing.}
+
+% ---------- ACHIEVEMENTS ----------
+\section{Achievements}
+
+\achievement{2025}{Demo at IEEE ICMLCN — Spiking RL \& Digital Twin research}{Barcelona}
+\achievement{2024}{Presented at FOSSCOMM — Free Open-Source Software Conference}{Thessaloniki}
+\achievement{2024}{Presented at AI, Data \& Modern Workplace conference (Microsoft MVPs)}{International}
+\achievement{2023}{Participated at Meta Presence Platform Hackathon}{London}
+\achievement{2022}{Poster at ACM SIGGRAPH 2022}{Vancouver}
+\achievement{2021}{Published official Keras PPO RL implementation (reviewed by F.\ Chollet)}{Global}
+\achievement{2019}{1st Place, Cyprus STEAME Communication Competition}{Cyprus}
+\achievement{2019}{Marie Skłodowska-Curie Scholarship Recipient}{Europe}
+\achievement{2019}{Honorable Mention by the Chief of the Greek Army}{Greece}
+\achievement{2018}{U.S.\ Patent Holder — VR behavioral analysis (No.\ 9965675)}{USA}
+\achievement{2017}{3rd Place, Global Student Challenge}{Hong Kong}
+\achievement{2016}{1st Place, Microsoft Imagine Cup — World Championship (\$50k)}{Seattle}
+\achievement{2016--18}{Distinction by AUTH's Rector (multiple awards)}{Greece}
+\achievement{2016}{Finalist at Greece Debating Tournament}{Greece}
+
+% ---------- RESEARCH WORK ----------
+\section{Research Work}
+
+\pub{2026}{Journal}
+{ExpertAssist: An "On-the-Job" augmented reality toolkit for assistance in the construction industry}
+{Computers \& Education: X Reality}
+
+\pub{2026}{Journal}
+{Metaverse Framework for Wireless Systems Management}
+{IEEE Internet of Things Magazine}
+
+\pub{2025}{Conference}
+{A Digital Twin Based Reconfigurable Intelligent Surface Phase Adaptation Using Spiking RL Policy Optimization}
+{IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN)}
+
+\pub{2022}{Journal}
+{Less Is More: Efficient Networked VR Transformation Handling Using Geometric Algebra}
+{Advances in Applied Clifford Algebras (Springer)}
+
+\pub{2022}{Journal}
+{MAGES 4.0: Accelerating the world's transition to medical VR training}
+{IEEE Computer Graphics and Applications}
+
+\pub{2022}{Journal}
+{Virtual Reality Medical Training for COVID-19 Swab Testing and PPE Handling}
+{Frontiers in Virtual Reality}
+
+\pub{2022}{Poster}
+{Recording and replaying psychomotor user actions in VR}
+{ACM SIGGRAPH 2022}
+
+\pub{2022}{Preprint}
+{Assessing unconstrained surgical cuttings in VR using CNNs}
+{arXiv}
+
+\pub{2020}{Journal}
+{Low-complexity random rotation-based schemes for intelligent reflecting surfaces}
+{IEEE Transactions on Wireless Communications}
+
+\pub{2020}{Conference}
+{Random rotation-based low-complexity schemes for intelligent reflecting surfaces}
+{IEEE Personal, Indoor, and Mobile Radio Communications (PIMRC)}
+
+\pub{2020}{Conference}
+{Smartphone-based Biofeedback Games for Shielding of Immune System against COVID-19}
+{ACM International Conference on Software Development and Technologies}
+
+\pub{2018}{Conference}
+{User-perceived reusability estimation based on analysis of software repositories}
+{IEEE Workshop on Machine Learning Techniques for Software Quality Evaluation}
+
+\section{Patent}
+
+\pub{2018}{USPTO No.\ 9965675}
+{Using virtual reality for behavioral analysis}
+{United States Patent and Trademark Office}
+
+\vfill
+{\fontsize{8}{10}\selectfont\color{texttertiary}\centering
+Last updated: \today\hspace{8pt}{\color{border}·}\hspace{8pt}Full portfolio: \href{https://iliachry.gr}{iliachry.gr}\par
+}
+
+\end{document}
