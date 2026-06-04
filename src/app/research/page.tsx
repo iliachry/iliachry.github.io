@@ -166,6 +166,9 @@ export default function ResearchPage() {
                       )}
                     </h3>
                     <p className="text-xs text-text-tertiary mt-1">
+                      {pub.authors}
+                    </p>
+                    <p className="text-xs text-text-tertiary mt-0.5 italic">
                       {pub.venue}
                     </p>
                   </div>

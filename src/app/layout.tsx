@@ -84,11 +84,67 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Structured Data — Person */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Ilias Chrysovergis",
+              url: "https://iliachry.gr",
+              jobTitle: "Software Architect, Researcher, Founder",
+              worksFor: [
+                {
+                  "@type": "Organization",
+                  name: "Metatopia",
+                  url: "https://metatopia.gr",
+                },
+                {
+                  "@type": "EducationalOrganization",
+                  name: "National Technical University of Athens",
+                },
+              ],
+              alumniOf: [
+                {
+                  "@type": "EducationalOrganization",
+                  name: "Imperial College London",
+                },
+                {
+                  "@type": "EducationalOrganization",
+                  name: "Aristotle University of Thessaloniki",
+                },
+              ],
+              sameAs: [
+                "https://github.com/iliachry",
+                "https://linkedin.com/in/ilias-chrysovergis",
+                "https://scholar.google.com/citations?user=x5Zq1-QAAAAJ",
+                "https://www.researchgate.net/profile/Ilias-Chrysovergis",
+                "https://orcid.org/0000-0002-5434-2175",
+                "https://x.com/iliachry",
+              ],
+              knowsAbout: [
+                "Extended Reality",
+                "Digital Twins",
+                "Artificial Intelligence",
+                "Hydroinformatics",
+                "Spatial Computing",
+                "Wireless Communications",
+              ],
+            }),
+          }}
+        />
       </head>
       <body className="min-h-screen flex flex-col bg-background text-text-primary">
         <ThemeProvider>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-accent focus:text-white focus:rounded-md focus:text-sm focus:font-medium"
+          >
+            Skip to main content
+          </a>
           <Header />
-          <main className="flex-1 pt-16">{children}</main>
+          <main id="main-content" className="flex-1 pt-16">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

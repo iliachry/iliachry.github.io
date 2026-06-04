@@ -161,7 +161,10 @@ export function ContactForm() {
           onChange={(e) =>
             setFormData({ ...formData, type: e.target.value })
           }
-          className="w-full px-4 py-2.5 bg-surface-elevated border border-border rounded-md text-sm text-text-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors appearance-none"
+          className="w-full px-4 py-2.5 bg-surface-elevated border border-border rounded-md text-sm text-text-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors appearance-none bg-no-repeat bg-[right_0.75rem_center] bg-[length:1rem_1rem]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238A8A85' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")`,
+          }}
           disabled={status === "submitting"}
         >
           <option value="">Select a category</option>

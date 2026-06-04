@@ -39,6 +39,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={isActive ? "page" : undefined}
                 className={`text-sm font-medium transition-colors link-underline ${
                   isActive
                     ? "text-accent"
@@ -172,6 +173,7 @@ export function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
+                    aria-current={isActive ? "page" : undefined}
                     className={`text-lg font-medium transition-colors ${
                       isActive
                         ? "text-accent"

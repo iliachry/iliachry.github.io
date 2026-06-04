@@ -9,7 +9,7 @@ import { ventures } from "@/data/ventures";
 export const metadata: Metadata = {
   title: "Ventures",
   description:
-    "Startup ventures and products by Ilias Chrysovergis. Building companies that commercialize advanced technology — from spatial computing to agricultural AI.",
+    "Startup ventures and products by Ilias Chrysovergis. Building companies that commercialize advanced technology — from spatial computing to SaaS platforms.",
 };
 
 export default function VenturesPage() {

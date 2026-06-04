@@ -52,7 +52,7 @@ export function Footer() {
                 <a
                   href={siteConfig.social.github}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                   className="text-sm text-text-secondary hover:text-text-primary transition-colors"
                 >
                   GitHub
@@ -62,7 +62,7 @@ export function Footer() {
                 <a
                   href={siteConfig.social.linkedin}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                   className="text-sm text-text-secondary hover:text-text-primary transition-colors"
                 >
                   LinkedIn
@@ -72,7 +72,7 @@ export function Footer() {
                 <a
                   href={siteConfig.social.scholar}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                   className="text-sm text-text-secondary hover:text-text-primary transition-colors"
                 >
                   Google Scholar
@@ -82,7 +82,7 @@ export function Footer() {
                 <a
                   href={siteConfig.social.researchgate}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                   className="text-sm text-text-secondary hover:text-text-primary transition-colors"
                 >
                   ResearchGate
@@ -92,7 +92,7 @@ export function Footer() {
                 <a
                   href={siteConfig.social.twitter}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                   className="text-sm text-text-secondary hover:text-text-primary transition-colors"
                 >
                   X / Twitter
@@ -102,7 +102,7 @@ export function Footer() {
                 <a
                   href={siteConfig.social.orcid}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                   className="text-sm text-text-secondary hover:text-text-primary transition-colors"
                 >
                   ORCID

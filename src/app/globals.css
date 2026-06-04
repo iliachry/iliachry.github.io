@@ -213,3 +213,19 @@ body {
     padding-right: 2.5rem;
   }
 }
+
+/* --- Console Animations --- */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hide scrollbar in console */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
