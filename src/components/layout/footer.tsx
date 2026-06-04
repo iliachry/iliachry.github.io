@@ -98,6 +98,16 @@ export function Footer() {
                   X / Twitter
                 </a>
               )}
+              {siteConfig.social.orcid && (
+                <a
+                  href={siteConfig.social.orcid}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                >
+                  ORCID
+                </a>
+              )}
               <a
                 href={`mailto:${siteConfig.email}`}
                 className="text-sm text-text-secondary hover:text-text-primary transition-colors"

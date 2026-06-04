@@ -132,6 +132,11 @@ export default function ResearchPage() {
                 DBLP Profile
               </Button>
             )}
+            {siteConfig.social.orcid && (
+              <Button href={siteConfig.social.orcid} variant="secondary" external>
+                ORCID
+              </Button>
+            )}
           </AnimateIn>
           <div className="space-y-0">
             {publications.map((pub, i) => (

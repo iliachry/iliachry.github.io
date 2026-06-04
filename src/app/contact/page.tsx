@@ -165,6 +165,8 @@ export default function ContactPage() {
                               ? "Google Scholar"
                               : platform === "dblp"
                               ? "DBLP Profile"
+                              : platform === "orcid"
+                              ? "ORCID"
                               : platform.charAt(0).toUpperCase() + platform.slice(1)}
                           </a>
                         ))}
