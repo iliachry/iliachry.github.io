@@ -75,59 +75,77 @@ export default function AboutPage() {
           <div className="max-w-3xl space-y-0">
             {[
               {
-                period: "2024 – Present",
+                period: "Jun 2025 – Present",
+                title: "Research Scientist — Democritus University of Thrace",
+                detail:
+                  "Researching how AI and XR can be leveraged for systems thinking education.",
+              },
+              {
+                period: "Mar 2025 – Present",
+                title: "Lecturer — International Hellenic University",
+                detail:
+                  "Teaching Augmented & Virtual Reality at the MSc in Smart Environmental Sustainability.",
+              },
+              {
+                period: "Nov 2024 – Present",
+                title: "Lead Full-Stack Developer — NTUA",
+                detail:
+                  "Building digital twin systems for urban water infrastructure in the UWMH unit. Hydroinformatics visualization and flood simulation platforms.",
+              },
+              {
+                period: "Oct 2024 – Sep 2025",
                 title: "Lecturer — Mediterranean College · University of Derby",
                 detail:
-                  "Teaching Computer Graphics, Virtual Environment Development, Game Behavior, and Game Development. Supervising final year projects in ML, blockchain, and game development.",
+                  "Taught Computer Graphics, Virtual Environment Development, Game Behavior, and Game Development. Supervised six final year projects in ML, blockchain, and game development.",
               },
               {
-                period: "2023 – Present",
-                title: "Co-Founder & CEO/CTO — Metatopia",
+                period: "Nov 2022 – Sep 2025",
+                title: "Founder & CEO/CTO — Metatopia",
                 detail:
-                  "Building Greece's first metaverse studio. Delivering digital twins, XR training platforms, and immersive experiences across Thessaloniki and Nicosia.",
+                  "Built Greece's first metaverse studio. Delivered VR training simulators, MR gaming, digital twins for wireless systems, and EU open call consortia across Thessaloniki and Nicosia.",
               },
               {
-                period: "2022 – Present",
-                title: "PhD Candidate — University of Thessaly",
+                period: "Apr 2022 – Oct 2024",
+                title: "Lead ML & XR Engineer — CERTH/ITI",
                 detail:
-                  "Researching metaverse architectures for wireless communications systems. Investigating digital twins, intelligent reflecting surfaces, and spiking neural networks.",
+                  "Led development of ExpertAssist AR toolkit for construction. Worked on OCR for Greek documents. Wrote deliverables for Greek and EU funded projects. Technical Lead of VARLAB XR team.",
               },
               {
-                period: "2021 – Present",
-                title: "Full-Stack Developer — NTUA",
+                period: "Sep 2020 – Sep 2022",
+                title: "Software Engineer (ML & VR) — ORamaVR",
                 detail:
-                  "Building digital twin systems for urban water infrastructure. Hydroinformatics visualization and flood simulation platforms.",
+                  "VR surgical simulation, multiplayer integration, cloud data operations, 3D session recording & replay SDK, supervised DL algorithm for surgical assessment. Co-authored four papers.",
               },
               {
-                period: "2020 – 2022",
-                title: "VR & ML Software Engineer — ORamaVR",
+                period: "Apr 2020 – Aug 2020",
+                title: "Machine Learning Engineer — AUTH",
                 detail:
-                  "Developed 3D session recording and ML-based user performance evaluation for the MAGES medical VR training SDK. Research on surgical assessment with CNNs and geometric algebra for networked VR.",
+                  "Developed DL algorithms for gyroscope/accelerometer eating behavior detection and real-time breathing rate estimation from audio signals.",
               },
               {
-                period: "2019 – 2022",
-                title: "Lead XR Software Engineer — CERTH",
+                period: "Sep 2019 – Mar 2020",
+                title: "Research Scientist — University of Cyprus",
                 detail:
-                  "Led extended reality research and development. Medical VR training (MAGES 4.0), virtual museums, and international research collaborations.",
+                  "Marie Skłodowska-Curie Fellow. Research on fundamental limits of intelligent reflecting surfaces and ML for wireless communications.",
               },
               {
-                period: "2019",
-                title: "Marie Skłodowska-Curie Fellow — University of Cyprus",
+                period: "Nov 2018 – Aug 2019",
+                title: "Software Engineer (VR) — Greek Army",
                 detail:
-                  "Research on machine learning for communication systems. Published in IEEE conference proceedings.",
+                  "Designed and developed the first VR application for military infantry training. Presented to generals and the Deputy Minister of National Defense. Received 30k+ EUR funding.",
               },
               {
-                period: "2016 – 2018",
+                period: "Oct 2017 – Sep 2018",
                 title: "MSc Communications & Signal Processing — Imperial College London",
                 detail:
-                  "Advanced study in signal processing, machine learning, and communications. Multiple excellence awards from AUTH Rector during this period.",
+                  "Signal Processing, Machine Intelligence, Computer Vision, Big Data, Pattern Recognition, Distributed Networks. Grade: 71.8%.",
               },
               {
-                period: "2010 – 2016",
+                period: "Oct 2012 – Jul 2017",
                 title:
                   "MEng Electrical & Computer Engineering — Aristotle University of Thessaloniki",
                 detail:
-                  "Honours degree. Won Microsoft Imagine Cup World Championship (2016). Secured U.S. Patent for VR behavioral analysis.",
+                  "Grade: 9.1/10 (Top 1%). Won Microsoft Imagine Cup World Championship (2016). Secured U.S. Patent for VR behavioral analysis.",
               },
             ].map((entry, i) => (
               <AnimateIn key={entry.period} delay={i * 0.05}>
@@ -254,9 +272,9 @@ export default function AboutPage() {
               <p>
                 I believe the most impactful technology is built by people who understand
                 both the science and the engineering required to ship it. My work is driven
-                by the conviction that complex real-world systems — water networks, agricultural
-                fields, urban infrastructure — deserve interfaces as thoughtful as any
-                consumer product.
+                by the conviction that complex real-world systems — water networks,
+                communication infrastructure, urban environments — deserve interfaces
+                as thoughtful as any consumer product.
               </p>
             </div>
             <div className="mt-6 flex flex-wrap gap-2">

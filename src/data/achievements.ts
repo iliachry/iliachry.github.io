@@ -56,8 +56,8 @@ export const achievements: Achievement[] = [
     category: "milestone",
   },
   {
-    title: "1st Place, Cyprus Science Communication",
-    detail: "National science communication competition winner",
+    title: "1st Place, Cyprus STEAME Communication Competition",
+    detail: "National science and technology communication competition winner",
     year: "2019",
     location: "Cyprus",
     category: "award",
@@ -110,6 +110,13 @@ export const achievements: Achievement[] = [
     year: "2016–2018",
     location: "Greece",
     category: "award",
+  },
+  {
+    title: "Finalist at Greece Debating Tournament",
+    detail: "National debating competition finalist",
+    year: "2016",
+    location: "Greece",
+    category: "recognition",
   },
 ];
 

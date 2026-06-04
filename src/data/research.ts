@@ -102,12 +102,13 @@ export const collaborations: Collaboration[] = [
     ],
   },
   {
-    institution: "Centre for Research and Technology Hellas (CERTH)",
-    role: "Lead XR Software Engineer",
+    institution: "Centre for Research and Technology Hellas (CERTH/ITI)",
+    role: "Lead ML & XR Engineer",
     focus: [
-      "Extended reality research projects",
-      "International research collaboration",
-      "Medical VR systems",
+      "ExpertAssist AR toolkit for construction industry",
+      "OCR for Greek documents",
+      "EU-funded research project deliverables",
+      "Technical Lead of VARLAB XR team",
     ],
   },
   {
@@ -135,6 +136,14 @@ export const collaborations: Collaboration[] = [
       "ML for communication systems",
       "IEEE conference publications",
       "International research exchange",
+    ],
+  },
+  {
+    institution: "Democritus University of Thrace (DUTH)",
+    role: "Research Scientist",
+    focus: [
+      "AI and XR for systems thinking education",
+      "Interdisciplinary research",
     ],
   },
 ];
