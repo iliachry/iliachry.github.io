@@ -20,11 +20,11 @@ export function ContactCTASection() {
               Start a conversation
             </Button>
             <Button
-              href="mailto:iliachry@iliachry.com"
+              href="mailto:iliachry@iliachry.gr"
               variant="ghost"
               external
             >
-              iliachry@iliachry.com
+              iliachry@iliachry.gr
             </Button>
           </div>
         </AnimateIn>
