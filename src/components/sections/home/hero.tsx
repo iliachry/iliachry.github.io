@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site";
+import { SystemConsole } from "@/components/ui/system-console";
 
 export function HeroSection() {
   return (
@@ -20,70 +21,87 @@ export function HeroSection() {
       </div>
 
       <div className="container-wide relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="max-w-4xl"
-        >
-          {/* Name */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-            className="text-sm font-medium text-accent mb-4 tracking-wide uppercase"
-          >
-            {siteConfig.name}
-          </motion.p>
-
-          {/* Positioning Statement */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="heading-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-text-primary leading-[1.08] text-balance"
-          >
-            Building intelligent spatial systems{" "}
-            <span className="text-text-secondary">for the physical world.</span>
-          </motion.h1>
-
-          {/* Supporting Paragraph */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.6 }}
-            className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary max-w-2xl leading-relaxed"
-          >
-            {siteConfig.heroDescription}
-          </motion.p>
-
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="mt-8 md:mt-10 flex flex-wrap gap-4"
-          >
-            <Button href="/work" variant="primary">
-              View Work
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Left: Text Content */}
+          <div className="lg:col-span-7">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="max-w-3xl"
+            >
+              {/* Name */}
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.1, duration: 0.5 }}
+                className="text-sm font-medium text-accent mb-4 tracking-wide uppercase"
               >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </Button>
-            <Button href="/contact" variant="secondary">
-              Collaborate
-            </Button>
-          </motion.div>
-        </motion.div>
+                {siteConfig.name}
+              </motion.p>
+
+              {/* Positioning Statement */}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="heading-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-text-primary leading-[1.08] text-balance"
+              >
+                Building intelligent spatial systems{" "}
+                <span className="text-text-secondary">for the physical world.</span>
+              </motion.h1>
+
+              {/* Supporting Paragraph */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35, duration: 0.6 }}
+                className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary max-w-2xl leading-relaxed"
+              >
+                {siteConfig.heroDescription}
+              </motion.p>
+
+              {/* CTAs */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+                className="mt-8 md:mt-10 flex flex-wrap gap-4"
+              >
+                <Button href="/work" variant="primary">
+                  View Work
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </Button>
+                <Button href="/contact" variant="secondary">
+                  Collaborate
+                </Button>
+              </motion.div>
+            </motion.div>
+          </div>
+
+          {/* Right: Interactive Console */}
+          <div className="lg:col-span-5 w-full flex justify-center lg:justify-end">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+              className="w-full max-w-md lg:max-w-none"
+            >
+              <SystemConsole />
+            </motion.div>
+          </div>
+        </div>
 
         {/* Accent line */}
         <motion.div

@@ -7,6 +7,7 @@ interface ButtonProps {
   children: React.ReactNode;
   className?: string;
   external?: boolean;
+  disabled?: boolean;
 }
 
 export function Button({
@@ -16,6 +17,7 @@ export function Button({
   children,
   className = "",
   external = false,
+  disabled = false,
 }: ButtonProps) {
   const base =
     "inline-flex items-center justify-center gap-2 font-medium text-sm transition-all duration-200 rounded-md px-5 py-2.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
@@ -29,9 +31,11 @@ export function Button({
       "text-text-secondary hover:text-text-primary hover:bg-surface active:scale-[0.98]",
   };
 
-  const classes = `${base} ${variants[variant]} ${className}`;
+  const disabledStyles = disabled ? "opacity-50 cursor-not-allowed pointer-events-none" : "";
 
-  if (href) {
+  const classes = `${base} ${variants[variant]} ${disabledStyles} ${className}`;
+
+  if (href && !disabled) {
     if (external) {
       return (
         <a
@@ -52,8 +56,9 @@ export function Button({
   }
 
   return (
-    <button onClick={onClick} className={classes}>
+    <button onClick={onClick} className={classes} disabled={disabled}>
       {children}
     </button>
   );
 }
+

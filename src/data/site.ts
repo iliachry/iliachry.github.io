@@ -12,7 +12,7 @@ export const siteConfig = {
   description:
     "Software architect, researcher, and founder building intelligent spatial systems for the physical world. Working across hydroinformatics, AI, spatial computing, XR, digital twins, and full-stack systems.",
   url: "https://iliachry.gr",
-  email: "iliachry@iliachry.com",
+  email: "iliachry@iliachry.gr",
   phone: "+30 698 629 30 42",
   location: "Thessaloniki, Greece",
   tagline:
