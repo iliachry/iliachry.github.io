@@ -5,6 +5,8 @@ import { AnimateIn } from "@/components/ui/animate-in";
 import { Badge } from "@/components/ui/badge";
 import { phd, researchThemes, collaborations } from "@/data/research";
 import { getPublicationsByYear } from "@/data/publications";
+import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Research",
@@ -114,6 +116,23 @@ export default function ResearchPage() {
             title="Papers, patents & contributions"
             description="Selected publications across IEEE, ACM, and other venues."
           />
+          <AnimateIn className="flex flex-wrap gap-3 mb-10 -mt-2">
+            {siteConfig.social.scholar && (
+              <Button href={siteConfig.social.scholar} variant="secondary" external>
+                Google Scholar
+              </Button>
+            )}
+            {siteConfig.social.researchgate && (
+              <Button href={siteConfig.social.researchgate} variant="secondary" external>
+                ResearchGate
+              </Button>
+            )}
+            {siteConfig.social.dblp && (
+              <Button href={siteConfig.social.dblp} variant="secondary" external>
+                DBLP Profile
+              </Button>
+            )}
+          </AnimateIn>
           <div className="space-y-0">
             {publications.map((pub, i) => (
               <AnimateIn key={`${pub.title}-${pub.year}`} delay={i * 0.03}>

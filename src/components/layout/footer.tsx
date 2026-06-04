@@ -68,6 +68,26 @@ export function Footer() {
                   LinkedIn
                 </a>
               )}
+              {siteConfig.social.scholar && (
+                <a
+                  href={siteConfig.social.scholar}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                >
+                  Google Scholar
+                </a>
+              )}
+              {siteConfig.social.researchgate && (
+                <a
+                  href={siteConfig.social.researchgate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                >
+                  ResearchGate
+                </a>
+              )}
               {siteConfig.social.twitter && (
                 <a
                   href={siteConfig.social.twitter}

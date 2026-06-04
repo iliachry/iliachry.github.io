@@ -25,6 +25,8 @@ export const siteConfig = {
     linkedin: "https://linkedin.com/in/ilias-chrysovergis",
     twitter: "https://x.com/iliachry",
     scholar: "https://scholar.google.com/citations?user=x5Zq1-QAAAAJ",
+    researchgate: "https://www.researchgate.net/profile/Ilias-Chrysovergis",
+    dblp: "https://dblp.org/pid/265/5737.html",
   },
 
   // SEO & Social Preview

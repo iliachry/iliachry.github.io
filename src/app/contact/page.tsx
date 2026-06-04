@@ -155,9 +155,17 @@ export default function ContactPage() {
                             href={url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm text-text-secondary hover:text-accent transition-colors capitalize"
+                            className="text-sm text-text-secondary hover:text-accent transition-colors"
                           >
-                            {platform === "twitter" ? "X / Twitter" : platform}
+                            {platform === "twitter"
+                              ? "X / Twitter"
+                              : platform === "researchgate"
+                              ? "ResearchGate"
+                              : platform === "scholar"
+                              ? "Google Scholar"
+                              : platform === "dblp"
+                              ? "DBLP Profile"
+                              : platform.charAt(0).toUpperCase() + platform.slice(1)}
                           </a>
                         ))}
                     </div>

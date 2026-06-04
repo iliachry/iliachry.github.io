@@ -64,6 +64,18 @@ export const publications: Publication[] = [
   },
   {
     title:
+      "Virtual Reality Medical Training for COVID-19 Swab Testing and Proper Handling of Personal Protective Equipment: Development and Usability",
+    authors:
+      "P. Zikas, M. Kamarianakis, N. Lydatakis, M. Kentros, I. Chrysovergis, G. Papagiannakis, et al.",
+    venue: "Frontiers in Virtual Reality",
+    year: 2022,
+    type: "journal",
+    doi: "10.3389/frvir.2021.740197",
+    url: "https://doi.org/10.3389/frvir.2021.740197",
+    tags: ["Medical VR", "COVID-19", "PPE Training", "Usability Evaluation"],
+  },
+  {
+    title:
       "MAGES 4.0: Accelerating the world's transition to medical VR training",
     authors: "I. Chrysovergis et al.",
     venue: "IEEE Conference on Virtual Reality and 3D User Interfaces",
