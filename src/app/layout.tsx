@@ -3,6 +3,7 @@ import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { DisclaimerPopup } from "@/components/ui/disclaimer-popup";
 import { siteConfig } from "@/data/site";
 import "./globals.css";
 
@@ -146,6 +147,7 @@ export default function RootLayout({
           <Header />
           <main id="main-content" className="flex-1 pt-16">{children}</main>
           <Footer />
+          <DisclaimerPopup />
         </ThemeProvider>
       </body>
     </html>

@@ -127,6 +127,12 @@ export function Footer() {
             {siteConfig.location}
           </p>
         </div>
+
+        {/* Disclaimer */}
+        <p className="mt-4 text-[10px] text-text-tertiary/60 text-center italic leading-relaxed">
+          This website was built with AI assistance and is not 100% human-curated.
+          Some details may be inaccurate or differ slightly from reality.
+        </p>
       </div>
     </footer>
   );
