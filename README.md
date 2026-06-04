@@ -1,149 +1,99 @@
-# iliachry.github.io
+# iliachry.gr — Personal Website
 
-> Ideas rendering in real time (some bugs and lag may apply).
+Personal website for Ilias Chrysovergis — researcher, software architect, and founder building intelligent spatial systems for the physical world.
 
-My personal website built with Jekyll and the Hacker theme, featuring a custom theme switcher for dark/light modes, comprehensive project portfolio, research publications, and professional information.
+**Live**: [iliachry.gr](https://iliachry.gr)
 
-## 🌟 Features
+## Tech Stack
 
-- **Dark/Light Theme Toggle**: Switch between classic hacker dark mode and clean light mode
-- **Comprehensive Portfolio**: Projects, publications, research, and professional information
-- **Consistent Green Branding**: Unified color scheme across both themes
-- **Responsive Design**: Works on desktop and mobile devices
-- **Jekyll Static Site**: Fast loading and SEO-friendly
-- **Custom Styling**: Modified hacker theme with personal touches
-- **GitHub Pages Ready**: Automatically deploys via GitHub Pages
-- **Professional Signature**: Consistent footer with personality across all pages
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Deployment**: GitHub Pages (static export)
 
-## 🎨 Theme Modes
-
-### 🌙 Dark Mode (Default)
-- Black background with hacker-style background image
-- Green terminal-style text
-- Classic hacker aesthetic
-
-### ☀️ Light Mode
-- Clean white background
-- Consistent green links and styling
-- Professional appearance
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Ruby (3.2.2 or higher)
-- Bundler
-- Jekyll
-
-### Local Development
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/iliachry/iliachry.github.io.git
-   cd iliachry.github.io
-   ```
-
-2. **Install dependencies**
-   ```bash
-   bundle install
-   ```
-
-3. **Run the development server**
-   ```bash
-   bundle exec jekyll serve
-   ```
-
-4. **View the site**
-   Open your browser and go to `http://localhost:4000`
-
-## 📁 Site Structure
+## Project Structure
 
 ```
-├── _config.yml          # Jekyll configuration
-├── _layouts/             # Custom layouts
-│   └── default.html      # Main layout with theme switcher
-├── _includes/            # Reusable components
-├── assets/
-│   └── css/
-│       └── style.scss    # Main styles with theme switching
-├── pages/               # Site content pages
-│   ├── about.md         # About page
-│   ├── blog.md          # Blog page
-│   ├── contact.md       # Contact page
-│   ├── project.md       # Projects page
-│   ├── publications.md  # Publications page
-│   └── research.md      # Research page
-├── index.md             # Homepage
-└── README.md            # This file
+src/
+├── app/                    # Pages (App Router)
+│   ├── layout.tsx          # Root layout, fonts, metadata
+│   ├── page.tsx            # Home page
+│   ├── work/page.tsx       # Work / case studies
+│   ├── research/page.tsx   # Research & publications
+│   ├── ventures/page.tsx   # Startup ventures
+│   ├── about/page.tsx      # About / bio
+│   └── contact/page.tsx    # Contact with smart form
+├── components/
+│   ├── layout/             # Header, Footer, PageWrapper
+│   ├── sections/           # Page-specific section components
+│   │   ├── home/           # Hero, SelectedWork, Bio, etc.
+│   │   └── contact/        # ContactForm
+│   ├── ui/                 # Reusable UI components
+│   │   ├── animate-in.tsx  # Scroll-triggered animation
+│   │   ├── badge.tsx       # Tag/badge component
+│   │   ├── button.tsx      # Button variants
+│   │   ├── monogram.tsx    # IC monogram SVG
+│   │   └── section-heading.tsx
+│   └── theme-provider.tsx  # Dark/light mode
+├── data/                   # Content data layer
+│   ├── site.ts             # Site metadata, social links
+│   ├── navigation.ts       # Nav configuration
+│   ├── projects.ts         # Case studies / work
+│   ├── publications.ts     # Academic publications
+│   ├── ventures.ts         # Startup ventures
+│   ├── achievements.ts     # Awards & recognition
+│   └── research.ts         # Research themes, PhD, collaborations
+└── app/globals.css         # Design system (tokens, utilities)
 ```
 
-## 🛠️ Customization
+## How to Edit Content
 
-### Theme Colors
-You can customize the theme colors by editing `assets/css/style.scss`:
+All content is centralized in `src/data/`. Each file is a TypeScript module exporting typed data:
 
-```scss
-// Dark theme colors
-body {
-  background: #151515 url("../images/bkg.png") 0 0 !important;
-  color: #eaeaea !important;
-}
+- **Projects**: Edit `src/data/projects.ts` — add/remove case studies, mark featured
+- **Publications**: Edit `src/data/publications.ts` — add new papers/patents
+- **Ventures**: Edit `src/data/ventures.ts` — update status, add new ventures
+- **Achievements**: Edit `src/data/achievements.ts` — add awards/recognition
+- **Research**: Edit `src/data/research.ts` — update PhD, themes, collaborations
+- **Site info**: Edit `src/data/site.ts` — metadata, social links, email
 
-// Light theme colors
-[data-theme="light"] body {
-  background: #ffffff !important;
-  color: #000000 !important;
-}
+Look for `// EDIT:` comments in data files for structured placeholders that need your specific details.
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npx serve out
 ```
 
-### Content
-- Edit the markdown files (`.md`) to update page content
-- Modify `_config.yml` for site-wide settings
-- Update `_layouts/default.html` for structural changes
+## Deployment
 
-## 🔧 Theme Switcher
+The site auto-deploys to GitHub Pages on push to `master` via the GitHub Actions workflow in `.github/workflows/deploy.yml`.
 
-The theme switcher is implemented using:
-- CSS for styling both themes
-- JavaScript for toggling between modes
-- LocalStorage for remembering user preference
+The site is exported as a static site (`output: 'export'` in `next.config.ts`).
 
-### How it works:
-1. JavaScript toggles the `data-theme="light"` attribute on the body
-2. CSS rules target this attribute to apply light theme styles
-3. User preference is saved in localStorage
+## Design System
 
-## 📝 Adding Content
+- **Colors**: Warm neutral foundation + controlled orange accent (`#D4600A`)
+- **Typography**: Inter (body) + Instrument Serif (headings) + JetBrains Mono (code)
+- **Theme**: Light/dark mode with toggle, system preference detection
+- **Design tokens**: Defined in `src/app/globals.css` via CSS custom properties
 
-### New Pages
-1. Create a new `.md` file in the `pages/` directory
-2. Add front matter:
-   ```yaml
-   ---
-   layout: default
-   title: Your Page Title
-   ---
-   ```
-3. Write your content in Markdown
-4. Add the page to navigation in `_layouts/default.html` if needed
+## Contact Form
 
-### Blog Posts
-Add new posts in the `_posts/` directory (create if it doesn't exist) with the naming convention:
-`YYYY-MM-DD-title.md`
+The contact form UI is built but needs a backend. Options:
+1. [Formspree](https://formspree.io) — easiest, add form endpoint
+2. [Netlify Forms](https://docs.netlify.com/forms/setup/) — if hosting on Netlify
+3. Custom API route — add a serverless function
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🤝 Contributing
-
-Feel free to fork this repository and customize it for your own use!
-
-## 📧 Contact
-
-- **Website**: [iliachry.github.io](https://iliachry.github.io){:target="_blank"}
-- **GitHub**: [@iliachry](https://github.com/iliachry){:target="_blank"}
-
----
-
-Built with ❤️ and excessive amounts of Coke Zero  
-Powered by Jekyll theme hacker • Deployed on GitHub Pages 
+See `src/components/sections/contact/contact-form.tsx` for the TODO comment.
