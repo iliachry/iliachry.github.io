@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { CyberpunkTerminal } from "@/components/ui/cyberpunk-terminal";
-import { Monogram } from "@/components/ui/monogram";
 
 export default function Home() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
@@ -46,15 +45,14 @@ export default function Home() {
         onClose={() => setIsTerminalOpen(false)}
       />
 
-      {/* ─── TOP HEADER / LOGO ─── */}
+      {/* ─── TOP HEADER ─── */}
       <header className="flex items-center justify-between w-full max-w-3xl mx-auto shrink-0">
         <div
           onClick={handleLogoClick}
-          className="flex items-center gap-3 cursor-pointer select-none group"
+          className="cursor-pointer select-none group"
           title="Click 3x to open Sovereign CLI"
         >
-          <Monogram className="w-6 h-6 text-white group-hover:text-emerald-400 transition-colors" />
-          <span className="text-xl font-bold tracking-tight text-white">
+          <span className="text-xl font-bold tracking-tight text-white group-hover:text-emerald-400 transition-colors">
             iliachry
           </span>
         </div>
