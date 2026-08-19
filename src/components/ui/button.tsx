@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface ButtonProps {
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "terminal";
   href?: string;
   onClick?: () => void;
   children: React.ReactNode;
@@ -20,18 +20,20 @@ export function Button({
   disabled = false,
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 font-medium text-sm transition-all duration-200 rounded-md px-5 py-2.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+    "inline-flex items-center justify-center gap-2 font-medium text-xs sm:text-sm transition-all duration-150 rounded px-4 py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400 select-none cursor-pointer";
 
   const variants = {
     primary:
-      "bg-accent text-white hover:bg-accent-hover active:scale-[0.98]",
+      "bg-white text-black hover:bg-zinc-200 active:scale-[0.98] font-medium shadow-sm",
     secondary:
-      "border border-border text-text-primary hover:border-accent hover:text-accent active:scale-[0.98]",
+      "bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-zinc-600 active:scale-[0.98]",
     ghost:
-      "text-text-secondary hover:text-text-primary hover:bg-surface active:scale-[0.98]",
+      "text-zinc-400 hover:text-emerald-400 hover:bg-zinc-900/60 active:scale-[0.98] font-mono text-xs",
+    terminal:
+      "font-mono text-xs px-2.5 py-1 bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-emerald-400 hover:border-emerald-500/50 rounded",
   };
 
-  const disabledStyles = disabled ? "opacity-50 cursor-not-allowed pointer-events-none" : "";
+  const disabledStyles = disabled ? "opacity-40 cursor-not-allowed pointer-events-none" : "";
 
   const classes = `${base} ${variants[variant]} ${disabledStyles} ${className}`;
 
@@ -61,4 +63,3 @@ export function Button({
     </button>
   );
 }
-

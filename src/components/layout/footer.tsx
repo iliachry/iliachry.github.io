@@ -4,25 +4,25 @@ import { Monogram } from "@/components/ui/monogram";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-surface/50 mt-auto">
+    <footer className="border-t border-zinc-900 bg-black text-zinc-500 font-mono text-xs mt-auto">
       <div className="container-wide py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="inline-flex items-center gap-2 text-text-primary">
-              <Monogram className="w-7 h-7" />
-              <span className="font-medium text-sm">{siteConfig.name}</span>
+            <Link href="/" className="inline-flex items-center gap-3 text-white group">
+              <Monogram className="w-6 h-6 text-white group-hover:text-emerald-400 transition-colors" />
+              <span className="font-bold tracking-tight text-sm font-sans">{siteConfig.name}</span>
             </Link>
-            <p className="text-sm text-text-tertiary max-w-xs leading-relaxed">
-              Researcher, software architect, and founder building intelligent spatial systems.
+            <p className="text-xs text-zinc-400 leading-relaxed font-sans max-w-xs">
+              Software architect, researcher, and founder engineering sovereign spatial systems.
             </p>
           </div>
 
           {/* Navigation */}
-          <div className="space-y-4">
-            <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary">
-              Navigate
-            </h3>
+          <div className="space-y-3">
+            <div className="text-[11px] uppercase tracking-widest text-zinc-500">
+              Navigation
+            </div>
             <div className="grid grid-cols-2 gap-2">
               {[
                 { label: "Work", href: "/work" },
@@ -34,7 +34,7 @@ export function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                  className="text-xs text-zinc-400 hover:text-emerald-400 transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -43,19 +43,19 @@ export function Footer() {
           </div>
 
           {/* Connect */}
-          <div className="space-y-4">
-            <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary">
-              Connect
-            </h3>
-            <div className="flex flex-col gap-2">
+          <div className="space-y-3">
+            <div className="text-[11px] uppercase tracking-widest text-zinc-500">
+              Connect & Signals
+            </div>
+            <div className="flex flex-col gap-1.5">
               {siteConfig.social.github && (
                 <a
                   href={siteConfig.social.github}
                   target="_blank"
                   rel="me noopener noreferrer"
-                  className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                  className="text-xs text-zinc-400 hover:text-white transition-colors"
                 >
-                  GitHub
+                  GitHub ↗
                 </a>
               )}
               {siteConfig.social.linkedin && (
@@ -63,9 +63,9 @@ export function Footer() {
                   href={siteConfig.social.linkedin}
                   target="_blank"
                   rel="me noopener noreferrer"
-                  className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                  className="text-xs text-zinc-400 hover:text-white transition-colors"
                 >
-                  LinkedIn
+                  LinkedIn ↗
                 </a>
               )}
               {siteConfig.social.scholar && (
@@ -73,44 +73,14 @@ export function Footer() {
                   href={siteConfig.social.scholar}
                   target="_blank"
                   rel="me noopener noreferrer"
-                  className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                  className="text-xs text-zinc-400 hover:text-white transition-colors"
                 >
-                  Google Scholar
-                </a>
-              )}
-              {siteConfig.social.researchgate && (
-                <a
-                  href={siteConfig.social.researchgate}
-                  target="_blank"
-                  rel="me noopener noreferrer"
-                  className="text-sm text-text-secondary hover:text-text-primary transition-colors"
-                >
-                  ResearchGate
-                </a>
-              )}
-              {siteConfig.social.twitter && (
-                <a
-                  href={siteConfig.social.twitter}
-                  target="_blank"
-                  rel="me noopener noreferrer"
-                  className="text-sm text-text-secondary hover:text-text-primary transition-colors"
-                >
-                  X / Twitter
-                </a>
-              )}
-              {siteConfig.social.orcid && (
-                <a
-                  href={siteConfig.social.orcid}
-                  target="_blank"
-                  rel="me noopener noreferrer"
-                  className="text-sm text-text-secondary hover:text-text-primary transition-colors"
-                >
-                  ORCID
+                  Google Scholar ↗
                 </a>
               )}
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                className="text-xs text-zinc-300 hover:text-emerald-400 transition-colors pt-1"
               >
                 {siteConfig.email}
               </a>
@@ -119,19 +89,32 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-text-tertiary">
-            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
-          </p>
-          <p className="text-xs text-text-tertiary">
-            {siteConfig.location}
-          </p>
+        <div className="mt-12 pt-6 border-t border-zinc-900 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-zinc-500">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>© {new Date().getFullYear()} {siteConfig.name}</span>
+            <span className="hidden sm:inline text-zinc-800">•</span>
+            <span>{siteConfig.location}</span>
+            <span className="hidden sm:inline text-zinc-800">•</span>
+            <a
+              href="https://metatopia.gr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-emerald-400 transition-colors"
+            >
+              Metatopia Studio ↗
+            </a>
+          </div>
+          <a
+            href="mailto:iliachry@iliachry.gr"
+            className="text-white hover:underline shrink-0"
+          >
+            Direct Inquiries →
+          </a>
         </div>
 
         {/* Disclaimer */}
-        <p className="mt-4 text-[10px] text-text-tertiary/60 text-center italic leading-relaxed">
-          This website was built with AI assistance and is not 100% human-curated.
-          Some details may be inaccurate or differ slightly from reality.
+        <p className="mt-6 text-[10px] text-zinc-600 text-center leading-relaxed">
+          This website is engineered with AI assistance for data autonomy & sovereignty.
         </p>
       </div>
     </footer>

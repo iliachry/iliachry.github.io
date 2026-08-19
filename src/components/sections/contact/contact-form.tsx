@@ -21,19 +21,15 @@ export function ContactForm() {
     setErrorMessage("");
 
     try {
-      // Use native FormData from the form element — includes name attributes
       const formDataObj = new FormData(e.currentTarget);
 
-      const response = await fetch(
-        "https://formspree.io/f/mojzvwoq",
-        {
-          method: "POST",
-          body: formDataObj,
-          headers: {
-            Accept: "application/json",
-          },
-        }
-      );
+      const response = await fetch("https://formspree.io/f/mojzvwoq", {
+        method: "POST",
+        body: formDataObj,
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
       const data = await response.json().catch(() => null);
 
@@ -43,13 +39,13 @@ export function ContactForm() {
       } else {
         setErrorMessage(
           data?.errors?.map((err: { message: string }) => err.message).join(", ") ||
-            "Something went wrong. Please try again or email me directly at iliachry@iliachry.gr."
+            "Transmission failed. Please retry or email directly at iliachry@iliachry.gr."
         );
         setStatus("error");
       }
     } catch {
       setErrorMessage(
-        "Could not send your message. Please check your connection or email me directly at iliachry@iliachry.gr."
+        "Network connection interrupted. Please email directly at iliachry@iliachry.gr."
       );
       setStatus("error");
     }
@@ -57,58 +53,51 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="p-8 md:p-12 bg-surface-elevated border border-border rounded-lg text-center">
+      <div className="mono-card p-8 md:p-10 rounded-lg text-center font-mono">
         <div className="flex justify-center mb-4">
-          <div className="w-12 h-12 rounded-full bg-[#54C258]/10 flex items-center justify-center">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#54C258"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
+          <div className="w-10 h-10 rounded-full bg-emerald-950/60 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg">
+            ✓
           </div>
         </div>
-        <h3 className="text-lg font-medium text-text-primary mb-2">
-          Message sent
+        <h3 className="text-base font-medium text-white mb-2">
+          [MESSAGE DISPATCHED]
         </h3>
-        <p className="text-sm text-text-secondary mb-6">
-          Thank you for reaching out. I&apos;ll respond within 24–48 hours.
+        <p className="text-xs text-zinc-400 mb-6 font-sans">
+          Your transmission was encrypted and delivered. Expect a response within 24–48 hours.
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="text-sm text-accent hover:text-accent-hover transition-colors link-underline"
+          className="text-xs font-mono text-emerald-400 hover:underline cursor-pointer"
         >
-          Send another message
+          [Dispatch Another Message]
         </button>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-4 font-mono text-xs">
       {/* Error Banner */}
       {status === "error" && (
-        <div className="p-4 bg-red-500/5 border border-red-500/20 rounded-md text-sm text-red-400">
-          {errorMessage}
+        <div className="p-3 bg-red-950/40 border border-red-800/40 rounded text-xs text-red-400 font-mono">
+          [ERROR] {errorMessage}
         </div>
       )}
 
       {/* Hidden fields for Formspree */}
-      <input type="hidden" name="_subject" value={`[iliachry.gr] ${formData.type || "Contact"} from ${formData.name}`} />
+      <input
+        type="hidden"
+        name="_subject"
+        value={`[iliachry.gr] ${formData.type || "Contact"} from ${formData.name}`}
+      />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label
             htmlFor="contact-name"
-            className="block text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2"
+            className="block text-[10px] uppercase tracking-widest text-zinc-500 mb-1.5"
           >
-            Name
+            Your Name
           </label>
           <input
             id="contact-name"
@@ -119,17 +108,17 @@ export function ContactForm() {
             onChange={(e) =>
               setFormData({ ...formData, name: e.target.value })
             }
-            className="w-full px-4 py-2.5 bg-surface-elevated border border-border rounded-md text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
-            placeholder="Your name"
+            className="w-full px-3.5 py-2 bg-zinc-900/90 border border-zinc-800 rounded text-xs text-white placeholder:text-zinc-600 focus:outline-none focus:border-emerald-400 transition-colors font-sans"
+            placeholder="Ada Lovelace"
             disabled={status === "submitting"}
           />
         </div>
         <div>
           <label
             htmlFor="contact-email"
-            className="block text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2"
+            className="block text-[10px] uppercase tracking-widest text-zinc-500 mb-1.5"
           >
-            Email
+            Return Email
           </label>
           <input
             id="contact-email"
@@ -140,8 +129,8 @@ export function ContactForm() {
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
-            className="w-full px-4 py-2.5 bg-surface-elevated border border-border rounded-md text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
-            placeholder="you@example.com"
+            className="w-full px-3.5 py-2 bg-zinc-900/90 border border-zinc-800 rounded text-xs text-white placeholder:text-zinc-600 focus:outline-none focus:border-emerald-400 transition-colors font-sans"
+            placeholder="ada@domain.com"
             disabled={status === "submitting"}
           />
         </div>
@@ -150,9 +139,9 @@ export function ContactForm() {
       <div>
         <label
           htmlFor="contact-type"
-          className="block text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2"
+          className="block text-[10px] uppercase tracking-widest text-zinc-500 mb-1.5"
         >
-          Inquiry Type
+          Category / Subject
         </label>
         <select
           id="contact-type"
@@ -161,27 +150,24 @@ export function ContactForm() {
           onChange={(e) =>
             setFormData({ ...formData, type: e.target.value })
           }
-          className="w-full px-4 py-2.5 bg-surface-elevated border border-border rounded-md text-sm text-text-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors appearance-none bg-no-repeat bg-[right_0.75rem_center] bg-[length:1rem_1rem]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238A8A85' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")`,
-          }}
+          className="w-full px-3.5 py-2 bg-zinc-900/90 border border-zinc-800 rounded text-xs text-white focus:outline-none focus:border-emerald-400 transition-colors font-sans"
           disabled={status === "submitting"}
         >
-          <option value="">Select a category</option>
-          <option value="Research Collaboration">Research Collaboration</option>
-          <option value="Startup / Investment">Startup / Investment</option>
-          <option value="Technical Consulting">Technical Consulting</option>
-          <option value="Speaking / Media">Speaking / Media</option>
-          <option value="Other">Other</option>
+          <option value="" className="bg-zinc-950">Select inquiry classification</option>
+          <option value="Research Collaboration" className="bg-zinc-950">Research Collaboration</option>
+          <option value="Startup / Investment" className="bg-zinc-950">Startup / Investment</option>
+          <option value="Technical Consulting" className="bg-zinc-950">Technical Architecture</option>
+          <option value="Speaking / Media" className="bg-zinc-950">Speaking & Keynotes</option>
+          <option value="Other" className="bg-zinc-950">Other Inquiries</option>
         </select>
       </div>
 
       <div>
         <label
           htmlFor="contact-message"
-          className="block text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2"
+          className="block text-[10px] uppercase tracking-widest text-zinc-500 mb-1.5"
         >
-          Message
+          Message Body
         </label>
         <textarea
           id="contact-message"
@@ -192,44 +178,20 @@ export function ContactForm() {
           onChange={(e) =>
             setFormData({ ...formData, message: e.target.value })
           }
-          className="w-full px-4 py-2.5 bg-surface-elevated border border-border rounded-md text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors resize-y"
-          placeholder="Tell me about your project, research interest, or idea..."
+          className="w-full px-3.5 py-2 bg-zinc-900/90 border border-zinc-800 rounded text-xs text-white placeholder:text-zinc-600 focus:outline-none focus:border-emerald-400 transition-colors resize-y font-sans leading-relaxed"
+          placeholder="Brief description of your project, research scope, or collaboration goal..."
           disabled={status === "submitting"}
         />
       </div>
 
-      {/* Honeypot — hidden from real users, catches bots */}
+      {/* Honeypot */}
       <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} />
 
-      <Button variant="primary" disabled={status === "submitting"}>
-        {status === "submitting" ? (
-          <span className="flex items-center gap-2">
-            <svg
-              className="animate-spin h-4 w-4"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <circle
-                className="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                strokeWidth="4"
-              />
-              <path
-                className="opacity-75"
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-              />
-            </svg>
-            Sending…
-          </span>
-        ) : (
-          "Send message"
-        )}
-      </Button>
+      <div className="pt-2">
+        <Button variant="primary" disabled={status === "submitting"}>
+          {status === "submitting" ? "[TRANSMITTING...]" : "Send Message →"}
+        </Button>
+      </div>
     </form>
   );
 }

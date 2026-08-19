@@ -6,29 +6,31 @@ export function AchievementsSection() {
   const achievements = getFeaturedAchievements();
 
   return (
-    <section className="py-24 md:py-32 bg-surface/50">
+    <section className="py-20 md:py-28 border-t border-zinc-900">
       <div className="container-wide">
         <SectionHeading
-          label="Recognition"
-          title="Selected proof"
+          label="Proof & Recognition"
+          title="Milestones, patents & awards"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-0">
           {achievements.map((achievement, i) => (
-            <AnimateIn key={`${achievement.title}-${achievement.year}`} delay={i * 0.06}>
-              <div className="flex items-baseline gap-4 py-4 border-b border-border last:border-b-0">
-                <span className="text-xs font-mono text-text-tertiary shrink-0 w-16">
-                  {achievement.year}
-                </span>
-                <div className="min-w-0">
-                  <h3 className="text-sm font-medium text-text-primary">
-                    {achievement.title}
-                  </h3>
-                  <p className="text-xs text-text-tertiary mt-0.5">
-                    {achievement.detail}
-                  </p>
+            <AnimateIn key={`${achievement.title}-${achievement.year}`} delay={i * 0.05}>
+              <div className="flex items-baseline justify-between gap-4 py-3.5 border-b border-zinc-900">
+                <div className="flex items-baseline gap-3 min-w-0">
+                  <span className="text-xs font-mono text-zinc-600 shrink-0 w-12">
+                    {achievement.year}
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="text-xs sm:text-sm font-medium text-white">
+                      {achievement.title}
+                    </h3>
+                    <p className="text-[11px] text-zinc-400 font-light mt-0.5">
+                      {achievement.detail}
+                    </p>
+                  </div>
                 </div>
-                <span className="text-xs text-text-tertiary shrink-0 hidden sm:block">
+                <span className="text-[11px] font-mono text-zinc-600 shrink-0 hidden sm:block">
                   {achievement.location}
                 </span>
               </div>

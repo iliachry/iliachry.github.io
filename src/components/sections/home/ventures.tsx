@@ -6,60 +6,53 @@ import Link from "next/link";
 
 export function VenturesSection() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-20 md:py-28 border-t border-zinc-900">
       <div className="container-wide">
         <SectionHeading
-          label="Ventures"
-          title="From research to product"
-          description="Building companies that commercialize advanced technology for real-world impact."
+          label="Portfolio & Ventures"
+          title="From research to production platforms"
+          description="Building technology companies and products that commercialize advanced software and hardware."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {ventures.map((venture, i) => (
-            <AnimateIn key={venture.slug} delay={i * 0.1}>
-              <div className="group p-6 md:p-8 bg-surface-elevated border border-border rounded-lg card-hover h-full flex flex-col">
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-medium text-text-primary">
-                    {venture.name}
-                  </h3>
-                  <Badge variant={venture.status === "active" ? "accent" : "default"}>
-                    {venture.status}
-                  </Badge>
+            <AnimateIn key={venture.slug} delay={i * 0.08}>
+              <div className="mono-card rounded-lg p-6 h-full flex flex-col justify-between group">
+                <div>
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h3 className="text-lg font-medium text-white group-hover:text-emerald-400 transition-colors">
+                      {venture.name}
+                    </h3>
+                    <Badge variant={venture.status === "active" ? "emerald" : "default"}>
+                      {venture.status}
+                    </Badge>
+                  </div>
+                  <p className="text-xs font-mono text-zinc-400 mb-3">
+                    {venture.tagline}
+                  </p>
+                  <p className="text-xs sm:text-sm text-zinc-400 font-light leading-relaxed mb-4">
+                    {venture.description.slice(0, 150)}...
+                  </p>
                 </div>
-                <p className="text-sm text-accent font-medium mb-3">
-                  {venture.tagline}
-                </p>
-                <p className="text-sm text-text-secondary leading-relaxed flex-1">
-                  {venture.description.slice(0, 160)}...
-                </p>
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {venture.domains.slice(0, 3).map((domain) => (
-                    <Badge key={domain}>{domain}</Badge>
-                  ))}
+
+                <div>
+                  <div className="flex flex-wrap gap-1.5 pt-3 border-t border-zinc-900">
+                    {venture.domains.slice(0, 3).map((domain) => (
+                      <Badge key={domain}>{domain}</Badge>
+                    ))}
+                  </div>
                 </div>
               </div>
             </AnimateIn>
           ))}
         </div>
 
-        <AnimateIn delay={0.4} className="mt-10">
+        <AnimateIn delay={0.3} className="mt-8">
           <Link
             href="/ventures"
-            className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-hover transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-emerald-400 transition-colors"
           >
-            All ventures & products
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            All ventures & initiatives →
           </Link>
         </AnimateIn>
       </div>

@@ -2,19 +2,42 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navigation } from "@/data/navigation";
 import { Monogram } from "@/components/ui/monogram";
-import { useTheme } from "@/components/theme-provider";
 
 export function Header() {
   const pathname = usePathname();
-  const { theme, toggleTheme } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Quick listener to scroll to or toggle console
+  const handleCliClick = () => {
+    const consoleEl = document.getElementById("system-console");
+    if (consoleEl) {
+      consoleEl.scrollIntoView({ behavior: "smooth" });
+      // Focus input if available
+      const input = consoleEl.querySelector("input");
+      if (input) input.focus();
+    } else {
+      // If on inner page, route home and jump to console
+      window.location.href = "/#system-console";
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "`" || e.key === "~" || (e.ctrlKey && e.key.toLowerCase() === "k")) {
+        e.preventDefault();
+        handleCliClick();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800/80">
       <nav
         className="container-wide flex items-center justify-between h-16"
         aria-label="Main navigation"
@@ -22,14 +45,17 @@ export function Header() {
         {/* Logo / Monogram */}
         <Link
           href="/"
-          className="flex items-center gap-2 text-text-primary hover:text-accent transition-colors"
+          className="flex items-center gap-3 text-white group"
           aria-label="Home"
         >
-          <Monogram className="w-8 h-8" />
+          <Monogram className="w-7 h-7 text-white group-hover:text-emerald-400 transition-colors" />
+          <span className="text-sm font-bold tracking-tight text-white hidden sm:inline">
+            iliachry
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {navigation.map((item) => {
             const href = item.href as string;
             const isActive =
@@ -40,10 +66,10 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? "page" : undefined}
-                className={`text-sm font-medium transition-colors link-underline ${
+                className={`text-xs font-mono transition-colors link-underline ${
                   isActive
-                    ? "text-accent"
-                    : "text-text-secondary hover:text-text-primary"
+                    ? "text-white"
+                    : "text-zinc-400 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -51,78 +77,28 @@ export function Header() {
             );
           })}
 
-          {/* Theme Toggle */}
+          {/* CLI Easter egg / Fast trigger */}
           <button
-            onClick={toggleTheme}
-            className="p-2 rounded-md text-text-secondary hover:text-text-primary hover:bg-surface transition-colors"
-            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+            onClick={handleCliClick}
+            className="text-[10px] font-mono px-2 py-1 bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-emerald-400 hover:border-emerald-500/50 rounded transition-all flex items-center gap-1"
+            title="Press ~ or Ctrl+K to jump to CLI"
           >
-            {theme === "light" ? (
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-            ) : (
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="5" />
-                <line x1="12" y1="1" x2="12" y2="3" />
-                <line x1="12" y1="21" x2="12" y2="23" />
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                <line x1="1" y1="12" x2="3" y2="12" />
-                <line x1="21" y1="12" x2="23" y2="12" />
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-              </svg>
-            )}
+            <span>[~]</span>
+            <span>CLI</span>
           </button>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="flex items-center gap-3 md:hidden">
           <button
-            onClick={toggleTheme}
-            className="p-2 rounded-md text-text-secondary hover:text-text-primary transition-colors"
-            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+            onClick={handleCliClick}
+            className="text-[10px] font-mono px-2 py-1 bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-emerald-400 rounded transition-all"
           >
-            {theme === "light" ? (
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-            ) : (
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="5" />
-                <line x1="12" y1="1" x2="12" y2="3" />
-                <line x1="12" y1="21" x2="12" y2="23" />
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                <line x1="1" y1="12" x2="3" y2="12" />
-                <line x1="21" y1="12" x2="23" y2="12" />
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-              </svg>
-            )}
+            [~] CLI
           </button>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 rounded-md text-text-secondary hover:text-text-primary transition-colors"
+            className="p-2 rounded-md text-zinc-400 hover:text-white transition-colors"
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
           >
@@ -160,7 +136,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-background border-b border-border"
+            className="md:hidden bg-black/95 backdrop-blur-xl border-b border-zinc-800"
           >
             <div className="container-wide py-6 flex flex-col gap-4">
               {navigation.map((item) => {
@@ -174,10 +150,10 @@ export function Header() {
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
                     aria-current={isActive ? "page" : undefined}
-                    className={`text-lg font-medium transition-colors ${
+                    className={`text-sm font-mono transition-colors ${
                       isActive
-                        ? "text-accent"
-                        : "text-text-secondary hover:text-text-primary"
+                        ? "text-emerald-400"
+                        : "text-zinc-400 hover:text-white"
                     }`}
                   >
                     {item.label}

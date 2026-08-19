@@ -4,98 +4,52 @@ import { useEffect, useState, useRef, useCallback } from "react";
 
 interface LogLine {
   text: string;
-  type: "info" | "success" | "command" | "warn";
-  timestamp: string;
+  type: "info" | "success" | "command" | "warn" | "system";
+  timestamp?: string;
 }
 
-// Command-response pairs covering real projects
+// Preset telemetry / command outputs
 const commandPairs: { cmd: string; responses: LogLine[] }[] = [
   {
     cmd: "uwmh --status --attica-dt",
     responses: [
-      { text: "Attica Regional Digital Twin: ONLINE", type: "success", timestamp: "" },
-      { text: "Hydraulic solver nodes: 144 active | Latency: 42ms", type: "info", timestamp: "" },
+      { text: "Attica Regional Digital Twin: [ONLINE]", type: "success" },
+      { text: "Hydraulic solver nodes: 144 active | Latency: 0.42ms", type: "info" },
     ],
   },
   {
-    cmd: "pestview sensors --check --floor-plan",
+    cmd: "pestview nodes --mesh-status",
     responses: [
-      { text: "PestView IoT mesh: 38/38 stations reporting", type: "success", timestamp: "" },
-      { text: "bait_station_#24 last_trigger: 2h ago [NORMAL]", type: "info", timestamp: "" },
+      { text: "PestView IoT Mesh: 100+ Field Sensors [HEALTHY]", type: "success" },
+      { text: "Telemetry gateway: 5G/NB-IoT uplink operational", type: "info" },
     ],
   },
   {
-    cmd: "poeticsvr --sync --cannes-immersive",
+    cmd: "poeticsvr --spatial-pipeline --status",
     responses: [
-      { text: "Cannes Immersive Market (79th): Sync active", type: "success", timestamp: "" },
-      { text: "Playback pipeline: VR180° + Volumetric [OK]", type: "info", timestamp: "" },
+      { text: "Poetics VR Cinema: 3,500+ Screenings logged", type: "success" },
+      { text: "Spatial compute engine: 3D Ambisonics + Volumetric [OK]", type: "info" },
     ],
   },
   {
-    cmd: "scholar --fetch --recent-citations",
+    cmd: "metatopia --sovereign-datacenter --telemetry",
     responses: [
-      { text: "New citation: \"Metaverse Framework for Wireless Systems\" — IEEE IoT Mag.", type: "info", timestamp: "" },
-      { text: "+3 citations this week across 5 publications", type: "success", timestamp: "" },
+      { text: "DGX Spark AI Nodes: 275 TOPS [ONLINE]", type: "success" },
+      { text: "Solar PV + LiFePO4: 98.5% SOC | Zero Cloud Leaks", type: "info" },
+    ],
+  },
+  {
+    cmd: "scholar --citations --verify",
+    responses: [
+      { text: "Published: IEEE, ACM SIGGRAPH, Springer, Elsevier", type: "info" },
+      { text: "Patent (USPTO): VR Behavioral Analysis & Spatial AI", type: "success" },
     ],
   },
   {
     cmd: "keras-ppo --eval --cartpole-v1",
     responses: [
-      { text: "PPO agent loaded (official Keras example)", type: "info", timestamp: "" },
-      { text: "Eval reward: 498.2 / 500.0 | Episodes: 100", type: "success", timestamp: "" },
-    ],
-  },
-  {
-    cmd: "metatopia --dt --water-network",
-    responses: [
-      { text: "IMPETUS H2020 Digital Twin: data pipeline healthy", type: "success", timestamp: "" },
-      { text: "PostGIS layer: 2,841 segments | WebGL render: 16ms", type: "info", timestamp: "" },
-    ],
-  },
-  {
-    cmd: "irs-sim --phase-optimize --spiking-rl",
-    responses: [
-      { text: "RIS phase config: 64 elements | SNN policy loaded", type: "info", timestamp: "" },
-      { text: "Spiking RL convergence: 340 episodes | SNR gain: +4.2dB", type: "success", timestamp: "" },
-    ],
-  },
-  {
-    cmd: "expertassist --ar-toolkit --deploy",
-    responses: [
-      { text: "ExpertAssist AR overlay: calibration locked", type: "success", timestamp: "" },
-      { text: "Construction worker guidance pipeline: ACTIVE", type: "info", timestamp: "" },
-    ],
-  },
-  {
-    cmd: "mages4 --session --surgical-assessment",
-    responses: [
-      { text: "MAGES 4.0: VR surgical session #2847 recorded", type: "info", timestamp: "" },
-      { text: "CNN cutting assessment: precision 94.3% [PASS]", type: "success", timestamp: "" },
-    ],
-  },
-  {
-    cmd: "flood-sim --scenario --rainfall-extreme",
-    responses: [
-      { text: "Loading 100-year rainfall scenario for Attica basin...", type: "info", timestamp: "" },
-      { text: "Simulation complete: 3 flood zones identified | Risk: HIGH", type: "warn", timestamp: "" },
-    ],
-  },
-  {
-    cmd: "git log --oneline -1 keras-io/ppo_cartpole",
-    responses: [
-      { text: "a3f829c Reviewed by @fchollet — merge to main", type: "success", timestamp: "" },
-    ],
-  },
-  {
-    cmd: "vr-museum --status --cultural-heritage",
-    responses: [
-      { text: "Virtual museum: 4 exhibits online | WebRTC peers: 12", type: "success", timestamp: "" },
-    ],
-  },
-  {
-    cmd: "sys_health --full",
-    responses: [
-      { text: "All systems nominal. Uptime: 99.97% (30d)", type: "success", timestamp: "" },
+      { text: "Official Keras example PPO agent loaded", type: "info" },
+      { text: "Eval reward: 498.2 / 500.0 (Reviewed by François Chollet)", type: "success" },
     ],
   },
 ];
@@ -107,30 +61,22 @@ function getTimestamp(): string {
   ).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")}`;
 }
 
-// Fisher-Yates shuffle
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
 export function SystemConsole() {
   const [logs, setLogs] = useState<LogLine[]>([]);
+  const [inputVal, setInputVal] = useState("");
   const [metrics, setMetrics] = useState({
-    cpu: 12,
-    mem: 1.4,
-    uptime: 2847,
+    cpu: 14,
+    mem: 1.6,
+    nodes: 104,
   });
   const queueRef = useRef<typeof commandPairs>([]);
   const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const addLog = useCallback((log: Omit<LogLine, "timestamp">) => {
     setLogs((prev) => [
-      ...prev.slice(-10),
+      ...prev.slice(-24),
       { ...log, timestamp: getTimestamp() },
     ]);
   }, []);
@@ -138,59 +84,47 @@ export function SystemConsole() {
   // Boot sequence
   useEffect(() => {
     const bootSequence: { log: Omit<LogLine, "timestamp">; delay: number }[] = [
-      { log: { text: "ssh systems-architect@iliachry.gr", type: "command" }, delay: 0 },
-      { log: { text: "Authenticating via ed25519 key...", type: "info" }, delay: 600 },
-      { log: { text: "Connection established. Welcome back, Ilias.", type: "success" }, delay: 1200 },
-      { log: { text: "source ~/.research/env.sh", type: "command" }, delay: 2200 },
-      { log: { text: "Loading: NTUA/UWMH · Metatopia · PestView · PoeticsVR", type: "info" }, delay: 2800 },
-      { log: { text: "5 project environments loaded. All systems green.", type: "success" }, delay: 3600 },
+      { log: { text: "iliachry OS v3.4.0 [SOVEREIGN COMPUTE NODE]", type: "system" }, delay: 0 },
+      { log: { text: "Authenticating ed25519 identity key...", type: "info" }, delay: 500 },
+      { log: { text: "Access granted: Ilias Chrysovergis [Systems Architect]", type: "success" }, delay: 1000 },
+      { log: { text: "Type 'help' for commands or watch live telemetry", type: "system" }, delay: 1600 },
     ];
 
     const ids: ReturnType<typeof setTimeout>[] = [];
-
     bootSequence.forEach(({ log, delay }) => {
       ids.push(setTimeout(() => addLog(log), delay));
     });
-
     timeoutsRef.current = ids;
 
     return () => ids.forEach(clearTimeout);
   }, [addLog]);
 
-  // Dynamic log cycle — command + response pairs
+  // Background cycle for continuous live telemetry
   useEffect(() => {
     let active = true;
 
     const runCycle = () => {
       if (!active) return;
-
-      // Refill & shuffle when queue is empty
       if (queueRef.current.length === 0) {
-        queueRef.current = shuffle(commandPairs);
+        queueRef.current = [...commandPairs].sort(() => Math.random() - 0.5);
       }
 
       const pair = queueRef.current.shift()!;
-      const ts = getTimestamp();
-
-      // Add command
       addLog({ text: pair.cmd, type: "command" });
 
-      // Add responses with staggered delays
       pair.responses.forEach((resp, i) => {
         const id = setTimeout(() => {
           if (active) addLog(resp);
-        }, 800 + i * 900);
+        }, 700 + i * 800);
         timeoutsRef.current.push(id);
       });
 
-      // Schedule next cycle
-      const nextDelay = 5000 + Math.random() * 3000;
+      const nextDelay = 6000 + Math.random() * 4000;
       const id = setTimeout(runCycle, nextDelay);
       timeoutsRef.current.push(id);
     };
 
-    // Start after boot sequence
-    const startId = setTimeout(runCycle, 5000);
+    const startId = setTimeout(runCycle, 3500);
     timeoutsRef.current.push(startId);
 
     return () => {
@@ -199,15 +133,15 @@ export function SystemConsole() {
     };
   }, [addLog]);
 
-  // Metric fluctuation
+  // Metrics fluctuation
   useEffect(() => {
     const id = setInterval(() => {
       setMetrics((prev) => ({
-        cpu: Math.max(4, Math.min(28, prev.cpu + (Math.random() - 0.45) * 4)),
-        mem: Math.max(1.1, Math.min(2.2, prev.mem + (Math.random() - 0.5) * 0.15)),
-        uptime: prev.uptime + 1,
+        cpu: Math.max(8, Math.min(32, prev.cpu + (Math.random() - 0.48) * 3)),
+        mem: Math.max(1.2, Math.min(2.4, prev.mem + (Math.random() - 0.5) * 0.1)),
+        nodes: prev.nodes,
       }));
-    }, 2000);
+    }, 2500);
     return () => clearInterval(id);
   }, []);
 
@@ -218,58 +152,123 @@ export function SystemConsole() {
     }
   }, [logs]);
 
+  const handleCommand = (e: React.FormEvent) => {
+    e.preventDefault();
+    const cmd = inputVal.trim();
+    if (!cmd) return;
+
+    addLog({ text: cmd, type: "command" });
+    setInputVal("");
+
+    const clean = cmd.toLowerCase();
+    setTimeout(() => {
+      if (clean === "help") {
+        addLog({
+          type: "system",
+          text: "COMMANDS: status | nodes | ventures | research | contact | clear | patent",
+        });
+      } else if (clean === "status") {
+        addLog({
+          type: "success",
+          text: "[SYSTEM NOMINAL] 100+ IoT nodes active · Zero cloud latency · Sovereign stack",
+        });
+      } else if (clean === "nodes") {
+        addLog({
+          type: "info",
+          text: "Active nodes: Attica Digital Twin (NTUA), PestView IoT Mesh, Poetics VR, Cyprus Museum",
+        });
+      } else if (clean === "ventures") {
+        addLog({
+          type: "info",
+          text: "1. Metatopia  2. Sovereign Mini Datacenter  3. PestView  4. Poetics  5. OpenSpaces360",
+        });
+      } else if (clean === "research") {
+        addLog({
+          type: "info",
+          text: "PhD Candidate (UTh) · Hydroinformatics & Digital Twins · Wireless RIS Spiking RL",
+        });
+      } else if (clean === "contact") {
+        addLog({
+          type: "success",
+          text: "Email: iliachry@iliachry.gr · Studio: sales@metatopia.gr",
+        });
+      } else if (clean === "patent") {
+        addLog({
+          type: "success",
+          text: "US Patent #10,893,828: System and Method for Virtual Reality Behavioral Assessment",
+        });
+      } else if (clean === "clear") {
+        setLogs([]);
+      } else {
+        addLog({
+          type: "warn",
+          text: `Command not recognized: '${cmd}'. Type 'help' for available commands.`,
+        });
+      }
+    }, 150);
+  };
+
   return (
     <div
-      className="w-full max-w-lg mx-auto bg-[#0A0A09] border border-border/80 rounded-lg shadow-2xl overflow-hidden font-mono text-xs text-[#9B9B96] select-none"
-      role="img"
-      aria-label="Animated terminal showing project system status"
+      id="system-console"
+      className="w-full max-w-lg mx-auto bg-black/90 border border-zinc-800 rounded-lg shadow-2xl overflow-hidden font-mono text-xs text-zinc-400 backdrop-blur-xl"
     >
       {/* Title Bar */}
-      <div className="flex items-center justify-between px-4 py-3 bg-[#131312] border-b border-border/40">
+      <div className="flex items-center justify-between px-3.5 py-2.5 bg-zinc-950/80 border-b border-zinc-800/80 select-none">
         <div className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#E05A4E]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#E5B54F]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#54C258]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-zinc-800" />
+          <span className="w-2.5 h-2.5 rounded-full bg-zinc-800" />
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
         </div>
-        <div className="text-[10px] text-text-tertiary">
-          systems-architect@iliachry.gr:~
+        <div className="text-[10px] text-zinc-500 tracking-wider">
+          sovereign@iliachry:~$
         </div>
-        <div className="w-10" />
+        <div className="text-[10px] text-emerald-400/80 font-mono">
+          [LIVE]
+        </div>
       </div>
 
       {/* Terminal Content */}
       <div
         ref={scrollRef}
-        className="p-4 h-[272px] overflow-y-auto space-y-1.5 flex flex-col justify-end bg-gradient-to-b from-transparent to-[#050504] scrollbar-none"
+        onClick={() => inputRef.current?.focus()}
+        className="p-4 h-[250px] overflow-y-auto space-y-1.5 flex flex-col justify-end bg-black/60 scrollbar-none font-mono text-[11px] leading-relaxed cursor-text"
         style={{ scrollbarWidth: "none" }}
       >
         {logs.map((log, i) => (
-          <div key={i} className="leading-relaxed flex items-start gap-2 animate-[fadeIn_0.3s_ease-out]">
-            <span className="text-[10px] text-[#555] shrink-0 select-none tabular-nums">
-              {log.timestamp}
-            </span>
-            <span className="flex items-start gap-1.5">
+          <div key={i} className="flex items-start gap-2 animate-[fadeIn_0.2s_ease-out]">
+            {log.timestamp && (
+              <span className="text-[10px] text-zinc-600 shrink-0 select-none tabular-nums">
+                {log.timestamp}
+              </span>
+            )}
+            <span className="flex items-start gap-1.5 flex-1 min-w-0">
               {log.type === "command" && (
-                <span className="text-accent shrink-0">$</span>
+                <span className="text-emerald-400 shrink-0 select-none">$</span>
               )}
               {log.type === "success" && (
-                <span className="text-[#54C258] shrink-0">✓</span>
+                <span className="text-emerald-400 shrink-0 select-none">✓</span>
               )}
               {log.type === "info" && (
-                <span className="text-[#6EA8FE] shrink-0">›</span>
+                <span className="text-zinc-400 shrink-0 select-none">›</span>
               )}
               {log.type === "warn" && (
-                <span className="text-[#E5B54F] shrink-0">⚠</span>
+                <span className="text-amber-400 shrink-0 select-none">!</span>
+              )}
+              {log.type === "system" && (
+                <span className="text-zinc-500 shrink-0 select-none">#</span>
               )}
               <span
                 className={
                   log.type === "command"
-                    ? "text-[#EAEAE6] font-medium"
+                    ? "text-white font-medium break-all"
                     : log.type === "success"
-                    ? "text-[#A8D8AA]"
+                    ? "text-emerald-300 break-words"
                     : log.type === "warn"
-                    ? "text-[#E5C97A]"
-                    : "text-[#B8B8B3]"
+                    ? "text-amber-300 break-words"
+                    : log.type === "system"
+                    ? "text-zinc-500 break-words"
+                    : "text-zinc-300 break-words"
                 }
               >
                 {log.text}
@@ -278,35 +277,30 @@ export function SystemConsole() {
           </div>
         ))}
 
-        {/* Blinking cursor */}
-        <div className="flex items-center gap-1.5 text-[#EAEAE6]">
-          <span className="text-[10px] text-[#555] select-none tabular-nums">
-            {getTimestamp()}
-          </span>
-          <span className="text-accent">$</span>
-          <span className="w-[7px] h-[14px] bg-[#EAEAE6]/80 animate-[blink_1s_step-end_infinite]" />
-        </div>
+        {/* Interactive CLI input */}
+        <form onSubmit={handleCommand} className="flex items-center gap-1.5 pt-1">
+          <span className="text-emerald-400 font-mono select-none">$</span>
+          <input
+            ref={inputRef}
+            type="text"
+            value={inputVal}
+            onChange={(e) => setInputVal(e.target.value)}
+            placeholder="type command (e.g. status, help)..."
+            className="flex-1 bg-transparent text-white font-mono text-[11px] placeholder:text-zinc-700 focus:outline-none caret-emerald-400"
+          />
+        </form>
       </div>
 
-      {/* Footer Metrics */}
-      <div className="px-4 py-2 bg-[#131312] border-t border-border/40 text-[10px] text-[#555] flex items-center justify-between tabular-nums">
-        <div>
-          SYS{" "}
-          <span className="text-[#54C258] font-medium">ACTIVE</span>
+      {/* Footer Status Bar */}
+      <div className="px-3.5 py-1.5 bg-zinc-950/90 border-t border-zinc-800 text-[10px] font-mono text-zinc-500 flex items-center justify-between tabular-nums select-none">
+        <div className="flex items-center gap-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="text-zinc-400">DGX CLUSTER ONLINE</span>
         </div>
-        <div>
-          CPU{" "}
-          <span className={metrics.cpu > 20 ? "text-[#E5B54F]" : "text-[#9B9B96]"}>
-            {metrics.cpu.toFixed(0)}%
-          </span>
-        </div>
-        <div>
-          MEM{" "}
-          <span className="text-[#9B9B96]">{metrics.mem.toFixed(1)}GB</span>
-        </div>
-        <div>
-          UP{" "}
-          <span className="text-accent font-medium">{metrics.uptime}h</span>
+        <div className="flex items-center gap-3">
+          <span>CPU {metrics.cpu.toFixed(0)}%</span>
+          <span>MEM {metrics.mem.toFixed(1)}GB</span>
+          <span className="text-emerald-400">{metrics.nodes}+ NODES</span>
         </div>
       </div>
     </div>

@@ -6,9 +6,9 @@ import { AnimateIn } from "@/components/ui/animate-in";
 import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
-  title: "Work",
+  title: "Work & Systems",
   description:
-    "Case studies in hydroinformatics, AI systems, spatial computing, digital twins, and full-stack architecture. Selected projects by Ilias Chrysovergis.",
+    "Case studies in hydroinformatics, AI systems, spatial computing, digital twins, and full-stack architecture by Ilias Chrysovergis.",
 };
 
 export default function WorkPage() {
@@ -16,12 +16,12 @@ export default function WorkPage() {
 
   return (
     <PageWrapper>
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="container-wide">
           <SectionHeading
-            label="Work"
-            title="Turning complexity into clarity"
-            description="Each project represents a system designed to make complex real-world phenomena understandable and actionable. Not portfolio pieces — engineering outcomes."
+            label="Engineering & Systems"
+            title="Turning complexity into actionable clarity"
+            description="Each project represents a production system designed to make complex real-world phenomena understandable and actionable. Not portfolio pieces — engineering outcomes."
           />
         </div>
       </section>
@@ -29,101 +29,97 @@ export default function WorkPage() {
       <section className="pb-24 md:pb-32">
         <div className="container-wide space-y-0">
           {projects.map((project, i) => (
-            <AnimateIn key={project.slug} delay={i * 0.05}>
+            <AnimateIn key={project.slug} delay={i * 0.04}>
               <article
                 id={project.slug}
-                className="py-12 md:py-16 border-t border-border scroll-mt-24"
+                className="py-12 md:py-16 border-t border-zinc-800 scroll-mt-24"
               >
                 {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6 mb-6">
-                  <span className="text-xs font-mono text-text-tertiary">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="text-xs text-accent font-medium uppercase tracking-wider">
-                    {project.domain}
-                  </span>
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 sm:gap-6 mb-4">
+                  <div className="flex items-center gap-3">
+                    <span className="text-xs font-mono text-zinc-600">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-[11px] font-mono uppercase tracking-widest text-emerald-400">
+                      {project.domain}
+                    </span>
+                  </div>
+                  {project.links.length > 0 && (
+                    <div className="flex flex-wrap gap-3">
+                      {project.links.map((link) => (
+                        <a
+                          key={link.url}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs font-mono text-zinc-400 hover:text-emerald-400 transition-colors"
+                        >
+                          {link.label} ↗
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
-                <h2 className="heading-serif text-2xl md:text-3xl lg:text-4xl text-text-primary mb-4">
+                <h2 className="text-2xl sm:text-3xl font-light tracking-tight text-white mb-3">
                   {project.title}
                 </h2>
 
-                <p className="text-text-secondary text-base md:text-lg leading-relaxed max-w-3xl mb-8">
+                <p className="text-zinc-400 font-light text-sm sm:text-base leading-relaxed max-w-3xl mb-8">
                   {project.summary}
                 </p>
 
                 {/* Details Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-                  <div>
-                    <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2">
-                      Problem
-                    </h3>
-                    <p className="text-sm text-text-secondary leading-relaxed">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 pt-6 border-t border-zinc-900">
+                  <div className="mono-card rounded p-5">
+                    <div className="text-[10px] uppercase font-mono tracking-widest text-zinc-500 mb-2">
+                      Problem Context
+                    </div>
+                    <p className="text-xs sm:text-sm text-zinc-400 font-light leading-relaxed">
                       {project.problem}
                     </p>
                   </div>
-                  <div>
-                    <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2">
-                      Role
-                    </h3>
-                    <p className="text-sm text-text-primary font-medium mb-3">
+                  <div className="mono-card rounded p-5">
+                    <div className="text-[10px] uppercase font-mono tracking-widest text-zinc-500 mb-2">
+                      Role & Methods
+                    </div>
+                    <p className="text-xs sm:text-sm text-white font-medium mb-2">
                       {project.role}
                     </p>
-                    <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2">
-                      Methods
-                    </h3>
                     <ul className="space-y-1">
                       {project.methods.map((method) => (
                         <li
                           key={method}
-                          className="text-sm text-text-secondary"
+                          className="text-xs text-zinc-400 font-light flex items-center gap-1.5"
                         >
-                          {method}
+                          <span className="text-zinc-600">•</span>
+                          <span>{method}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div>
-                    <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2">
-                      Outcome
-                    </h3>
-                    <p className="text-sm text-text-secondary leading-relaxed mb-4">
+                  <div className="mono-card rounded p-5">
+                    <div className="text-[10px] uppercase font-mono tracking-widest text-zinc-500 mb-2">
+                      Outcome & Impact
+                    </div>
+                    <p className="text-xs sm:text-sm text-zinc-400 font-light leading-relaxed mb-3">
                       {project.outcome}
                     </p>
-                    <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2">
-                      Impact
-                    </h3>
-                    <p className="text-sm text-text-secondary leading-relaxed">
+                    <div className="text-xs font-mono text-emerald-400/90 pt-2 border-t border-zinc-800/80">
                       {project.impact}
-                    </p>
+                    </div>
                   </div>
                 </div>
 
-                {/* Stack & Links */}
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-xs font-medium uppercase tracking-wider text-text-tertiary mr-2">
-                    Stack
+                {/* Stack */}
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-[11px] font-mono uppercase tracking-widest text-zinc-600 mr-1">
+                    Stack:
                   </span>
                   {project.stack.map((tech) => (
                     <Badge key={tech}>{tech}</Badge>
                   ))}
                 </div>
-
-                {project.links.length > 0 && (
-                  <div className="mt-4 flex flex-wrap gap-4">
-                    {project.links.map((link) => (
-                      <a
-                        key={link.url}
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-accent hover:text-accent-hover transition-colors link-underline"
-                      >
-                        {link.label} ↗
-                      </a>
-                    ))}
-                  </div>
-                )}
               </article>
             </AnimateIn>
           ))}

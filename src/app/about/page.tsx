@@ -9,37 +9,39 @@ import { achievements } from "@/data/achievements";
 import { teaching } from "@/data/research";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About & Journey",
   description:
-    "Ilias Chrysovergis — software architect, researcher, and founder. Greek engineer working across hydroinformatics, AI, spatial computing, and startup product development.",
+    "Ilias Chrysovergis — software architect, researcher, and founder working across hydroinformatics, AI, spatial computing, and startup engineering.",
 };
 
 export default function AboutPage() {
   return (
     <PageWrapper>
       {/* Hero */}
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="container-wide">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
-            <AnimateIn className="md:col-span-4 lg:col-span-4">
-              <div className="relative aspect-[4/5] max-w-sm rounded-lg overflow-hidden bg-surface border border-border">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-start">
+            <AnimateIn className="md:col-span-4">
+              <div className="relative aspect-[4/5] max-w-sm rounded-lg overflow-hidden bg-zinc-900 border border-zinc-800">
                 <Image
                   src="/images/profile.jpeg"
                   alt="Ilias Chrysovergis"
                   fill
-                  className="object-cover"
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-300"
                   sizes="(max-width: 768px) 100vw, 33vw"
                   priority
                 />
               </div>
             </AnimateIn>
 
-            <AnimateIn className="md:col-span-8 lg:col-span-8" delay={0.15}>
-              <span className="section-label mb-4 block">About</span>
-              <h1 className="heading-serif text-4xl md:text-5xl text-text-primary mb-8 text-balance">
+            <AnimateIn className="md:col-span-8" delay={0.1}>
+              <div className="text-[11px] uppercase font-mono tracking-widest text-zinc-500 mb-2">
+                Identity & Background
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-white mb-6 text-balance">
                 Engineer, researcher, builder, founder.
               </h1>
-              <div className="space-y-5 text-text-secondary leading-relaxed max-w-2xl">
+              <div className="space-y-4 text-zinc-400 font-light text-sm sm:text-base leading-relaxed max-w-2xl">
                 <p>
                   I build systems that make complex physical phenomena understandable
                   and actionable. My work sits at the intersection of academic
@@ -49,29 +51,28 @@ export default function AboutPage() {
                 <p>
                   Based in Greece, I work across hydroinformatics, AI, spatial
                   computing, extended reality, digital twins, and full-stack systems
-                  architecture. I&apos;m not a specialist in one narrow domain;
-                  I&apos;m a systems thinker who connects disciplines to solve
+                  architecture. I connect disciplines to solve
                   problems that no single field can address alone.
                 </p>
                 <p>
-                  I co-founded Metatopia — Greece&apos;s first metaverse studio — and
-                  I&apos;m building products across XR, creative tech, and
+                  I co-founded Metatopia — sovereign infrastructure and spatial compute studio — and
+                  I build products across XR, creative tech, and
                   decision-support systems. I&apos;m simultaneously a PhD candidate,
                   a university lecturer, and an engineer who has shipped production
                   code for defense, healthcare, water management, and open-source
                   ML frameworks used globally.
                 </p>
               </div>
-              <div className="mt-6">
+              <div className="mt-8 flex flex-wrap items-center gap-3 font-mono">
                 <a
                   href="/Ilias_Chrysovergis_CV.pdf"
                   download
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white text-sm font-medium rounded-md hover:bg-accent/90 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white text-black text-xs sm:text-sm font-medium rounded hover:bg-zinc-200 transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="14"
+                    height="14"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -83,20 +84,23 @@ export default function AboutPage() {
                     <polyline points="7 10 12 15 17 10" />
                     <line x1="12" y1="15" x2="12" y2="3" />
                   </svg>
-                  Download CV
+                  Download CV (PDF)
                 </a>
+                <Button href="/contact" variant="secondary">
+                  Get in touch →
+                </Button>
               </div>
             </AnimateIn>
           </div>
         </div>
       </section>
 
-      {/* Education & Journey */}
-      <section className="py-24 md:py-32 bg-surface/50">
+      {/* Journey Timeline */}
+      <section className="py-20 md:py-28 border-t border-zinc-900 bg-zinc-950/40">
         <div className="container-wide">
-          <SectionHeading label="Journey" title="The path so far" />
+          <SectionHeading label="Trajectory" title="Engineering & research journey" />
 
-          <div className="max-w-3xl space-y-0">
+          <div className="max-w-3xl space-y-0 border-t border-zinc-800">
             {[
               {
                 period: "Jun 2025 – Present",
@@ -126,7 +130,7 @@ export default function AboutPage() {
                 period: "Nov 2022 – Sep 2025",
                 title: "Founder & CEO/CTO — Metatopia",
                 detail:
-                  "Built Greece's first metaverse studio. Delivered VR training simulators, MR gaming, digital twins for wireless systems, and EU open call consortia across Thessaloniki and Nicosia.",
+                  "Built sovereign infrastructure studio. Delivered VR training simulators, MR gaming, digital twins for wireless systems, and EU open call consortia across Thessaloniki and Nicosia.",
               },
               {
                 period: "Apr 2022 – Oct 2024",
@@ -162,7 +166,7 @@ export default function AboutPage() {
                 period: "Oct 2017 – Sep 2018",
                 title: "MSc Communications & Signal Processing — Imperial College London",
                 detail:
-                  "Signal Processing, Machine Intelligence, Computer Vision, Big Data, Pattern Recognition, Distributed Networks. Grade: 71.8%.",
+                  "Signal Processing, Machine Intelligence, Computer Vision, Big Data, Pattern Recognition, Distributed Networks. Distinction (71.8%).",
               },
               {
                 period: "Oct 2012 – Jul 2017",
@@ -172,18 +176,18 @@ export default function AboutPage() {
                   "Grade: 9.1/10 (Top 1%). Won Microsoft Imagine Cup World Championship (2016). Secured U.S. Patent for VR behavioral analysis.",
               },
             ].map((entry, i) => (
-              <AnimateIn key={entry.period} delay={i * 0.05}>
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-6 py-6 border-b border-border">
-                  <div className="md:col-span-3">
-                    <span className="text-xs font-mono text-text-tertiary">
+              <AnimateIn key={entry.period} delay={i * 0.03}>
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-6 py-5 border-b border-zinc-900">
+                  <div className="md:col-span-4">
+                    <span className="text-xs font-mono text-zinc-500">
                       {entry.period}
                     </span>
                   </div>
-                  <div className="md:col-span-9">
-                    <h3 className="text-sm font-medium text-text-primary">
+                  <div className="md:col-span-8">
+                    <h3 className="text-sm font-medium text-white">
                       {entry.title}
                     </h3>
-                    <p className="text-sm text-text-secondary mt-1 leading-relaxed">
+                    <p className="text-xs text-zinc-400 font-light mt-1 leading-relaxed">
                       {entry.detail}
                     </p>
                   </div>
@@ -194,128 +198,86 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Achievements */}
-      <section className="py-24 md:py-32">
+      {/* Achievements & Proof */}
+      <section className="py-20 md:py-28 border-t border-zinc-900">
         <div className="container-wide">
           <SectionHeading
             label="Recognition"
-            title="Awards, fellowships & milestones"
+            title="Awards, fellowships & patents"
           />
 
-          <div className="max-w-4xl">
-            <div className="grid grid-cols-1 gap-0">
-              {achievements.map((achievement, i) => (
-                <AnimateIn
-                  key={`${achievement.title}-${achievement.year}`}
-                  delay={i * 0.03}
-                >
-                  <div className="grid grid-cols-12 gap-4 py-4 border-b border-border items-baseline">
-                    <span className="col-span-2 md:col-span-1 text-xs font-mono text-text-tertiary">
-                      {achievement.year}
-                    </span>
-                    <div className="col-span-7 md:col-span-8">
-                      <h3 className="text-sm font-medium text-text-primary">
-                        {achievement.title}
-                      </h3>
-                      <p className="text-xs text-text-tertiary mt-0.5">
-                        {achievement.detail}
-                      </p>
-                    </div>
-                    <span className="col-span-3 text-xs text-text-tertiary text-right">
-                      {achievement.location}
-                    </span>
+          <div className="max-w-4xl space-y-0 border-t border-zinc-800">
+            {achievements.map((achievement, i) => (
+              <AnimateIn
+                key={`${achievement.title}-${achievement.year}`}
+                delay={i * 0.02}
+              >
+                <div className="grid grid-cols-12 gap-3 py-3.5 border-b border-zinc-900 items-baseline">
+                  <span className="col-span-2 md:col-span-1 text-xs font-mono text-zinc-600">
+                    {achievement.year}
+                  </span>
+                  <div className="col-span-7 md:col-span-8">
+                    <h3 className="text-xs sm:text-sm font-medium text-white">
+                      {achievement.title}
+                    </h3>
+                    <p className="text-[11px] text-zinc-400 font-light mt-0.5">
+                      {achievement.detail}
+                    </p>
                   </div>
-                </AnimateIn>
-              ))}
-            </div>
+                  <span className="col-span-3 text-[11px] font-mono text-zinc-600 text-right">
+                    {achievement.location}
+                  </span>
+                </div>
+              </AnimateIn>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Teaching */}
-      <section className="py-24 md:py-32 bg-surface/50">
+      <section className="py-20 md:py-28 border-t border-zinc-900 bg-zinc-950/40">
         <div className="container-wide">
-          <SectionHeading label="Teaching" title="Academic instruction" />
+          <SectionHeading label="Instruction" title="Academic teaching & lectures" />
           <AnimateIn>
             <div className="max-w-3xl">
-              <div className="p-8 bg-surface-elevated border border-border rounded-lg">
-                <h3 className="text-lg font-medium text-text-primary mb-1">
+              <div className="mono-card rounded-lg p-6 md:p-8">
+                <h3 className="text-base font-medium text-white mb-1">
                   {teaching.institution}
                 </h3>
-                <p className="text-sm text-accent font-medium mb-1">
+                <p className="text-xs font-mono text-emerald-400 mb-1">
                   {teaching.role} · {teaching.program}
                 </p>
-                <p className="text-xs text-text-tertiary mb-6">{teaching.period}</p>
+                <p className="text-xs font-mono text-zinc-500 mb-6">{teaching.period}</p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-zinc-900">
                   <div>
-                    <h4 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-3">
-                      Courses
-                    </h4>
-                    <ul className="space-y-1.5">
+                    <div className="text-[10px] uppercase font-mono tracking-widest text-zinc-500 mb-2.5">
+                      Courses Delivered
+                    </div>
+                    <ul className="space-y-1 text-xs font-mono text-zinc-400">
                       {teaching.courses.map((course) => (
-                        <li key={course} className="text-sm text-text-secondary">
-                          {course}
+                        <li key={course} className="flex items-center gap-1.5">
+                          <span className="text-zinc-600">›</span>
+                          <span>{course}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-3">
-                      Supervision Areas
-                    </h4>
-                    <ul className="space-y-1.5">
+                    <div className="text-[10px] uppercase font-mono tracking-widest text-zinc-500 mb-2.5">
+                      Supervised Topics
+                    </div>
+                    <ul className="space-y-1 text-xs font-mono text-zinc-400">
                       {teaching.supervision.map((area) => (
-                        <li key={area} className="text-sm text-text-secondary">
-                          {area}
+                        <li key={area} className="flex items-center gap-1.5">
+                          <span className="text-zinc-600">›</span>
+                          <span>{area}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
               </div>
-            </div>
-          </AnimateIn>
-        </div>
-      </section>
-
-      {/* Personal */}
-      <section className="py-24 md:py-32">
-        <div className="container-wide">
-          <AnimateIn className="max-w-2xl">
-            <span className="section-label mb-4 block">Personal</span>
-            <h2 className="heading-serif text-2xl md:text-3xl text-text-primary mb-6">
-              Beyond the systems
-            </h2>
-            <div className="space-y-4 text-text-secondary leading-relaxed">
-              <p>
-                I&apos;m based in Thessaloniki, Greece — a city where you can debug code
-                with a view of the Thermaikos Gulf. My perspective is shaped by working
-                across Greek and international contexts, from London to Nicosia to Seattle.
-              </p>
-              <p>
-                I believe the most impactful technology is built by people who understand
-                both the science and the engineering required to ship it. My work is driven
-                by the conviction that complex real-world systems — water networks,
-                communication infrastructure, urban environments — deserve interfaces
-                as thoughtful as any consumer product.
-              </p>
-            </div>
-            <div className="mt-6 flex flex-wrap gap-2">
-              {[
-                "Thessaloniki",
-                "Greece",
-                "Interdisciplinary",
-                "Systems Thinking",
-                "Research → Product",
-              ].map((tag) => (
-                <Badge key={tag}>{tag}</Badge>
-              ))}
-            </div>
-            <div className="mt-8">
-              <Button href="/contact" variant="primary">
-                Get in touch
-              </Button>
             </div>
           </AnimateIn>
         </div>

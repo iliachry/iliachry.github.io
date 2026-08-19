@@ -9,9 +9,9 @@ import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Research",
+  title: "Research & Publications",
   description:
-    "Academic research in hydroinformatics, spatial computing, AI/ML systems, digital twins, and wireless communications. Publications, PhD work, and collaborations by Ilias Chrysovergis.",
+    "Academic research in hydroinformatics, spatial computing, AI/ML systems, digital twins, and wireless communications by Ilias Chrysovergis.",
 };
 
 export default function ResearchPage() {
@@ -29,34 +29,36 @@ export default function ResearchPage() {
   return (
     <PageWrapper>
       {/* Hero */}
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="container-wide">
           <SectionHeading
-            label="Research"
-            title="Inquiry grounded in engineering"
-            description="Academic research that produces working systems, not just papers. Investigating how intelligent spatial systems can bridge simulation, visualization, and real-world decision-making."
+            label="Academic Research"
+            title="Scientific inquiry grounded in systems execution"
+            description="Academic research that produces working systems, not just theoretical papers. Investigating how spatial compute, digital twins, and reinforcement learning connect simulation with real-world decision-making."
           />
         </div>
       </section>
 
-      {/* PhD */}
-      <section className="pb-20 md:pb-28">
+      {/* PhD Card */}
+      <section className="pb-16 md:pb-24">
         <div className="container-wide">
           <AnimateIn>
-            <div className="p-8 md:p-12 bg-surface-elevated border border-border rounded-lg">
-              <span className="section-label mb-3 block">PhD Research</span>
-              <h2 className="heading-serif text-2xl md:text-3xl text-text-primary mb-2">
+            <div className="mono-card rounded-lg p-6 md:p-10 border border-zinc-800">
+              <div className="text-[11px] uppercase font-mono tracking-widest text-emerald-400 mb-2">
+                PhD Dissertation Research
+              </div>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-light tracking-tight text-white mb-2">
                 {phd.title}
               </h2>
-              <p className="text-sm text-accent font-medium mb-4">
+              <p className="text-xs font-mono text-zinc-400 mb-4">
                 {phd.institution} · {phd.status}
               </p>
-              <p className="text-text-secondary leading-relaxed max-w-3xl mb-6">
+              <p className="text-zinc-400 font-light text-sm sm:text-base leading-relaxed max-w-3xl mb-6">
                 {phd.description}
               </p>
               <div className="flex flex-wrap gap-2">
                 {phd.areas.map((area) => (
-                  <Badge key={area} variant="accent">
+                  <Badge key={area} variant="emerald">
                     {area}
                   </Badge>
                 ))}
@@ -67,36 +69,36 @@ export default function ResearchPage() {
       </section>
 
       {/* Research Themes */}
-      <section className="pb-24 md:pb-32 bg-surface/50">
-        <div className="container-wide py-24 md:py-32">
+      <section className="py-20 md:py-28 border-t border-zinc-900 bg-zinc-950/40">
+        <div className="container-wide">
           <SectionHeading
-            label="Research Themes"
-            title="Five converging domains"
+            label="Domains of Focus"
+            title="Five converging research pillars"
           />
-          <div className="space-y-8">
+          <div className="space-y-0 border-t border-zinc-800">
             {researchThemes.map((theme, i) => (
-              <AnimateIn key={theme.title} delay={i * 0.06}>
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-6 border-b border-border last:border-b-0">
+              <AnimateIn key={theme.title} delay={i * 0.05}>
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 py-6 border-b border-zinc-900">
                   <div className="md:col-span-1">
-                    <span className="text-xs font-mono text-text-tertiary">
+                    <span className="text-xs font-mono text-zinc-600">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
                   <div className="md:col-span-3">
-                    <h3 className="text-base font-medium text-text-primary">
+                    <h3 className="text-base font-medium text-white">
                       {theme.title}
                     </h3>
                   </div>
                   <div className="md:col-span-5">
-                    <p className="text-sm text-text-secondary leading-relaxed">
+                    <p className="text-xs sm:text-sm text-zinc-400 font-light leading-relaxed">
                       {theme.description}
                     </p>
                   </div>
                   <div className="md:col-span-3">
                     <ul className="space-y-1">
                       {theme.topics.map((topic) => (
-                        <li key={topic} className="text-xs text-text-tertiary">
-                          {topic}
+                        <li key={topic} className="text-xs font-mono text-zinc-500">
+                          › {topic}
                         </li>
                       ))}
                     </ul>
@@ -109,66 +111,68 @@ export default function ResearchPage() {
       </section>
 
       {/* Publications */}
-      <section className="py-24 md:py-32">
+      <section className="py-20 md:py-28 border-t border-zinc-900">
         <div className="container-wide">
           <SectionHeading
-            label="Publications"
-            title="Papers, patents & contributions"
-            description="Selected publications across IEEE, ACM, and other venues."
+            label="Bibliography"
+            title="Papers, patents & published contributions"
+            description="Peer-reviewed publications across IEEE, ACM SIGGRAPH, Springer, Elsevier, and USPTO."
           />
-          <AnimateIn className="flex flex-wrap gap-3 mb-10 -mt-2">
+          <AnimateIn className="flex flex-wrap gap-2.5 mb-10 -mt-4 font-mono">
             {siteConfig.social.scholar && (
               <Button href={siteConfig.social.scholar} variant="secondary" external>
-                Google Scholar
+                Google Scholar ↗
               </Button>
             )}
             {siteConfig.social.researchgate && (
               <Button href={siteConfig.social.researchgate} variant="secondary" external>
-                ResearchGate
+                ResearchGate ↗
               </Button>
             )}
             {siteConfig.social.dblp && (
               <Button href={siteConfig.social.dblp} variant="secondary" external>
-                DBLP Profile
+                DBLP ↗
               </Button>
             )}
             {siteConfig.social.orcid && (
               <Button href={siteConfig.social.orcid} variant="secondary" external>
-                ORCID
+                ORCID ↗
               </Button>
             )}
           </AnimateIn>
-          <div className="space-y-0">
+
+          <div className="space-y-0 border-t border-zinc-800">
             {publications.map((pub, i) => (
               <AnimateIn key={`${pub.title}-${pub.year}`} delay={i * 0.03}>
-                <div className="py-5 border-b border-border flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6">
+                <div className="py-4 border-b border-zinc-900 flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6">
                   <div className="flex items-baseline gap-3 md:w-32 shrink-0">
-                    <span className="text-xs font-mono text-text-tertiary">
+                    <span className="text-xs font-mono text-zinc-600">
                       {pub.year}
                     </span>
-                    <span className="text-xs px-1.5 py-0.5 rounded bg-surface text-text-tertiary border border-border">
+                    <Badge variant={pub.type === "patent" ? "emerald" : "default"}>
                       {typeLabels[pub.type]}
-                    </span>
+                    </Badge>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-sm font-medium text-text-primary leading-snug">
+                    <h3 className="text-sm font-medium text-white leading-snug">
                       {pub.url ? (
                         <a
                           href={pub.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:text-accent transition-colors"
+                          className="hover:text-emerald-400 transition-colors inline-flex items-center gap-1"
                         >
-                          {pub.title}
+                          <span>{pub.title}</span>
+                          <span className="text-zinc-500">↗</span>
                         </a>
                       ) : (
                         pub.title
                       )}
                     </h3>
-                    <p className="text-xs text-text-tertiary mt-1">
+                    <p className="text-xs text-zinc-400 font-light mt-1">
                       {pub.authors}
                     </p>
-                    <p className="text-xs text-text-tertiary mt-0.5 italic">
+                    <p className="text-xs font-mono text-zinc-500 mt-0.5">
                       {pub.venue}
                     </p>
                   </div>
@@ -180,26 +184,27 @@ export default function ResearchPage() {
       </section>
 
       {/* Collaborations */}
-      <section className="py-24 md:py-32 bg-surface/50">
+      <section className="py-20 md:py-28 border-t border-zinc-900 bg-zinc-950/40">
         <div className="container-wide">
           <SectionHeading
-            label="Collaborations"
-            title="Academic partnerships"
+            label="Institutional Network"
+            title="Academic & research collaborations"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {collaborations.map((collab, i) => (
-              <AnimateIn key={collab.institution} delay={i * 0.08}>
-                <div className="p-6 bg-surface-elevated border border-border rounded-lg">
-                  <h3 className="text-base font-medium text-text-primary mb-1">
+              <AnimateIn key={collab.institution} delay={i * 0.06}>
+                <div className="mono-card rounded-lg p-6">
+                  <h3 className="text-base font-medium text-white mb-1">
                     {collab.institution}
                   </h3>
-                  <p className="text-sm text-accent font-medium mb-3">
+                  <p className="text-xs font-mono text-emerald-400 mb-3">
                     {collab.role}
                   </p>
-                  <ul className="space-y-1">
+                  <ul className="space-y-1 font-mono text-xs text-zinc-400">
                     {collab.focus.map((f) => (
-                      <li key={f} className="text-sm text-text-secondary">
-                        {f}
+                      <li key={f} className="flex items-center gap-1.5">
+                        <span className="text-zinc-600">›</span>
+                        <span>{f}</span>
                       </li>
                     ))}
                   </ul>

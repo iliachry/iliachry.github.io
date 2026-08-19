@@ -8,87 +8,57 @@ export function SelectedWorkSection() {
   const projects = getFeaturedProjects().slice(0, 4);
 
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-20 md:py-28 border-t border-zinc-900">
       <div className="container-wide">
         <SectionHeading
-          label="Selected Work"
-          title="Systems that connect research to reality"
-          description="Case studies in hydroinformatics, AI, spatial computing, and full-stack systems architecture."
+          label="Selected Systems"
+          title="Engineered for the physical world"
+          description="Case studies across hydroinformatics digital twins, AI frameworks, spatial computing, and full-stack systems."
         />
 
-        <div className="space-y-0">
+        <div className="space-y-0 border-t border-zinc-800">
           {projects.map((project, i) => (
-            <AnimateIn key={project.slug} delay={i * 0.1}>
+            <AnimateIn key={project.slug} delay={i * 0.08}>
               <Link
                 href={`/work#${project.slug}`}
-                className="group block py-8 md:py-10 border-t border-border last:border-b hover:bg-surface/50 transition-colors -mx-4 px-4 md:-mx-6 md:px-6 rounded-md"
+                className="group flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 sm:gap-6 py-5 border-b border-zinc-900 hover:bg-zinc-950/60 transition-colors -mx-3 px-3 rounded"
               >
-                <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
-                  {/* Left: number + domain */}
-                  <div className="flex items-baseline gap-4 md:w-48 shrink-0">
-                    <span className="text-xs font-mono text-text-tertiary">
+                {/* Left: Number + Title + Summary */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-3 mb-1">
+                    <span className="text-xs font-mono text-zinc-600">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-xs text-text-tertiary">
-                      {project.domain.split("·")[0].trim()}
-                    </span>
-                  </div>
-
-                  {/* Right: content */}
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-xl md:text-2xl font-medium text-text-primary group-hover:text-accent transition-colors">
-                      {project.title}
+                    <h3 className="text-base sm:text-lg font-medium text-white group-hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5">
+                      <span>{project.title}</span>
+                      <span className="text-zinc-500 group-hover:text-emerald-400 transition-colors">↗</span>
                     </h3>
-                    <p className="mt-2 text-text-secondary text-sm md:text-base leading-relaxed line-clamp-2">
-                      {project.summary}
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {project.stack.slice(0, 4).map((tech) => (
-                        <Badge key={tech}>{tech}</Badge>
-                      ))}
-                    </div>
                   </div>
+                  <p className="text-xs sm:text-sm text-zinc-400 font-light leading-relaxed max-w-2xl">
+                    {project.summary}
+                  </p>
+                  <div className="mt-2.5 flex flex-wrap gap-1.5">
+                    {project.stack.slice(0, 4).map((tech) => (
+                      <Badge key={tech}>{tech}</Badge>
+                    ))}
+                  </div>
+                </div>
 
-                  {/* Arrow */}
-                  <div className="hidden md:flex items-center text-text-tertiary group-hover:text-accent transition-colors">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="transform group-hover:translate-x-1 transition-transform"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </div>
+                {/* Right: Domain tag */}
+                <div className="text-[11px] font-mono text-zinc-500 shrink-0 self-start sm:self-baseline">
+                  {project.domain.split("·")[0].trim()}
                 </div>
               </Link>
             </AnimateIn>
           ))}
         </div>
 
-        <AnimateIn delay={0.4} className="mt-10">
+        <AnimateIn delay={0.3} className="mt-8">
           <Link
             href="/work"
-            className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-hover transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-emerald-400 transition-colors"
           >
-            View all work
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            Explore all systems & engineering →
           </Link>
         </AnimateIn>
       </div>

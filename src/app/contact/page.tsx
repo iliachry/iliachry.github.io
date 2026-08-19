@@ -6,58 +6,35 @@ import { siteConfig } from "@/data/site";
 import { ContactForm } from "@/components/sections/contact/contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact & Collaboration",
   description:
-    "Get in touch with Ilias Chrysovergis for research collaboration, startup partnerships, technical consulting, or speaking engagements.",
+    "Get in touch with Ilias Chrysovergis for research collaboration, sovereign systems architecture, startup partnerships, or speaking.",
 };
 
 const pathways = [
   {
     title: "Research Collaboration",
     description:
-      "Joint research projects, academic partnerships, co-authored publications, or PhD-adjacent collaborations.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-      </svg>
-    ),
+      "Joint research proposals, academic publications, digital twin architecture, or PhD-adjacent collaborations.",
+    code: "[RESEARCH_01]",
   },
   {
-    title: "Startup & Investment",
+    title: "Venture & Investment",
     description:
-      "Venture partnership, investment discussions, technical co-founding opportunities, or strategic technology guidance.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-        <path d="M2 17l10 5 10-5" />
-        <path d="M2 12l10 5 10-5" />
-      </svg>
-    ),
+      "Metatopia studio initiatives, technical co-founding, sovereign compute hardware, or deep-tech investment discussions.",
+    code: "[VENTURE_02]",
   },
   {
-    title: "Technical Consulting",
+    title: "Systems Consulting",
     description:
-      "Architecture reviews, systems design, AI/ML strategy, spatial computing guidance, or technical due diligence.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6" />
-        <polyline points="8 6 2 12 8 18" />
-      </svg>
-    ),
+      "Full-stack architecture reviews, spatial compute pipeline design, AI/ML strategy, or technical leadership.",
+    code: "[SYSTEMS_03]",
   },
   {
-    title: "Speaking & Media",
+    title: "Keynotes & Teaching",
     description:
-      "Conference talks, panel discussions, podcast appearances, or press inquiries about deep-tech and spatial systems.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
-        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-        <line x1="12" y1="19" x2="12" y2="23" />
-        <line x1="8" y1="23" x2="16" y2="23" />
-      </svg>
-    ),
+      "Technical conference talks, guest lectures, panel discussions, or workshops on spatial systems and sovereign infrastructure.",
+    code: "[KEYNOTE_04]",
   },
 ];
 
@@ -65,30 +42,34 @@ export default function ContactPage() {
   return (
     <PageWrapper>
       {/* Hero */}
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="container-wide">
           <SectionHeading
-            label="Contact"
-            title="Let's talk about what you're building"
-            description="I'm available for research collaboration, startup partnership, technical consulting, and speaking engagements. Choose the path that fits your needs."
+            label="Direct Uplink"
+            title="Let's build high-integrity systems together"
+            description="Available for research partnerships, technical co-founding, architectural leadership, and keynotes. Connect directly through the encrypted form or direct channels."
           />
         </div>
       </section>
 
       {/* Pathways */}
-      <section className="pb-24 md:pb-32">
+      <section className="pb-16 md:pb-24">
         <div className="container-wide">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {pathways.map((pathway, i) => (
-              <AnimateIn key={pathway.title} delay={i * 0.1}>
-                <div className="p-6 md:p-8 bg-surface-elevated border border-border rounded-lg card-hover h-full">
-                  <div className="text-accent mb-4">{pathway.icon}</div>
-                  <h3 className="text-lg font-medium text-text-primary mb-2">
-                    {pathway.title}
-                  </h3>
-                  <p className="text-sm text-text-secondary leading-relaxed">
-                    {pathway.description}
-                  </p>
+              <AnimateIn key={pathway.title} delay={i * 0.06}>
+                <div className="mono-card rounded-lg p-6 h-full flex flex-col justify-between group">
+                  <div>
+                    <div className="text-[10px] font-mono text-emerald-400 mb-2">
+                      {pathway.code}
+                    </div>
+                    <h3 className="text-base font-medium text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                      {pathway.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-zinc-400 font-light leading-relaxed">
+                      {pathway.description}
+                    </p>
+                  </div>
                 </div>
               </AnimateIn>
             ))}
@@ -97,13 +78,16 @@ export default function ContactPage() {
       </section>
 
       {/* Form + Direct Contact */}
-      <section className="py-24 md:py-32 bg-surface/50">
+      <section className="py-20 md:py-28 border-t border-zinc-900 bg-zinc-950/40">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
             {/* Form */}
             <div className="lg:col-span-7">
               <AnimateIn>
-                <h2 className="heading-serif text-2xl md:text-3xl text-text-primary mb-6">
+                <div className="text-[11px] uppercase font-mono tracking-widest text-zinc-500 mb-2">
+                  Encrypted Message Dispatch
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-light tracking-tight text-white mb-6">
                   Send a message
                 </h2>
                 <ContactForm />
@@ -112,41 +96,56 @@ export default function ContactPage() {
 
             {/* Direct Contact */}
             <div className="lg:col-span-5">
-              <AnimateIn delay={0.15}>
-                <h2 className="heading-serif text-2xl md:text-3xl text-text-primary mb-6">
-                  Direct contact
+              <AnimateIn delay={0.1}>
+                <div className="text-[11px] uppercase font-mono tracking-widest text-zinc-500 mb-2">
+                  Direct Channels
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-light tracking-tight text-white mb-6">
+                  Telemetry & Contacts
                 </h2>
 
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2">
-                      Email
-                    </h3>
+                <div className="space-y-5 font-mono text-xs">
+                  <div className="mono-card rounded p-4">
+                    <div className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">
+                      Primary Inquiries
+                    </div>
                     <a
                       href={`mailto:${siteConfig.email}`}
-                      className="text-accent hover:text-accent-hover transition-colors link-underline"
+                      className="text-emerald-400 hover:underline text-sm"
                     >
                       {siteConfig.email}
                     </a>
                   </div>
 
-                  <div>
-                    <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2">
-                      Location
-                    </h3>
-                    <p className="text-text-secondary text-sm">
-                      {siteConfig.location}
+                  <div className="mono-card rounded p-4">
+                    <div className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">
+                      Metatopia Studio
+                    </div>
+                    <a
+                      href="mailto:sales@metatopia.gr"
+                      className="text-white hover:underline text-sm"
+                    >
+                      sales@metatopia.gr
+                    </a>
+                  </div>
+
+                  <div className="mono-card rounded p-4">
+                    <div className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">
+                      Base Location
+                    </div>
+                    <p className="text-zinc-300">
+                      {siteConfig.location} (GR)
                     </p>
-                    <p className="text-text-tertiary text-xs mt-1">
-                      Available internationally for significant projects
+                    <p className="text-zinc-500 text-[11px] mt-1">
+                      On-site availability: London, Berlin, Athens, Thessaloniki
                     </p>
                   </div>
 
-                  <div>
-                    <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2">
-                      Social
-                    </h3>
-                    <div className="flex flex-col gap-2">
+                  <div className="mono-card rounded p-4">
+                    <div className="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">
+                      Public Feeds
+                    </div>
+                    <div className="flex flex-wrap gap-2 text-[11px]">
                       {Object.entries(siteConfig.social)
                         .filter(([, url]) => url)
                         .map(([platform, url]) => (
@@ -155,32 +154,12 @@ export default function ContactPage() {
                             href={url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm text-text-secondary hover:text-accent transition-colors"
+                            className="text-zinc-400 hover:text-emerald-400 transition-colors"
                           >
-                            {platform === "twitter"
-                              ? "X / Twitter"
-                              : platform === "researchgate"
-                              ? "ResearchGate"
-                              : platform === "scholar"
-                              ? "Google Scholar"
-                              : platform === "dblp"
-                              ? "DBLP Profile"
-                              : platform === "orcid"
-                              ? "ORCID"
-                              : platform.charAt(0).toUpperCase() + platform.slice(1)}
+                            [{platform.toUpperCase()}]
                           </a>
                         ))}
                     </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-2">
-                      Response Time
-                    </h3>
-                    <p className="text-sm text-text-secondary">
-                      Typically within 24–48 hours. For urgent matters,
-                      please note &ldquo;Urgent&rdquo; in your subject line.
-                    </p>
                   </div>
                 </div>
               </AnimateIn>

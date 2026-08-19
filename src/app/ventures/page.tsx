@@ -7,71 +7,71 @@ import { Button } from "@/components/ui/button";
 import { ventures } from "@/data/ventures";
 
 export const metadata: Metadata = {
-  title: "Ventures",
+  title: "Ventures & Portfolio",
   description:
-    "Startup ventures and products by Ilias Chrysovergis. Building companies that commercialize advanced technology — from spatial computing to SaaS platforms.",
+    "Startup ventures, sovereign infrastructure, and deep-tech products by Ilias Chrysovergis.",
 };
 
 export default function VenturesPage() {
   return (
     <PageWrapper>
       {/* Hero */}
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="container-wide">
           <SectionHeading
-            label="Ventures"
-            title="Research commercialized into products"
-            description="Building companies at the intersection of deep technology and real-world need. Each venture translates research-grade capability into systems that work at production scale."
+            label="Portfolio & Ventures"
+            title="Sovereign infrastructure & deep technology platforms"
+            description="Building companies at the intersection of sovereign hardware, AI models, and real-world physical systems. Translating research into platforms that operate reliably at production scale."
           />
         </div>
       </section>
 
       {/* Ventures List */}
       <section className="pb-24 md:pb-32">
-        <div className="container-wide space-y-16 md:space-y-24">
+        <div className="container-wide space-y-12 md:space-y-16">
           {ventures.map((venture, i) => (
-            <AnimateIn key={venture.slug} delay={i * 0.1}>
-              <article className="border-t border-border pt-12 md:pt-16">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+            <AnimateIn key={venture.slug} delay={i * 0.08}>
+              <article className="border-t border-zinc-800 pt-10 md:pt-14">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
                   {/* Left column */}
                   <div className="lg:col-span-4">
-                    <div className="flex items-center gap-3 mb-4">
-                      <h2 className="heading-serif text-3xl md:text-4xl text-text-primary">
+                    <div className="flex items-center gap-3 mb-3">
+                      <h2 className="text-2xl sm:text-3xl font-light tracking-tight text-white">
                         {venture.name}
                       </h2>
                       <Badge
                         variant={
-                          venture.status === "active" ? "accent" : "default"
+                          venture.status === "active" ? "emerald" : "default"
                         }
                       >
                         {venture.status}
                       </Badge>
                     </div>
-                    <p className="text-accent font-medium mb-4">
+                    <p className="text-xs font-mono text-zinc-400 mb-2">
                       {venture.tagline}
                     </p>
-                    <p className="text-sm text-text-tertiary mb-4">
-                      {venture.role}
+                    <p className="text-xs font-mono text-zinc-500 mb-5">
+                      Role: {venture.role}
                     </p>
                     {venture.url && (
                       <Button href={venture.url} variant="secondary" external>
-                        Visit site ↗
+                        Visit Platform ↗
                       </Button>
                     )}
                   </div>
 
                   {/* Right column */}
-                  <div className="lg:col-span-8">
-                    <p className="text-text-secondary leading-relaxed mb-8">
+                  <div className="lg:col-span-8 space-y-6">
+                    <p className="text-zinc-400 font-light text-sm sm:text-base leading-relaxed">
                       {venture.description}
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-zinc-900">
                       <div>
-                        <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-3">
-                          Domains
-                        </h3>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="text-[10px] uppercase font-mono tracking-widest text-zinc-500 mb-2.5">
+                          Technical Domains
+                        </div>
+                        <div className="flex flex-wrap gap-1.5">
                           {venture.domains.map((domain) => (
                             <Badge key={domain}>{domain}</Badge>
                           ))}
@@ -79,19 +79,17 @@ export default function VenturesPage() {
                       </div>
 
                       <div>
-                        <h3 className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-3">
-                          Highlights
-                        </h3>
-                        <ul className="space-y-2">
+                        <div className="text-[10px] uppercase font-mono tracking-widest text-zinc-500 mb-2.5">
+                          Key Milestones
+                        </div>
+                        <ul className="space-y-1.5 font-mono text-xs">
                           {venture.highlights.map((highlight) => (
                             <li
                               key={highlight}
-                              className="text-sm text-text-secondary flex items-start gap-2"
+                              className="text-zinc-400 flex items-start gap-2"
                             >
-                              <span className="text-accent mt-1 shrink-0">
-                                ·
-                              </span>
-                              {highlight}
+                              <span className="text-emerald-400 shrink-0">›</span>
+                              <span>{highlight}</span>
                             </li>
                           ))}
                         </ul>
@@ -106,22 +104,21 @@ export default function VenturesPage() {
       </section>
 
       {/* Future Ventures */}
-      <section className="py-24 md:py-32 bg-surface/50">
+      <section className="py-20 md:py-28 border-t border-zinc-900 bg-zinc-950/40">
         <div className="container-wide">
           <AnimateIn>
             <div className="max-w-2xl">
-              <span className="section-label mb-4 block">What&apos;s Next</span>
-              <h2 className="heading-serif text-2xl md:text-3xl text-text-primary mb-4">
-                Always building
+              <div className="text-[11px] uppercase font-mono tracking-widest text-zinc-500 mb-2">
+                Co-Founding & Roadmap
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-light tracking-tight text-white mb-4">
+                Always building sovereign platforms
               </h2>
-              <p className="text-text-secondary leading-relaxed mb-6">
-                I&apos;m constantly exploring new intersections between research and
-                product. If you&apos;re working on a technically ambitious problem and
-                looking for a co-founder, technical partner, or architectural lead —
-                let&apos;s talk.
+              <p className="text-zinc-400 font-light text-sm sm:text-base leading-relaxed mb-6">
+                Constantly prototyping new intersections between compute autonomy, hardware, and spatial software. If you&apos;re building an ambitious sovereign system — let&apos;s talk.
               </p>
               <Button href="/contact" variant="primary">
-                Discuss a venture
+                Discuss a Venture →
               </Button>
             </div>
           </AnimateIn>

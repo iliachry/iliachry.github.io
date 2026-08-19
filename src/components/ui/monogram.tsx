@@ -1,34 +1,38 @@
-export function Monogram({ className = "" }: { className?: string }) {
+export function Monogram({ className = "w-7 h-7" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      aria-label="IC monogram"
+      aria-label="Ilias Chrysovergis Monogram"
       role="img"
     >
-      {/* Geometric monogram: I and C letterforms */}
+      {/* Precision Geometric Monogram: I and C letterforms */}
       <rect
         x="8"
-        y="6"
-        width="4.5"
-        height="28"
-        rx="1"
+        y="7"
+        width="4"
+        height="26"
+        rx="2"
         fill="currentColor"
       />
       <path
-        d="M22 10C22 8.34315 23.3431 7 25 7H28C32.4183 7 36 10.5817 36 15V15C36 15.5523 35.5523 16 35 16H26C25.4477 16 25 15.5523 25 15V10Z"
-        fill="var(--accent)"
+        d="M22 9C22 7.89543 22.8954 7 24 7H28C32.4183 7 36 10.5817 36 15V15C36 15.5523 35.5523 16 35 16H25C23.3431 16 22 14.6569 22 13V9Z"
+        fill="currentColor"
       />
       <path
-        d="M25 18C25 17.4477 25.4477 17 26 17H35C35.5523 17 36 17.4477 36 18V22C36 22.5523 35.5523 23 35 23H26C25.4477 23 25 22.5523 25 22V18Z"
-        fill="var(--accent)"
-        opacity="0.7"
+        d="M22 27C22 28.6569 23.3431 30 25 30H35C35.5523 30 36 30.4477 36 31V31C36 35.4183 32.4183 39 28 39H24C22.8954 39 22 38.1046 22 37V27Z"
+        fill="currentColor"
       />
-      <path
-        d="M22 30C22 31.6569 23.3431 33 25 33H28C32.4183 33 36 29.4183 36 25V25C36 24.4477 35.5523 24 35 24H26C25.4477 24 25 24.4477 25 25V30Z"
-        fill="var(--accent)"
+      <rect
+        x="22"
+        y="18"
+        width="11"
+        height="4"
+        rx="2"
+        fill="currentColor"
+        opacity="0.4"
       />
     </svg>
   );

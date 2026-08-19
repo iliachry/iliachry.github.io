@@ -3,29 +3,29 @@ import { Button } from "@/components/ui/button";
 
 export function ContactCTASection() {
   return (
-    <section className="py-24 md:py-32 bg-surface/50">
+    <section className="py-20 md:py-28 border-t border-zinc-900 bg-zinc-950/60">
       <div className="container-wide">
         <AnimateIn className="max-w-2xl">
-          <span className="section-label mb-4 block">Get in Touch</span>
-          <h2 className="heading-serif text-3xl md:text-4xl lg:text-5xl text-text-primary mb-6 text-balance">
+          <div className="text-[11px] uppercase font-mono tracking-widest text-zinc-500 mb-2">
+            Initiate Contact
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight text-white mb-4 text-balance">
             Building something that matters?
           </h2>
-          <p className="text-text-secondary text-lg leading-relaxed mb-8">
-            Whether you&apos;re exploring a research collaboration, evaluating a technical
-            partnership, or need architectural leadership for a complex system —
-            I&apos;d like to hear about it.
+          <p className="text-zinc-400 font-light text-sm sm:text-base leading-relaxed mb-8">
+            Whether you&apos;re exploring research collaboration, evaluating technical
+            architecture, or looking for deep-tech partnership — let&apos;s connect.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap items-center gap-4 font-mono">
             <Button href="/contact" variant="primary">
-              Start a conversation
+              Start a Conversation →
             </Button>
-            <Button
+            <a
               href="mailto:iliachry@iliachry.gr"
-              variant="ghost"
-              external
+              className="text-xs font-mono text-zinc-400 hover:text-emerald-400 transition-colors"
             >
-              iliachry@iliachry.gr
-            </Button>
+              iliachry@iliachry.gr ↗
+            </a>
           </div>
         </AnimateIn>
       </div>

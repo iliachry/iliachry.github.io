@@ -7,109 +7,72 @@ import { SystemConsole } from "@/components/ui/system-console";
 
 export function HeroSection() {
   return (
-    <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" aria-hidden>
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)",
-            backgroundSize: "40px 40px",
-          }}
-        />
-      </div>
-
+    <section className="relative py-16 md:py-24 lg:py-28 overflow-hidden">
       <div className="container-wide relative">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left: Text Content */}
           <div className="lg:col-span-7">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="max-w-3xl"
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="max-w-2xl"
             >
-              {/* Name */}
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.1, duration: 0.5 }}
-                className="text-sm font-medium text-accent mb-4 tracking-wide uppercase"
-              >
-                {siteConfig.name}
-              </motion.p>
+              {/* Monospace Subhead / Status */}
+              <div className="flex items-center gap-2 mb-4">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-[11px] font-mono uppercase tracking-widest text-zinc-400">
+                  {siteConfig.name} — Systems Architect & Founder
+                </span>
+              </div>
 
-              {/* Positioning Statement */}
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="heading-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-text-primary leading-[1.08] text-balance"
-              >
-                Building intelligent spatial systems{" "}
-                <span className="text-text-secondary">for the physical world.</span>
-              </motion.h1>
+              {/* Main Sovereign Statement */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-snug text-white mb-4 text-balance">
+                Engineering sovereign hardware & software — from custom spatial systems to production SaaS.
+              </h1>
 
               {/* Supporting Paragraph */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35, duration: 0.6 }}
-                className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary max-w-2xl leading-relaxed"
-              >
+              <p className="text-sm sm:text-base md:text-lg text-zinc-400 font-light leading-relaxed mb-8">
                 {siteConfig.heroDescription}
-              </motion.p>
+              </p>
 
               {/* CTAs */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                className="mt-8 md:mt-10 flex flex-wrap gap-4"
-              >
+              <div className="flex flex-wrap items-center gap-3 font-mono">
                 <Button href="/work" variant="primary">
-                  View Work
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
+                  View Systems ↗
                 </Button>
-                <Button href="/contact" variant="secondary">
-                  Collaborate
+                <Button href="/ventures" variant="secondary">
+                  Portfolio & Ventures
                 </Button>
-              </motion.div>
+                <a
+                  href="#system-console"
+                  className="text-xs font-mono text-zinc-500 hover:text-emerald-400 transition-colors px-2 py-1"
+                >
+                  [~] Live Telemetry
+                </a>
+              </div>
+
+              {/* Credibility Line */}
+              <div className="mt-8 pt-4 border-t border-zinc-900">
+                <p className="text-[11px] sm:text-xs font-mono text-zinc-500">
+                  Founder (Metatopia) · Patent (USPTO) · Published (IEEE, ACM SIGGRAPH, Springer)
+                </p>
+              </div>
             </motion.div>
           </div>
 
           {/* Right: Interactive Console */}
           <div className="lg:col-span-5 w-full flex justify-center lg:justify-end">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+              transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
               className="w-full max-w-md lg:max-w-none"
             >
               <SystemConsole />
             </motion.div>
           </div>
         </div>
-
-        {/* Accent line */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ delay: 0.7, duration: 0.8, ease: "easeOut" }}
-          className="mt-16 md:mt-20 h-px bg-border origin-left"
-        />
       </div>
     </section>
   );
