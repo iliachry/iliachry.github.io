@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import { siteConfig } from "@/data/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -19,14 +18,14 @@ export const metadata: Metadata = {
   title: "Ilias Chrysovergis — Systems Architect, Researcher & Founder",
   description:
     "Ilias Chrysovergis — Software architect, researcher, and founder building spatial computing, sovereign infrastructure, and AI systems.",
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL("https://iliachry.gr"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: siteConfig.url,
+    url: "https://iliachry.gr",
     siteName: "Ilias Chrysovergis",
     title: "Ilias Chrysovergis — Systems Architect, Researcher & Founder",
     description:
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    creator: siteConfig.twitter.handle,
+    creator: "@iliachry",
     title: "Ilias Chrysovergis — Systems Architect, Researcher & Founder",
     description:
       "Software architect, researcher, and founder building spatial computing, sovereign infrastructure, and AI systems.",
