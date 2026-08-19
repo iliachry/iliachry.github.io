@@ -71,10 +71,8 @@ export default function RootLayout({
               },
               sameAs: [
                 "https://github.com/iliachry",
-                "https://linkedin.com/in/ilias-chrysovergis",
-                "https://scholar.google.com/citations?user=x5Zq1-QAAAAJ",
-                "https://www.researchgate.net/profile/Ilias-Chrysovergis",
-                "https://orcid.org/0000-0002-5434-2175",
+                "https://www.linkedin.com/in/ilias-chrysovergis/",
+                "https://scholar.google.com/citations?user=ionnzvMAAAAJ",
                 "https://x.com/iliachry",
               ],
             }),

@@ -72,10 +72,10 @@ export default function Home() {
       {/* ─── MAIN MINIMAL CONTENT (FITS IN SINGLE VIEWPORT) ─── */}
       <main className="w-full max-w-3xl mx-auto my-auto py-12">
         <h1 className="text-2xl sm:text-4xl md:text-5xl font-light tracking-tight leading-snug text-white mb-6">
-          Ilias Chrysovergis engineers spatial computing, digital twins & sovereign systems.
+          Ilias Chrysovergis engineers spatial systems, digital twins & AI architectures.
         </h1>
         <p className="text-sm sm:text-base md:text-lg text-zinc-400 font-light leading-relaxed">
-          Software architect, researcher, and founder bridging deep science and production software. Co-founder of Metatopia, PhD candidate, and U.S. Patent holder.
+          Software Architect, Developer & Researcher bridging deep science with real-world execution. Co-founder of Metatopia, PhD candidate, and U.S. Patent holder.
         </p>
       </main>
 
@@ -92,7 +92,7 @@ export default function Home() {
           </a>
           <span className="text-zinc-800">•</span>
           <a
-            href="https://scholar.google.com/citations?user=x5Zq1-QAAAAJ"
+            href="https://scholar.google.com/citations?user=ionnzvMAAAAJ"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-emerald-400 transition-colors"
@@ -101,7 +101,7 @@ export default function Home() {
           </a>
           <span className="text-zinc-800">•</span>
           <a
-            href="https://linkedin.com/in/ilias-chrysovergis"
+            href="https://www.linkedin.com/in/ilias-chrysovergis/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-emerald-400 transition-colors"
@@ -119,18 +119,18 @@ export default function Home() {
           </a>
           <span className="text-zinc-800">•</span>
           <a
-            href="/Ilias_Chrysovergis_CV.pdf"
+            href="/Chrysovergis_Resume_Portfolio.pdf"
             download
             className="hover:text-emerald-400 transition-colors"
           >
-            CV (PDF)
+            Resume / Portfolio (PDF)
           </a>
         </div>
         <a
-          href="mailto:iliachry@iliachry.gr"
+          href="mailto:iliachry@gmail.com"
           className="text-white hover:underline shrink-0"
         >
-          iliachry@iliachry.gr ↗
+          iliachry@gmail.com ↗
         </a>
       </footer>
     </div>

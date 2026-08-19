@@ -92,20 +92,14 @@ Security Autonomy   : 100% Data Sovereignty`,
       case "projects":
         newHistory.push({
           type: "output",
-          text: `[PORTFOLIO & INITIATIVES]
+          text: `[VENTURES & SELECTED PROJECTS]
 --------------------------------------------------
-1. Metatopia — Sovereign Infrastructure Studio
+1. Metatopia — Metaverse studio & 3D spatial solutions
    https://metatopia.gr
-2. Sovereign Mini Datacenter (Self-Powered Compute)
-   https://iliachry.gr/sovereign-mini-datacenter/
-3. PestView (Smart IoT Hardware & SaaS Platform)
-   https://pestview.io
-4. Poetics (Pop-Up Immersive VR Cinema)
-   https://poeticsvr.com
-5. OpenSpaces360 (Spatial Digitization — Cyprus Food Museum)
-   https://openspaces360.org
-6. The Generator (Anti-Entropic Parametric Audio Engine)
-   https://metatopia.gr/generator/`,
+2. PestView — Cloud-based pest control management platform
+3. QuimaXR — Immersive XR cinema & spatial storytelling
+4. NTUA Digital Twins — Hydroinformatics & flood simulation
+5. CERTH/ITI — ExpertAssist AR on-the-job construction toolkit`,
         });
         break;
 
@@ -138,15 +132,16 @@ Ilias Chrysovergis is a software architect, researcher, and founder based in Gre
         break;
 
       case "cv":
+      case "resume":
         newHistory.push({
           type: "output",
-          text: `[CV DOWNLOAD INITIATED]
-Downloading /Ilias_Chrysovergis_CV.pdf...`,
+          text: `[RESUME / PORTFOLIO DOWNLOAD INITIATED]
+Downloading /Chrysovergis_Resume_Portfolio.pdf...`,
         });
         setTimeout(() => {
           const a = document.createElement("a");
-          a.href = "/Ilias_Chrysovergis_CV.pdf";
-          a.download = "Ilias_Chrysovergis_CV.pdf";
+          a.href = "/Chrysovergis_Resume_Portfolio.pdf";
+          a.download = "Chrysovergis_Resume_Portfolio.pdf";
           document.body.appendChild(a);
           a.click();
           document.body.removeChild(a);
